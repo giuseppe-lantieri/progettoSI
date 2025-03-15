@@ -10,7 +10,7 @@ Le funzionalità erogate dal software saranno le seguenti:
 - Gestione degli utenti.
 <!-- TODO togliere?-->
 - Ricerca e prenotazione dei libri.
-- Ricerca e prenotazione di un posto per il coworking/sala studio.
+- Ricerca e prenotazione di un posto per il co-working/sala studio.
 - Mappa Interattiva.
 
 ## Landing page
@@ -24,7 +24,7 @@ L'utente amministratore potrà personalizzare la pagina della biblioteca di rife
 L'utente semplice potrà accedere tramite servizi di identificazione elettronica per poi cercare e prenotare libri e aule studio.
 ## Ricerca e prenotazione dei libri
 Il portale guiderà l'utente alla ricerca del libro che, una volta selezionato permetterà di visionare tutte le caratteristiche e le biblioteche in cui è disponibile dando l'opzione di prenotarlo.
-## Ricerca e prenotazione di un posto in aula coworking/studio.
+## Ricerca e prenotazione di un posto in aula co-working/studio.
 Il portale permetterà all'utente di visualizzare le biblioteche con aule studio libere negli orari selezionati dando l'opzione di prenotare un posto per il tempo stabilito.
 ## Mappa interattiva
 Gli utenti avranno a disposizione una mappa interattiva che permetterà di esplorare e interagire con informazioni geografiche delle biblioteche, dando la possibilità di accedere alla scheda della biblioteca selezionata.
