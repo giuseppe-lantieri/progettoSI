@@ -2,7 +2,6 @@
 ## Documento di visione
 ## Introduzione
 In seguito a un bando il comune di Roma ha messo in palio la possibilità di rinnovare il proprio sistema bibliotecario, lo scopo è quello di migliorare e automatizzare le interazioni degli utenti con le biblioteche al fine di facilitare le operazioni di ricerca e prestito dei libri e di gestione degli spazi pubblici.
-ciao
 Le funzionalità erogate dal software saranno le seguenti:
 - Landing page.
 - Pagina personalizzata per biblioteca.
