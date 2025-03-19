@@ -27,18 +27,3 @@ Il portale guiderà l'utente alla ricerca del libro che, una volta selezionato p
 Il portale permetterà all'utente di visualizzare le biblioteche con aule studio libere negli orari selezionati dando l'opzione di prenotare un posto per il tempo stabilito.
 ## Mappa interattiva
 Gli utenti avranno a disposizione una mappa interattiva che permetterà di esplorare e interagire con informazioni geografiche delle biblioteche, dando la possibilità di accedere alla scheda della biblioteca selezionata.
-
-
-Il modello di progetto che seguiremo è il RUP (Rational Unified Process) e per effettuarlo correttamente vorremmo presentare i seguenti elaborati:
- 
-Documento di Visione
-Studio di Fattibilità
-Contratto
-Glossario
-Piano di Progetto
-Stima degli Sforzi (o Stima dei Costi)
-Gestione dei Rischi
-Modelli di Casi d'Uso
-Documento di Analisi
-Documento di Design
-Piano di Test
