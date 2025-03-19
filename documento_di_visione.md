@@ -123,3 +123,7 @@ Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi 
 |Giudizio sui commenti di altri lettori (Hai trovato utile questo commento?)| 50|
 |Condivisione Social (Facebook, Twitter)| 200|
 |Utilizzo della nuova APP| 1.500|
+
+
+## Revisioni
+19/03/2025: Prima stesura del documento
