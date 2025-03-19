@@ -1,5 +1,5 @@
 Il modello di progetto che seguiremo è il RUP (Rational Unified Process) e per effettuarlo correttamente vorremmo presentare i seguenti elaborati:
-- [x]  Documento di Visione
+- [x] Documento di Visione
 - [x] Studio di Fattibilità
 - [x] Contratto
 - [ ] Glossario
