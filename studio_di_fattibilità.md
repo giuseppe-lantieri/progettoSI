@@ -25,4 +25,7 @@ Nel contesto della capitale Italiana il panorama risulta frammentato, con softwa
 <!--- TODO: completare paragrafo--->
 
 ## Revisioni
-19/03/2025: Prima stesura del documento
+||||
+|--|--|--|
+|Versione|Data|Descrizione|
+|1.0|15/03/2025|Prima stesura del documento
