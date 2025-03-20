@@ -28,4 +28,4 @@ Nel contesto della capitale Italiana il panorama risulta frammentato, con softwa
 ||||
 |--|--|--|
 |Versione|Data|Descrizione|
-|1.0|15/03/2025|Prima stesura del documento
+|1.0|19/03/2025|Prima stesura del documento
