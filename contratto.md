@@ -17,10 +17,7 @@ Dato il Documento di Visione, e visto lo Studio di Fattibilità, la nostra propo
 - Rilascio periodico di documenti durante lo sviluppo per mostrare i progressi raggiunti, permettendo al cliente di accettare o rifiutare il lavoro svolto.
 
 Inoltre:
-- L'utilizzo del portale sarà duraturo nel tempo e potrà, in futuro, essere
-ampliato o esteso con nuove funzionalità, sia 
-_da noi che da eventuali altre aziende produttrici_ 
-<!-- TODO #1 scritto di merda correggere, lo scopo era dire che altre aziende oltre a noi possono intervenire in futuro -->
+- L'utilizzo del portale sarà duraturo nel tempo e potrà essere ampliato o esteso in futuro con nuove funzionalità, implementabili sia dalla nostra azienda che da eventuali aziende terze.
 - Eventuali versioni future del software non sono incluse in questo contratto.
 - L'utilizzo del portale nel periodo di beta sarà affiancato dagli sviluppatori per monitorare l'applicazione ed effettuare dei test pratici
 - La documentazione fornita sarà da interpretare come prima fonte di autorevolezza in caso di rilasci futuri e perciò dovrà essere sempre mantenuta attuale
