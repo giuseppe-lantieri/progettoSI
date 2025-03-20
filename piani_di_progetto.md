@@ -1,7 +1,8 @@
 # Biblioteche di Roma
 # Piano di Progetto
 ## Introduzione
-<!-- TODO: aggiungere contenuto paragrafo--->
+<!-- TODO: 
+Piano di Progetto: in questa fase viene svolto solo a grandi linee, si descrive il modello di processo scelto per sviluppare il sistema e i tempi necessari a svilupparlo, e (se si riesce) anche la stima delnumero di iterazioni necessarie per ogni fase del RUP>
 
 ## Prima Iterazione
 |||

@@ -131,6 +131,6 @@ Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi 
 |Versione|Data|Descrizione|
 |1.0|15/03/2025|Prima stesura del documento
 <!---
-Se le modifiche di Ganzio vanno bene per tutti, sistemare ed aggiungere questo commento
+TODO Se le modifiche di Ganzio vanno bene per tutti, sistemare ed aggiungere questo commento
 |1.1|19/03/2025|Modifiche generali: modificati requisiti (aggiunti nuovi requisiti, sistemati ed approfonditi quelli già presenti), aggiunto concetto di gamification.
 --->
