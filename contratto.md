@@ -1,5 +1,9 @@
 # Biblioteche di Roma
 ### Contratto
+
+## Introduzione
+Nel presente documento descriviamo gli impegni che assumiamo, come azienda sviluppatrice del sistema, relativamente al progetto concordato. 
+
 ## PROPOSTA DI CONTRATTO
 Dato il Documento di Visione, e visto lo Studio di Fattibilità, la nostra proposta di contratto è la seguente:
 - Realizzazione del progetto tramite  Rational Unified Process  (RUP)
@@ -24,7 +28,7 @@ _da noi che da eventuali altre aziende produttrici_
 ## LEGGE APPLICABILE E CESSIONE
 Il presente contratto è regolato dalla legge italiana e non può essere ceduto, in tutto o in parte, a terze parti, pena la nullità dell'atto di cessione.
 ## ACCORDO
-Il presente contratto, insieme ai Documenti allegati, costituisce l'accordo totale tra le Parti e sostituisce ogni contratto, accordo, offerta, intesa, sia verbale sia scritta, precedentemente intervenuta tra le Parti
+Il presente contratto, insieme ai Documenti allegati, costituisce l'accordo totale tra le Parti e sostituisce ogni contratto, accordo, offerta, intesa, sia verbale sia scritta, precedentemente intervenuta tra le Parti.
 
 ## Revisioni
 ||||
