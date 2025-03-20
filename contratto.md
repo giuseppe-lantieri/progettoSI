@@ -27,4 +27,7 @@ Il presente contratto è regolato dalla legge italiana e non può essere ceduto,
 Il presente contratto, insieme ai Documenti allegati, costituisce l'accordo totale tra le Parti e sostituisce ogni contratto, accordo, offerta, intesa, sia verbale sia scritta, precedentemente intervenuta tra le Parti
 
 ## Revisioni
-19/03/2025: Prima stesura del documento
+||||
+|--|--|--|
+|Versione|Data|Descrizione|
+|1.0|19/03/2025|Prima stesura del documento
