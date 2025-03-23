@@ -1,8 +1,18 @@
 # Biblioteche di Roma
 ## Documento di visione
 ## Introduzione
-In seguito a un bando il comune di Roma ha messo in palio la possibilità di rinnovare il proprio sistema bibliotecario, lo scopo è quello di migliorare e automatizzare le interazioni degli utenti con le biblioteche al fine di facilitare le operazioni di ricerca e prestito dei libri e di gestione degli spazi pubblici.
-Le funzionalità erogate dal software saranno le seguenti:
+In seguito a un bando il comune di Roma ha messo in gara la possibilità di rinnovare il proprio sistema bibliotecario, lo scopo è quello di migliorare e automatizzare le interazioni degli utenti con le biblioteche al fine di facilitare le operazioni di ricerca e prestito dei libri e di gestione degli spazi pubblici.
+
+##Obiettivi
+
+Riportiamo di seguito gli obiettivi che questo progetto permetterà di raggiungere:
+1.	Accessibilità: Rendere i servizi delle biblioteche facilmente accessibili a tutti i cittadini, indipendentemente dalla loro posizione geografica.
+2.	Efficienza: Ottimizzare il processo di prenotazione, riducendo i tempi di attesa e migliorando la gestione delle risorse.
+3.	User Experience: Offrire un'interfaccia intuitiva e user-friendly che faciliti la navigazione e l'utilizzo del portale.
+4.	Integrazione: Integrare il portale con i sistemi esistenti delle biblioteche per garantire una gestione centralizzata e coerente delle prenotazioni.
+
+##Funzionalità
+Le funzionalità erogate dal portale saranno le seguenti:
 
 - Landing page.
 - Pagina personalizzata per biblioteca.
