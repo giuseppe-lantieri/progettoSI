@@ -1,55 +1,136 @@
 # Biblioteche di Roma
-## Documento di visione
+### Documento di visione
 ## Introduzione
-In seguito a un bando il comune di Roma ha messo in gara la possibilità di rinnovare il proprio sistema bibliotecario, lo scopo è quello di migliorare e automatizzare le interazioni degli utenti con le biblioteche al fine di facilitare le operazioni di ricerca e prestito dei libri e di gestione degli spazi pubblici.
-
-##Obiettivi
-
-Riportiamo di seguito gli obiettivi che questo progetto permetterà di raggiungere:
-1.	Accessibilità: Rendere i servizi delle biblioteche facilmente accessibili a tutti i cittadini, indipendentemente dalla loro posizione geografica.
-2.	Efficienza: Ottimizzare il processo di prenotazione, riducendo i tempi di attesa e migliorando la gestione delle risorse.
-3.	User Experience: Offrire un'interfaccia intuitiva e user-friendly che faciliti la navigazione e l'utilizzo del portale.
-4.	Integrazione: Integrare il portale con i sistemi esistenti delle biblioteche per garantire una gestione centralizzata e coerente delle prenotazioni.
-
-##Funzionalità
-Le funzionalità erogate dal portale saranno le seguenti:
-
-- Landing page.
-- Pagina personalizzata per biblioteca.
-<!-- TODO  -->
-- Gestione degli utenti.
-<!-- TODO togliere?-->
-- Ricerca e prenotazione dei libri.
-- Ricerca e prenotazione di un posto per il co-working/sala studio.
-- Mappa Interattiva.
-
-## Landing page
-Il portale permetterà di accedere alle informazioni di ogni biblioteca, guidando l'utente attraverso le varie sezioni del sito.
-## Pagina personalizzata per biblioteca
-<!-- TODO trova nome decente -->
-Ogni pagina avrà una sezione comune a tutte le biblioteche dove saranno specificate indirizzo, contatti, orari e servizi.
-## Gestione degli utenti
-Il portale permetterà di gestire vari tipi di utenti tramite ruoli distinti. Ad ogni ruolo corrisponderanno permessi differenti che influenzeranno la visione del portale.
-L'utente amministratore potrà personalizzare la pagina della biblioteca di riferimento.
-L'utente semplice potrà accedere tramite servizi di identificazione elettronica per poi cercare e prenotare libri e aule studio.
-## Ricerca e prenotazione dei libri
-Il portale guiderà l'utente alla ricerca del libro che, una volta selezionato permetterà di visionare tutte le caratteristiche e le biblioteche in cui è disponibile dando l'opzione di prenotarlo.
-## Ricerca e prenotazione di un posto in aula co-working/studio.
-Il portale permetterà all'utente di visualizzare le biblioteche con aule studio libere negli orari selezionati dando l'opzione di prenotare un posto per il tempo stabilito.
-## Mappa interattiva
-Gli utenti avranno a disposizione una mappa interattiva che permetterà di esplorare e interagire con informazioni geografiche delle biblioteche, dando la possibilità di accedere alla scheda della biblioteca selezionata.
+Il comune di Roma vuole creare un nuovo portale online per il proprio sistema bibliotecario. 
+Il portale deve dare la possibilità di accedere ai servizi offerti dalle biblioteche in maniera semplice e digitale. 
+L'obbiettivo, perciò è riuscire a creare un semplice metodo per gli utenti di usufruire dei seguenti servizi:
+- Prenotazione Libri
+- Prestito Libri (Fisico e EBook)
+- Prenotazione Posto (ove possibile)
+- Servizio Wifi
+- Servizio Tesseramento
 
 
-Il modello di progetto che seguiremo è il RUP (Rational Unified Process) e per effettuarlo correttamente vorremmo presentare i seguenti elaborati:
- 
-Documento di Visione
-Studio di Fattibilità
-Contratto
-Glossario
-Piano di Progetto
-Stima degli Sforzi (o Stima dei Costi)
-Gestione dei Rischi
-Modelli di Casi d'Uso
-Documento di Analisi
-Documento di Design
-Piano di Test
+Oltre a ciò il portale dovrà essere in grado di:
+- Segnalare notizie riguardanti le singole biblioteche
+- Offrire indicazioni chiare e veloci sulla posizione
+- Aggregare i database
+- Permettere i login tramite i servizi di stato
+<!-- TODO Non ho idea se lasciarlo
+- Aderire al servizio Open Data 
+-->
+- Gamification 
+
+## Prenotazione Libri 
+Il portale deve permettere ai vari utenti (che hanno fatto o meno l'accesso) di verificare la presenza dei libri, indicando se sono fisici o ebook, nel caso dovrà aggiungere le informazioni riguardanti la libreria che lo possiede, la posizione o nel caso fosse preso mettere in risalto i giorni rimanenti prima che finisca il prestito.
+
+## Prestito Libri
+Il prestito libri differisce in base al formato del libro:
+- Fisico: 
+	
+	Il libro fisico non potrà per ovvie ragione essere preso direttamente online, il portale per permettere il servizio dovrà:
+	
+	1) Segnalare la presa in carico al database
+	2) Creare una ricevuta apposita da consegnare all'utente
+	3) Permettere al bibliotecario di convalidare l'autenticità della ricevuta
+	4) Impedire agli altri utenti di prenotare all'ora volta il libro
+
+- Ebook: 
+	Il libro digitale dovrà essere gestito interamente dal portale, per assicurare che i termini e le licenze dell'ebook non vengano violati deve limitare le interazione dell'utente con esso, ma permetterne comunque una lettura agevole e senza impacci.
+
+## Prenotazione Posto
+
+Alcune biblioteche offrono tavoli e stanze, adibite al co-working e allo studio. 
+Il portale dovrà:
+1) Segnalare se la biblioteca scelta ha un posto disponibile
+2) Gestire la prenotazione anche in caso di concorrenza
+3) Permettere la verifica di quest'ultima da parte di un bibliotecario
+4) Segnalare al bibliotecario la fine di una prenotazione in modo che esso possa controllare
+5) Permettere all'utente di estendere la propria prenotazione
+
+## Servizio Wifi 
+
+Il portale deve offrire la possibilità di entrare all'interno della connessione protetta offerta dal comune di Roma. Il servizio è accessibile solo alle persone che hanno aderito a un certo livello di tesseramento. Perciò dovrà offrire un sistema di API per fare effettuare le verifiche alle biblioteche localmente.
+
+## Servizio di Tesseramento 
+
+Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e altri gratuiti. Ogni tessera permette di accedere a dei servizi e dei vantaggi:
+
+- Bibliopass
+(tessera gratuita con possibilità di iscrizione/rinnovo on-line)
+
+Richiedono, invece, il pagamento di una quota di adesione annuale:
+	
+ - Bibliocard
+(10 euro l’anno)
+	
+- Youngcard
+(5 euro l’anno - per utenti fino a 14 anni)
+	
+- Goldcard
+(quota di sottoscrizione libera a partire da 20 euro l’anno)
+La tessera d’iscrizione è personale e ha validità di un anno dall’ emissione.
+
+Se si perde la tessera la si deve bloccare subito. In biblioteca verranno rilasciate nuove credenziali e verrà emessa una nuova tessera per avere nuovamente accesso a tutte le attività on-line. Il rilascio della tessera sostitutiva Bibliocard richiede il pagamento di un rimborso spese di 5 euro. In caso di furto la tessera sostitutiva è gratuita se viene presentata copia della denuncia.
+
+##  Notizie
+
+Il portale avrà anche una parte dedicata alle notizie. Questo avverrà sia in maniera aggregata e generale, nella sezione principale, sia in dettaglio e in riferimento alla singola biblioteca nella pagina dedicata ad essa. 
+
+## Posizione 
+Il portale dovrà segnalare le posizioni delle varie biblioteche, offrendo una chiara e semplice mappa delle posizioni. L'utente deve avere la possibilità di interagirci senza modificarla, possibilmente verificando quale sia la più vicina a lui in base al municipio di appartenenza. 
+
+## Database Unificati
+Il portale deve permettere di interrogare tutti i database delle varie biblioteche tramite un unico punto di accesso, questo per assicurare che ogni informazione sia condivisa e accessibile. 
+
+## Integrare i servizi del Login di stato
+Lo stato italiano ha da poco aggiunto vari servizi certificati, che permettono il login autorizzato del cittadino. Strumenti come lo SPID o la CIE, permettono un veloce e sicuro login da parte dell'utente che in applicazioni statali, come il portale descritto in questi file, sono indispensabili. 
+
+## Gamification
+Il portale dovrà aggiungere funzionalità di gamification. Gli utenti dovranno collaborare all'interno del portale per acquisire punti, questi potranno essere guadagnati tramite varie operazione tra cui: 
+- Aggiunta di informazioni riguardanti i libri 
+- Recensioni
+- Prestiti
+- Interazioni con la piattaforma
+
+Ovviamente il sistema serve anche a punire comportamenti nocivi quali:
+- Recensioni valutate negativamente dai librai
+...
+
+Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi dalla seguente lista:
+|Azione| Punteggio|
+|---|---|
+|Nuova/rinnovo BIBLIOPASS| 5.000|
+|Nuova/rinnovo BIBLIOPASS online| 6.000|
+|Nuova/rinnovo BIBLIOCARD| 10.000|
+|Nuova/rinnovo BIBLIOCARD online| 11.000|
+|Nuova/rinnovo YOUNGCARD| 10.000|
+|Nuova/rinnovo YOUNGCARD online| 11.000|
+|Nuova/rinnovo GOLDCARD| 15.000|
+|Nuova/rinnovo GRATISCARD| 10.000|
+|Nuova/rinnovo GRAYOUCARD| 10.000|
+|Nuova/rinnovo SOCIALCARD| 10.000|
+|Registrazione prestito Audiovisivo (DVD, CD, ... )| 100|
+|Riconsegna prestito nei tempi previsti Audiovisivo| 100|
+|Registrazione prestito tutti gli altri materiali (libro, e-book, ...)| 500|
+|Riconsegna prestito nei tempi previsti tutti gli altri materiali| 700|
+|Riconsegna prestito in ritardo| -1.000|
+|Inserimento giudizio di gradimento sui titoli (stelle)| 50|
+|Inserimento Commento| 1.000|
+|Cancellazione commento| -1.000|
+|Tuo commento ritenuto utile (Hai trovato utile questo commento?)| 300|
+|Tuo commento ritenuto inopportuno dai bibliotecari| -1.000|
+|Giudizio sui commenti di altri lettori (Hai trovato utile questo commento?)| 50|
+|Condivisione Social (Facebook, Twitter)| 200|
+|Utilizzo della nuova APP| 1.500|
+
+
+## Revisioni
+||||
+|--|--|--|
+|Versione|Data|Descrizione|
+|1.0|15/03/2025|Prima stesura del documento
+<!---
+TODO Se le modifiche di Ganzio vanno bene per tutti, sistemare ed aggiungere questo commento
+|1.1|19/03/2025|Modifiche generali: modificati requisiti (aggiunti nuovi requisiti, sistemati ed approfonditi quelli già presenti), aggiunto concetto di gamification.
+--->
