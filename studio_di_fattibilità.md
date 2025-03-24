@@ -19,10 +19,8 @@ Tra gli svantaggi della soluzione proposta da "Biblioteche di Roma" vi è il cos
 Nel contesto della capitale Italiana il panorama risulta frammentato, con software non uniformi e spesso non integrati tra loro. Perciò la richiesta di una soluzione unificata è fortemente sentita sia dalle istituzioni che dagli utenti. La piattaforma proposta risponde dunque alla crescente domanda di sistemi centralizzati, più efficienti e user-friendly.
 
 ## Tecnologie
-<!--- Ganzio pensaci tu --->
-
-## Stima dei costi dell'architettura fisica
-<!--- TODO: completare paragrafo--->
+<!--- TODO scrivere tecnologie -->
+CMS, Content management system (Word Press)
 
 ## Revisioni
 ||||
