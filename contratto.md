@@ -1,5 +1,5 @@
 # **Biblioteche di Roma**
-## **CONTRATTO**
+### **CONTRATTO**
 
 ## ***INTRODUZIONE***
 Nel presente documento descriviamo gli impegni che assumiamo, come azienda sviluppatrice del sistema, relativamente al progetto concordato. 
