@@ -19,8 +19,13 @@ Tra gli svantaggi della soluzione proposta da "Biblioteche di Roma" vi è il cos
 Nel contesto della capitale Italiana il panorama risulta frammentato, con software non uniformi e spesso non integrati tra loro. Perciò la richiesta di una soluzione unificata è fortemente sentita sia dalle istituzioni che dagli utenti. La piattaforma proposta risponde dunque alla crescente domanda di sistemi centralizzati, più efficienti e user-friendly.
 
 ## Tecnologie
-<!--- TODO scrivere tecnologie -->
-CMS, Content management system (Word Press)
+Per la realizzazione del sistema si prevede l'utilizzo delle seguenti componenti tecnologiche:
+	- Un'interfaccia web, che consenta agli utenti di accedere ai servizi offerti; 
+	- Un web server, incaricato di gestire le richieste provenienti dal client e coordinare la comunicazione con la base dati;
+	- Un database relazionale, necessario per conservare in modo strutturato le informazioni relative a utenti, libri, disponibilità e prestiti.
+
+Trattandosi di un sistema basato su tecnologie ampiamente diffuse e consolidate, non si rende necessario introdurre strumenti innovativi o sperimentali. 
+Il linguaggio principale adottato sarà Java 8, la gestione dei dati avverrà tramite comandi SQL, mentre la realizzazione dell'interfaccia utente sarà affidata a HTML5, con il possibile supporto di CSS3 e JavScript per una maggiore dinamicità e responsività dell'esperienza utente.
 
 ## Revisioni
 ||||
