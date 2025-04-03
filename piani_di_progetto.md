@@ -1,25 +1,40 @@
 # Biblioteche di Roma
 # Piano di Progetto
-## Introduzione
-<!-- TODO: 
-Piano di Progetto: in questa fase viene svolto solo a grandi linee, si descrive il modello di processo scelto per sviluppare il sistema e i tempi necessari a svilupparlo, e (se si riesce) anche la stima delnumero di iterazioni necessarie per ogni fase del RUP
--->
+| Nome | Iterazione 1 | 
+| :--- | :--- |
+|Fase|Inception
+| Stato |Accettato|
+|Obiettivi| - Analisi dei requisiti<br>-Documento di visione<br>-Proposta di Contratto<br>-Studio di Fattibilità|
 
-## Prima Iterazione
-|||
-|--|--|
-|Nome|Interazione 1|
-|Fase|Inception|
-|Inizio|19/03/2025|
-|Fine|19/03/2025|
-|Stato|Effettuata|
-|Obbiettivi: | 
-- Incontro con il cliente per capire i punti principali e dirigere il Documento di Visione e lo Studio di Fattibilità.
-- Inizio stesura del glossario e del contratto
-|
+| Nome | Iterazione 2 | 
+| :--- | :--- |
+|Fase|Inception
+| Stato|Accettato | 
+|Obiettivi| - Revisione del documento di visione<br>-Piano di Iniziale Progetto<br>-Modello dei casi d'uso preliminare<br>-Valutazione dei rischi d'uso<br>-Architettura Iniziale-<br>-Glossario|
 
-## Revisioni (o cronologia revisioni)
-||||
-|--|--|--|
-|Versione|Data|Descrizione|
-|1|19/03/2025|Prima stesura del documento
+| Nome | Iterazione 3 | 
+| :--- | :--- |
+|Fase|Elaboration
+| Stato|Accettato | 
+|Obiettivi| -Contratto Firmato <br>-Piano di Progetto rivisto<br>-Use Case e Piano di Test|
+
+
+Nome | Iterazione 4 | 
+| :--- | :--- |
+|Fase|Construction
+| Stato|Accettato | 
+|Obiettivi| - Modello use Case<br> -Piano di Test<br>|
+
+
+
+|Nome | Iterazione 5 | 
+| :--- | :--- |
+|Fase|Costruction
+| Stato |Accettato| 
+|Obiettivi| - Implementazione<br>-Relazizzazione dei casi di test|
+
+|Nome | Iterazione 6 | 
+| :--- | :--- |
+|Fase|Transition
+| Stato |Accettato| 
+|Obiettivi| - Training on the Job<br>- Manuale Utente <br>- BugFix|

@@ -1,0 +1,86 @@
+Inception
+
+Elaboration
+
+-Construction
+
+-Transition
+
+
+Inception
+
+In questa fase sono stati delineati gli aspetti principali del sistema, visti ad alto livello, in modo da elaborare un primo studio di fattibilità. Sono stati  identificati gli stakeholders, i requisiti principali, l'architettura del sistema e analizzate criticità, costi e rischi. Al termine dei vari flussi di lavoro sono stati generati i seguenti documenti:
+
+01 - Documento di visione
+
+02 - Analisi Fattibilità
+
+03 - Analisi Preliminare Costi
+
+04 – AnalisiRischi_v1.2
+
+05 - Specifica Preliminare Casi d'Uso
+
+06 - Specifica Preliminare Architettura
+
+07 - Use Case Diagram
+
+08 - CONTRATTO DI FORNITURA DI SOLUZIONE INFORMATICA
+
+La realizzazione di questi documenti corrisponde alla milestone raggiunta per questa fase. 
+
+Elaboration
+
+In questa fase sono stati analizzati più a fondo gli aspetti visti nella fase di Inception, con particolare attenzione al diagramma dei casi d'uso e allo schema architetturale del sistema. Al termine dei vari flussi di lavoro sono stati generati e revisionati i seguenti documenti:
+
+-Architettura Hardware
+
+-Architettura Software
+
+-Design
+
+-Diagramma dei casi d'uso
+
+-Lista Priorità e Dipendenze
+
+-Project Plan
+
+-Test Plan
+
+La realizzazione di questi documenti ha permesso di procedere, in accordo con il cliente, alla fase di sviluppo e corrisponde alla milestone da raggiungere per questa fase.
+
+
+
+Construction
+
+
+-01 - Architettura_Software
+
+-02 - Documento di Test
+
+-03 - UserGuide
+
+
+Transition
+
+In questa fase il team ha installato il software, opportunamente configurato, nell'ambiente di produzione del cliente. Congiuntamente al personale del cliente, si è proceduto all’acceptance test dell'applicativo e sono stati corretti alcuni difetti di funzionamento. È inoltre stata condotta una prima sessione di training per gli utenti.
+
+Analisys & Design
+
+Architettura
+
+In questa fase non è stato necessario apportare modifiche all'architettura del sistema.
+
+Implementation
+
+In questo flusso di lavoro il team di sviluppo ha configurato opportunamente e rilasciato il software  in ambiente di produzione. A seguito dell’ acceptance-test sono state effettuate alcune correzioni.
+
+Test
+
+In seguito al rilascio in ambiente di produzione, il team di test ha potuto iniziare i acceptance-test. Dopo alcune iterazioni di test e implementation, tutti i difetti sono stati corretti con soddisfazione del cliente.
+
+Deployment
+
+In questa fase, è stata tenuta la prima sessione di training del personale del cliente basandosi sulla  user guide prodotta precedentemente.
+
+È stata inoltre condotta una prima review del progetto che ha dato esiti ampiamente soddisfacenti sia per il cliente che per la NEO Software.

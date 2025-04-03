@@ -19,10 +19,15 @@ Tra gli svantaggi della soluzione proposta da "Biblioteche di Roma" vi è il cos
 Nel contesto della capitale Italiana il panorama risulta frammentato, con software non uniformi e spesso non integrati tra loro. Perciò la richiesta di una soluzione unificata è fortemente sentita sia dalle istituzioni che dagli utenti. La piattaforma proposta risponde dunque alla crescente domanda di sistemi centralizzati, più efficienti e user-friendly.
 
 ## Tecnologie
-<!--- Ganzio pensaci tu --->
+Le tecnologie proposte si dividono in: 
+- Un database che permetta la gestione corretta di grandi dati, operazioni transazionali e la gestione corretta dei ruoli e delle viste. Per questo proponiamo PostgreSQL.
+- Un backend robusto e conosciuto a livello globale, la manutenzione deve essere minima. Altri operatori devono poterci mettere mano seguendo semplicemente gli schemi lasciati da questa progettazioni, proprio per questi dettagli proponiamo SpringBoot Java
+- Un servizio di gestione degli eventi e dei messaggi tra API, per questo consigliamo rabbitMQ
+<!-- TODO #3 sta cosa da discutere con il prof -->
+- Un sistema di gestione dei contenuti specializzato per le biblioteche, per questo proponiamo BIBLIOWebPortal cms
 
 ## Stima dei costi dell'architettura fisica
-<!--- TODO: completare paragrafo--->
+<!-- TODO: completare paragrafo-->
 
 ## Revisioni
 ||||
