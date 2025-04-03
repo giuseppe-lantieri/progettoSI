@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>piano_di_test.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="piano-di-test-del-progetto-biblioteche-di-roma">Piano di Test del Progetto Biblioteche di Roma</h1>
+<h2 id="scopo-del-documento">Scopo del documento</h2>
+<p>Questo documento descrive il piano di test svolto per la validazione delle funzionalità definite nel piano di <em>&quot;progetto&quot;</em> e che sono elencate di seguito:</p>
+<ul>
+<li>Landing page</li>
+<li>Pagina personalizzata per biblioteca</li>
+<li>Gestione degli utenti</li>
+<li>Ricerca e prenotazione dei libri</li>
+<li>Ricerca e prenotazione di un posto in aula co-working/studio.</li>
+<li>Mappa interattiva</li>
+</ul>
+<p>Ogni funzionalità con i relativi test è stata descritta nei paragrafi successivi</p>
+<h2 id="landing-page">Landing page</h2>
+<p>Il portale permetterà di accedere alle informazioni di ogni biblioteca, guidando l'utente attraverso le varie sezioni del sito.</p>
+<h2 id="pagina-personalizzata-per-biblioteca">Pagina personalizzata per biblioteca</h2>
+<!-- TODO trova nome decente -->
+<p>Ogni pagina avrà una sezione comune a tutte le biblioteche dove saranno specificate indirizzo, contatti, orari e servizi.</p>
+<p>Use Case di riferimento
+UC.1.1_AccessoLandingPage di una Biblioteca</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT.1</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UC.1.1_AccessoLandingPage</td>
+<td style="text-align:left">Verifica accesso  alla home page di una determinata biblioteca</td>
+<td style="text-align:left">AccessoLandingPage di una Biblioteca</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">Accesso ad internet</td>
+<td style="text-align:left">1.l'utente accede alla homepage del portale 2.seleziona dalla lista dei municipi il municipio di interesse 3.Seleziona la biblioteca a cui vuole accedere</td>
+<td style="text-align:left">1.La pagina cambia alla home page della biblioteca selezionata mostrando le sezione informativa comune a tutte le biblioteche  2.La pagina mostra anche una sezione di notizie, menu e link utili specifica per la biblioteca</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gestione-degli-utenti">Gestione degli utenti</h2>
+<p>Il portale permetterà di gestire vari tipi di utenti tramite ruoli distinti. Ad ogni ruolo corrisponderanno permessi differenti che influenzeranno la visione del portale.
+L'utente amministratore potrà personalizzare la pagina della biblioteca di riferimento.
+L'utente semplice potrà accedere tramite servizi di identificazione elettronica per poi cercare e prenotare libri e aule studio.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT.2</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UC.1.2_Gestione Utenti con Ruoli differenti</td>
+<td style="text-align:left">Verifica ruolo amministrativo</td>
+<td style="text-align:left">Accesso alle funzionalità di personalizzazione delle pagina della  Biblioteca</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">1. Non esiste il nuovo utente amministrativo da creare.  2. Esiste un'utente admin del portale con tutti i permessi da amministratore del portale</td>
+<td style="text-align:left">1.l'utente amministratore accede alla homepage del portale 2.L'utente crea l'utente amministratore di una biblioteca e assegna una password di default   3. L'utente amministratore della biblioteca accede al portale e cambia la password</td>
+<td style="text-align:left">1.L'utente amministratore accede al portale dove saranno disponibili i menu di personalizzazione delle informazioni della biblioteca seguenti: 1.1 info di contatto 1.2 Notizie 1.3 Gestione Sale studio 1.4 Eventi 1.4 Aggiungi Sezione</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT.3</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UC.1.2_Gestione Utenti con Ruoli differenti</td>
+<td style="text-align:left">Verifica ruolo personale amministrativo</td>
+<td style="text-align:left">Accesso alle funzionalità di gestione della biblioteca</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">1.  Non esiste il nuovo utente amministratore biblioteca da creare. 2. Esiste un'utente admin del portale con tutti i permessi da amministratore del portale</td>
+<td style="text-align:left">1.l'utente amministratore biblioteca accede alla homepage del portale 2.L'utente crea l'utente amministratore di una biblioteca e assegna una password di default 3.L'utente amministratore della biblioteca accede al portale e cambia la password</td>
+<td style="text-align:left">1.L'utente amministratore della biblioteca accede al portale dove saranno disponibili i menu di personalizzazione delle informazioni della biblioteca seguenti: 1.1 Registra Utente 1.2 Gestisci Prenotazioni 1.3 Aggiungi/Cancella Libro 1.4 Gestisci Sala Studio</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ricerca-e-prenotazione-dei-libri">Ricerca e prenotazione dei libri</h2>
+<p>Il portale guiderà l'utente alla ricerca del libro che, una volta selezionato permetterà di visionare tutte le caratteristiche e le biblioteche in cui è disponibile dando l'opzione di prenotarlo.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT.4</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UC.1.3_Ricerca  dei libri</td>
+<td style="text-align:left">Verifica funzionalità di ricerca libro</td>
+<td style="text-align:left">Accesso alle funzionalità di ricerca di un libro</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">1.  Il libro esiste ed è caricato nella biblioteca.</td>
+<td style="text-align:left">1.l'utente della biblioteca accede alla homepage del portale 2.L'utente seleziona un libro</td>
+<td style="text-align:left">1.L'utente della biblioteca visualizzerà le informazioni del libro</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT.5</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UC.1.3_Prenotazione dei libri</td>
+<td style="text-align:left">Verifica funzionalità di prenotazione libro</td>
+<td style="text-align:left">Accesso alle funzionalità di prenotazione di un libro con possibilità di prenotazione</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">1.  Il libro esiste ed è caricato nella biblioteca. 2.Il libro è disponibile nella biblioteca selezionata</td>
+<td style="text-align:left">1.l'utente della biblioteca seleziona il libro desiderato 2.L'utente seleziona la biblioteca di interesse in cui il  libro è disponibile</td>
+<td style="text-align:left">1.L'utente della biblioteca visualizzerà il pulsante di prenotazione. 2. L'utente cliccherà sul bottone prenota visualizzando il riepilogo della prenotazione</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ricerca-e-prenotazione-di-un-posto-in-aula-co-workingstudio">Ricerca e prenotazione di un posto in aula co-working/studio.</h2>
+<p>Il portale permetterà all'utente di visualizzare le biblioteche con aule studio libere negli orari selezionati dando l'opzione di prenotare un posto per il tempo stabilito.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT.6</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UC.1.4_Ricerca Sala Studio</td>
+<td style="text-align:left">Verifica funzionalità ricerca posto in sala studio</td>
+<td style="text-align:left">Accesso alle funzionalità di ricerca di un un posto in sala studio con possibilità di prenotazione</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">1.  La sala studio esiste ed è caricata nella biblioteca.</td>
+<td style="text-align:left">1.l'utente della biblioteca accede alla ricerca dei posti liberi  2.L'utente seleziona la biblioteca di interesse in cui il  posto è disponibile</td>
+<td style="text-align:left">1.L'utente della biblioteca visualizzerà il pulsante di prenotazione. 2. L'utente cliccherà sul bottone prenota visualizzando il riepilogo della prenotazione</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mappa-interattiva">Mappa interattiva</h2>
+<p>Gli utenti avranno a disposizione una mappa interattiva che permetterà di esplorare e interagire con informazioni geografiche delle biblioteche, dando la possibilità di accedere alla scheda della biblioteca selezionata.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT.7</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UC.1.4_MappaInterattiva</td>
+<td style="text-align:left">Verifica funzionalità ricerca Biblioteche tramite localizzazione</td>
+<td style="text-align:left">Accesso alle funzionalità di ricerca di un biblioteca consultando la mappa interattiva che geo-localizza le biblioteche</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">1.  Accesso alla homepage.</td>
+<td style="text-align:left">1.l'utente della biblioteca accede alla mappa nella homepage del portale  2.L'utente seleziona la zona  o il municipio di interesse</td>
+<td style="text-align:left">1.L'utente della biblioteca visualizzerà le biblioteche disponibili nella zona o nel municipio selezionati. 2. L'utente cliccherà sull'icona delle biblioteca scelta accedendo alla sua Landing Page</td>
+</tr>
+</tbody>
+</table>
+<p>Elenco casi d'uso</p>
+<h3 id="autenticazioneutenti-au">AutenticazioneUtenti (AU):</h3>
+<ul>
+<li><strong>AU_1</strong>: Autenticazione Utente Sistema Interno</li>
+<li><strong>AU_2</strong>: Autenticazione Utente tramite Sistema Esterno</li>
+<li><strong>AU_3</strong>: Modifica Password sistema interno</li>
+<li><strong>AU_4</strong>: Login</li>
+<li><strong>AU_5</strong>: Logout</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestAU_1</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AU_1_Autenticazione_Utente_Sistema_Interno</td>
+<td style="text-align:left">Autenticazione Utente Sistema Interno</td>
+<td style="text-align:left">Verifica Autenticazione Utente Sistema Interno</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestAU_2</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AU_2_Autenticazione_Utente_Sistema_Esterno</td>
+<td style="text-align:left">Autenticazione Utente Sistema Esterno</td>
+<td style="text-align:left">Verifica Autenticazione Utente tramite Sistema Esterno</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestAU_3</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AU_3_Modifica Password sistema interno</td>
+<td style="text-align:left">Modifica Password sistema interno</td>
+<td style="text-align:left">Verifica Modifica Password sistema interno</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestAU_4</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AU_4_Login</td>
+<td style="text-align:left">Login</td>
+<td style="text-align:left">Verifica Login</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestAU_5</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AU_5_Logout</td>
+<td style="text-align:left">Logout</td>
+<td style="text-align:left">Verifica Logout</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tesseramento-t">Tesseramento (T):</h3>
+<ul>
+<li><strong>T_1</strong>: Nuovo Tesseramento</li>
+<li><strong>T_2</strong>: Rinnovo Tesseramento</li>
+<li><strong>T_3</strong>: Cancellazione Tesseramento</li>
+<li><strong>T_4</strong>: Denuncia smarrimento Tesseramento</li>
+<li><strong>T_5</strong>: Denuncia furto Tesseramento</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT_1</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T_1_Nuovo Tesseramento</td>
+<td style="text-align:left">Nuovo Tesseramento</td>
+<td style="text-align:left">Verifica Nuovo Tesseramento</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT_2</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T_2_Rinnovo Tesseramento</td>
+<td style="text-align:left">Rinnovo Tesseramento</td>
+<td style="text-align:left">Verifica Rinnovo Tesseramento</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT_3</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T_3_Cancellazione Tesseramento</td>
+<td style="text-align:left">Cancellazione Tesseramento</td>
+<td style="text-align:left">Verifica Cancellazione Tesseramento</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT_4</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T_4_Denuncia smarrimento Tesseramento</td>
+<td style="text-align:left">Denuncia smarrimento Tesseramento</td>
+<td style="text-align:left">Verifica Denuncia smarrimento Tesseramento</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT_5</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T_5_Denuncia furto Tesseramento</td>
+<td style="text-align:left">Denuncia furto Tesseramento</td>
+<td style="text-align:left">Verifica Denuncia furto Tesseramento</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gamification-g">Gamification (G):</h3>
+<ul>
+<li><strong>G_1</strong>: Partecipazione al sistema di gamification</li>
+<li><strong>G_2</strong>: Gestione Profilo</li>
+<li><strong>G_3</strong>: Inserimento Commento/Recensione</li>
+<li><strong>G_4</strong>: Segnalazione Commento/Recensione</li>
+<li><strong>G_5</strong>: Riscatto Punti</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestG_1</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">G_1_Partecipazione al sistema di gamification</td>
+<td style="text-align:left">Partecipazione al sistema di gamification</td>
+<td style="text-align:left">Verifica Partecipazione al sistema di gamification</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestG_2</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">G_2_Gestione Profilo</td>
+<td style="text-align:left">Gestione Profilo</td>
+<td style="text-align:left">Verifica Gestione Profilo</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestG_3</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">G_3_Inserimento Commento/Recensione</td>
+<td style="text-align:left">Inserimento Commento/Recensione</td>
+<td style="text-align:left">Verifica Inserimento Commento/Recensione</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestG_4</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">G_4_Segnalazione Commento/Recensione</td>
+<td style="text-align:left">Segnalazione Commento/Recensione</td>
+<td style="text-align:left">Verifica Segnalazione Commento/Recensione</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestG_5</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">G_5_Riscatto Punti</td>
+<td style="text-align:left">Riscatto Punti</td>
+<td style="text-align:left">Verifica Riscatto Punti</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prestitolibri-pl">PrestitoLibri (PL):</h3>
+<ul>
+<li><strong>PL_1</strong>: Ricerca Libro fisico e richiesta di prestito</li>
+<li><strong>PL_2</strong>: Restituzione Prestito fisico</li>
+<li><strong>PL_3</strong>: Richiesta allungamento Prestito fisico</li>
+<li><strong>PL_4</strong>: Richiesta e-book</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Test</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">PL_1_Ricerca Libro fisico e richiesta di prestito</td>
+<td style="text-align:left">Ricerca Libro fisico e richiesta di prestito</td>
+<td style="text-align:left">Verifica Ricerca Libro fisico e richiesta di prestito</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prenotazionespazio-ps">PrenotazioneSpazio (PS):</h3>
+<ul>
+<li><strong>PS_1</strong>: Prenotazione di uno spazio comune</li>
+<li><strong>PS_2</strong>: Richiesta allungamento di una prenotazione</li>
+<li><strong>PS_3</strong>: Cancellazione di una richiesta</li>
+<li><strong>PS_4</strong>: Segnalazione richiesta/comportamento errato</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT_5</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T_5_Denuncia furto Tesseramento</td>
+<td style="text-align:left">Denuncia furto Tesseramento</td>
+<td style="text-align:left">Verifica Denuncia furto Tesseramento</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sezione-amministrativa-sa">Sezione Amministrativa (SA):</h3>
+<ul>
+<li><strong>SA_1</strong>: Caricamento nuovi libri</li>
+<li><strong>SA_2</strong>: Segnalazione prestito avvenuto dal vivo</li>
+<li><strong>SA_3</strong>: Segnalazione notizie</li>
+<li><strong>SA_4</strong>: Gestione pagina della biblioteca</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TestT_5</th>
+<th style="text-align:left">Scopo</th>
+<th style="text-align:left">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T_5_Denuncia furto Tesseramento</td>
+<td style="text-align:left">Denuncia furto Tesseramento</td>
+<td style="text-align:left">Verifica Denuncia furto Tesseramento</td>
+</tr>
+<tr>
+<td style="text-align:left">Pre-condizioni</td>
+<td style="text-align:left">Azioni</td>
+<td style="text-align:left">Post-condizioni</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tabelle-descrittive-casi-duso">Tabelle Descrittive casi d'uso</h2>
+<p>Le seguenti tabelle descrittive, descriveranno i casi d'uso utilizzando il seguente schema:</p>
+<ul>
+<li><strong>ID</strong>: un id che rappresenta il caso d'uso</li>
+<li><strong>Nome</strong>: Nome del caso d'uso</li>
+<li><strong>Priorità</strong>: Un valore compreso tra 1 e 10 che esprime il rischio e il caso d'uso in se</li>
+<li><strong>Attori</strong>: Attori coinvolti</li>
+<li><strong>Descrizione</strong>: Breve descrizione del caso d'uso</li>
+<li><strong>Condizioni</strong>: Condizioni precedenti del sistema</li>
+<li><strong>Risultato</strong>: Il sistema dopo che il caso d'uso è avvenuto</li>
+<li><strong>Flusso</strong>: Descrizione delle interazioni dell'attore con il sistema</li>
+</ul>
+ <!-- XXX Struttura tabella  
+	|||
+	|--|--|
+	|ID| |
+	|Nome| |
+	|Priorità| |
+	|Attori| |
+	|Descrizione| |
+	|Condizioni| |
+	|Risultato| |
+	|Flusso| |
+  -->
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>AU_1</td>
+</tr>
+<tr>
+<td>Nome</td>
+<td>Autenticazione Utente Sistema Interno</td>
+</tr>
+<tr>
+<td>Priorità</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Attori</td>
+<td>UtenteGuest, Utente</td>
+</tr>
+<tr>
+<td>Descrizione</td>
+<td>Un utente vuole effettuare l'accesso tramite email e password con cui si è registrato precedentemente</td>
+</tr>
+<tr>
+<td>Condizioni</td>
+<td>Utente registrato correttamente dal servizio</td>
+</tr>
+<tr>
+<td>Risultato</td>
+<td>UtenteGuest si trasforma in Utente o viene rigettato</td>
+</tr>
+<tr>
+<td>Flusso</td>
+<td>1. Si preme il pulsante per accedere <br/> 2. Si compila il form con email e password <br/>3. Il sistema verifica email e password <br/>4. Il sistema verifica i dati immessi <br/>5. In base al risultato della verifica <br/>      5a. Il sistema autentica l'utente <br/>      5b. Il sistema rigetta l'autenticazione dell'utente</td>
+</tr>
+</tbody>
+</table>
+<!-- XXX Per evitare Il fatto che venisse una merda ho usato br e lo spazio in html così viene renderizzato meglio, se qualcuno trova una migliore soluzione tutto orecchie -->
+
+</body>
+</html>
