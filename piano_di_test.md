@@ -1,7 +1,15 @@
 
 # Piano di Test del Progetto Biblioteche di Roma
 ## Scopo del documento
-Questo documento descrive il piano di test svolto per la validazione dei seguenti casi d'uso:
+Questo documento descrive il piano di test svolto per la validazione dei seguenti casi d'uso.
+
+##Prerequisti Generali
+- Presenza di una connessione internet
+- Utenza di amministrazione esistente
+- Archivio dei libri da prenotare già caricato nel sistema
+- Utenza Bibliotecario esistente
+- Servizio WiFi funzionante
+- Funzione di localizzazione della posizione impostata sul browser
 
 
 Elenco casi d'uso

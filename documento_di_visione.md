@@ -23,6 +23,8 @@ Oltre a ciò il portale dovrà essere in grado di:
 
 ## Prenotazione Libri 
 Il portale deve permettere ai vari utenti (che hanno fatto o meno l'accesso) di verificare la presenza dei libri, indicando se sono fisici o ebook, nel caso dovrà aggiungere le informazioni riguardanti la libreria che lo possiede, la posizione o nel caso fosse preso mettere in risalto i giorni rimanenti prima che finisca il prestito.
+<!--Modificato -->
+Il portale deve permettere ai vari utenti (che hanno fatto o meno l'accesso) di verificare la presenza dei libri, indicando se sono fisici o ebook, nel caso dovrà aggiungere le informazioni riguardanti la libreria che lo possiede e la prima data utile disponibile per il prestito.
 
 ## Prestito Libri
 Il prestito libri differisce in base al formato del libro:
@@ -36,13 +38,14 @@ Il prestito libri differisce in base al formato del libro:
 	4) Impedire agli altri utenti di prenotare all'ora volta il libro
 
 - Ebook: 
-	Il libro digitale dovrà essere gestito interamente dal portale, per assicurare che i termini e le licenze dell'ebook non vengano violati deve limitare le interazione dell'utente con esso, ma permetterne comunque una lettura agevole e senza impacci.
+	Il libro digitale dovrà essere gestito interamente dal portale, per assicurare che i termini e le licenze dell'ebook non vengano violati deve limitare le interazione dell'utente con esso, ma permetterne comunque una lettura agevole e chiara.
+	Le licenze degli ebook possono essere di natura differente quindi il sistema deve permetterne la fruizione compatibilmente con le licenze in uso.
 
 ## Prenotazione Posto
-
+<!--Modificato secondo indicazioni ricevute per evidenza orario disponibile-->
 Alcune biblioteche offrono tavoli e stanze, adibite al co-working e allo studio. 
 Il portale dovrà:
-1) Segnalare se la biblioteca scelta ha un posto disponibile
+1) Segnalare se la biblioteca scelta ha un posto disponibile e da quando il posto è fruibile evidenziando un timesheet degli orari disponibili
 2) Gestire la prenotazione anche in caso di concorrenza
 3) Permettere la verifica di quest'ultima da parte di un bibliotecario
 4) Segnalare al bibliotecario la fine di una prenotazione in modo che esso possa controllare
@@ -53,8 +56,8 @@ Il portale dovrà:
 Il portale deve offrire la possibilità di entrare all'interno della connessione protetta offerta dal comune di Roma. Il servizio è accessibile solo alle persone che hanno aderito a un certo livello di tesseramento. Perciò dovrà offrire un sistema di API per fare effettuare le verifiche alle biblioteche localmente.
 
 ## Servizio di Tesseramento 
-
-Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e altri gratuiti. Ogni tessera permette di accedere a dei servizi e dei vantaggi:
+<!--modificato su indicazione professore-->
+Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e altri gratuiti. Ogni tessera permette di accedere a dei servizi e dei vantaggi che il personale delle Biblioteca di Roma può inserire/modificare o cancellare in relazioni alle offerte concordate dal comune riportandone anche il costo. A titolo di esempio riportiamo un'elenco di tesseramenti possibili
 
 - Bibliopass
 (tessera gratuita con possibilità di iscrizione/rinnovo on-line)
@@ -97,7 +100,7 @@ Ovviamente il sistema serve anche a punire comportamenti nocivi quali:
 - Recensioni valutate negativamente dai librai
 ...
 
-Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi dalla seguente lista:
+Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi da una   lista configurabile dal personale Bibliotecario. A titolo di esempio si riporta un'estratto di una possibile matrice:
 |Azione| Punteggio|
 |---|---|
 |Nuova/rinnovo BIBLIOPASS| 5.000|
@@ -130,6 +133,7 @@ Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi 
 |--|--|--|
 |Versione|Data|Descrizione|
 |1.0|15/03/2025|Prima stesura del documento
+|1.0|03/04/2025|Seconda stesura del documento con revisione del capo-progetto
 <!---
 TODO Se le modifiche di Ganzio vanno bene per tutti, sistemare ed aggiungere questo commento
 |1.1|19/03/2025|Modifiche generali: modificati requisiti (aggiunti nuovi requisiti, sistemati ed approfonditi quelli già presenti), aggiunto concetto di gamification.

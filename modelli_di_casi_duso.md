@@ -29,12 +29,12 @@ Ogni attore verrà descritto con i seguenti parametri:
 |Genitore| -|
 |Tipo| Secondario|
 |Descrizione| Un utente che accede senza effettuare l'accesso, avrà operazioni limitate|
-
+<!-- Utente cambiato in base alle indicazioni del professore-->
 |||
 |--|--|
 |ID| 2|
 |Nome| Utente|
-|Genitore| UtenteGuest|
+|Genitore| _UtenteAutenticato_|
 |Tipo| Primario|
 |Descrizione| Un utente che decide di effettuare il login e perciò sblocca le possibili operazioni aggiuntive|
 
