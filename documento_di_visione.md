@@ -62,14 +62,11 @@ Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e 
 
 Richiedono, invece, il pagamento di una quota di adesione annuale:
 	
- - Bibliocard
-(10 euro l’anno)
+- Bibliocard
 	
 - Youngcard
-(5 euro l’anno - per utenti fino a 14 anni)
 	
 - Goldcard
-(quota di sottoscrizione libera a partire da 20 euro l’anno)
 La tessera d’iscrizione è personale e ha validità di un anno dall’ emissione.
 
 Se si perde la tessera la si deve bloccare subito. In biblioteca verranno rilasciate nuove credenziali e verrà emessa una nuova tessera per avere nuovamente accesso a tutte le attività on-line. Il rilascio della tessera sostitutiva Bibliocard richiede il pagamento di un rimborso spese di 5 euro. In caso di furto la tessera sostitutiva è gratuita se viene presentata copia della denuncia.
@@ -100,32 +97,13 @@ Il sistema serve anche a punire comportamenti nocivi quali:
 - Ritardo nella riconsegna di un libro
 - Riconsegna di un libro con segni di usura
 
-Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi dalla seguente lista:
+Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi dalla seguente lista:  
+n.b.: il sistema di punteggio è indicativo
 |Azione| Punteggio|
 |---|---|
 |Sottoscrizione/rinnovo BIBLIOPASS| 5.000|
-|Sottoscrizione/rinnovo BIBLIOPASS online| 6.000|
-|Sottoscrizione/rinnovo BIBLIOCARD| 10.000|
-|Sottoscrizione/rinnovo BIBLIOCARD online| 11.000|
-|Sottoscrizione/rinnovo YOUNGCARD| 10.000|
-|Sottoscrizione/rinnovo YOUNGCARD online| 11.000|
-|Sottoscrizione/rinnovo GOLDCARD| 15.000|
-|Sottoscrizione/rinnovo GRATISCARD| 10.000|
-|Sottoscrizione/rinnovo GRAYOUCARD| 10.000|
-|Sottoscrizione/rinnovo SOCIALCARD| 10.000|
-|Registrazione prestito Audiovisivo (DVD, CD, ... )| 100|
-|Riconsegna prestito nei tempi previsti Audiovisivo| 100|
-|Registrazione prestito tutti gli altri materiali (libro, e-book, ...)| 500|
-|Riconsegna prestito nei tempi previsti tutti gli altri materiali| 700|
-|Riconsegna prestito in ritardo| -1.000|
-|Inserimento giudizio di gradimento sui titoli (stelle)| 50|
-|Inserimento Commento| 1.000|
-|Cancellazione commento| -1.000|
 |Tuo commento ritenuto utile (Hai trovato utile questo commento?)| 300|
 |Tuo commento ritenuto inopportuno dai bibliotecari| -1.000|
-|Giudizio sui commenti di altri lettori (Hai trovato utile questo commento?)| 50|
-|Condivisione Social (Facebook, Twitter)| 200|
-|Utilizzo della nuova APP| 1.500|
 
 
 ## ***REVISIONI***
@@ -133,8 +111,5 @@ Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi 
 |--|--|--|
 |Versione|Data|Descrizione|
 |1.0|15/03/2025|Prima stesura del documento
-|1.1|25/03/2025|Seconda stesura del documento
-<!---
-TODO Se le modifiche di Ganzio vanno bene per tutti, sistemare ed aggiungere questo commento
-|1.1|19/03/2025|Modifiche generali: modificati requisiti (aggiunti nuovi requisiti, sistemati ed approfonditi quelli già presenti), aggiunto concetto di gamification.
---->
+|1.1|19/03/2025|Seconda stesura del documento
+|1.2|25/03/2025|Terza stesura del documento
