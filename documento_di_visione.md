@@ -57,21 +57,10 @@ Il portale dovrà:
 
 ## ***SERVIZIO DI TESSERAMENTO*** 
 
-Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e altri gratuiti. Ogni tessera permette di accedere a dati servizi e vantaggi:
+Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e altri gratuiti.
+La tessera d’iscrizione è personale e ha una validità fissa. 
 
-- Bibliopass 
-
-Richiedono, invece, il pagamento di una quota di adesione annuale:
-	
-- Bibliocard
-	
-- Youngcard
-	
-- Goldcard
-
-La tessera d’iscrizione è personale e ha validità di un anno dall’ emissione.
-
-Se si perde la tessera la si deve bloccare subito. In biblioteca verranno rilasciate nuove credenziali e verrà emessa una nuova tessera per avere nuovamente accesso a tutte le attività on-line. Il rilascio della tessera sostitutiva Bibliocard richiede il pagamento di un rimborso. In caso di furto la tessera sostitutiva è gratuita se viene presentata copia della denuncia.
+I bibliotecari possono creare tessere per i nuovi utenti, proporre la creazione di una nuova tipologia di tessera e chiedere l'annullamento di una tessera di un utente.
 
 ##  ***NOTIZIE***
 
@@ -82,8 +71,10 @@ Il portale deve offrire una chiara e semplice mappa delle biblioteche, indicando
 
 ## ***DATABASE UNIFICATI***
 Il portale deve permettere di interrogare tutti i database delle varie biblioteche tramite un unico punto di accesso, per assicurare che ogni informazione sia condivisa e accessibile. 
+
 Per permettere ciò i database già esistenti verranno incorporati nel database che verrà generato per l'applicazione. 
-Inoltre sarà assicurata una migliore gestione dei dati. Verranno adottate le soluzioni più moderne, assicurando backup frequenti e politiche di distribuzione, adottando anche le politiche descritte da OPEN DATA. 
+
+Inoltre sarà assicurata una migliore gestione dei dati. Verranno adottate le soluzioni più moderne, assicurando backup frequenti e politiche di distribuzione, adottando anche le regole descritte nel progetto OPEN DATA. 
 
 ## ***INTEGRARE I SERVIZI DEL LOGIN DI STATO***
 Lo stato italiano dispone di vari servizi certificati, che permettono il login autorizzato del cittadino. Strumenti come lo SPID o la CIE, permettono un veloce e sicuro login da parte dell'utente che in applicazioni statali, come il portale descritto in questi file, sono indispensabili. 
@@ -101,16 +92,16 @@ Il sistema serve anche a punire comportamenti nocivi quali:
 - Ritardo nella riconsegna di un libro
 - Riconsegna di un libro con segni di usura
 
-Alla conquista di una certa somma di punti l'utente potrà riscattare dei premi dalla seguente lista:  
-n.b.: il sistema di punteggio è indicativo
+Al raggiungimento di una certa somma di punti l'utente potrà riscattare dei premi, segue un esempio:  
+
 |Azione| Punteggio|
 |---|---|
-|Sottoscrizione/rinnovo BIBLIOPASS| 5.000|
-|Tuo commento ritenuto utile (Hai trovato utile questo commento?)| 300|
+|Tuo commento ritenuto utile | 300|
 |Tuo commento ritenuto inopportuno dai bibliotecari| -1.000|
 
 Il sistema sarà progettato per portare maggiore interazione dell'utente con la piattaforma e valorizzare le biblioteche per le nuove generazioni. 
-Per assicurare ciò le nuove sezioni del portale saranno ottimizzate per la visione mobile. 
+
+Per assicurare ciò le nuove sezioni del portale dedicate alla gamification saranno ottimizzate per la visione mobile. 
 
 ## ***REVISIONI***
 ||||

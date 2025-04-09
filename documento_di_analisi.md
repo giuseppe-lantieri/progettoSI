@@ -62,7 +62,7 @@ Le principali operazioni individuate sono:
 |---|---| 
 | **Nome**          | UtenteGenerico |
 | **SuperClassi**   | - |
-| **SottoClassi**   | - UtenteGuest <br/> - Utente|
+| **SottoClassi**   | - UtenteGuest <br/> - Utente <br/> - UtenteGamification |
 | **Attributi**     | - |
 | **Responsabilità**| - Effettuare l’autenticazione e la registrazione (login, logout). <br> - Effettuare ricerche <br/> - Visionare le pagine delle biblioteche |
 | **Collaboratori** | - |
