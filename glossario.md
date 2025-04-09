@@ -1,15 +1,8 @@
 # Biblioteche di Roma
 ### Glossario
-- **"Guest"** = un utente che non ha effettuato l'accesso ma cui è consentito vedere il sito in tutte le sue sezioni che non richiedono un paywall.
-- **"User"** = un utente che ha effettuato un accesso di qualsiasi tipo.
-- **"Paywall"** = un blocco che permette di separare gli utenti in base a delle condizioni, se non specificata nessun'altra direttiva, il blocco di cui si parla è un tesseramento particolare. 
-- **"Bibliocard"** = nome della tessera gratuita.
 
-- **"Bibliopass"** = nome della tessera a pagamento.
-
-- **"Gamification"** = termina che indica rendere il tutto un gioco, lo scopo è quello di migliorare l'esperienza degli utenti e renderli più inclini ad usufruire del servizio.
-
-- **"Goldcard"** = Tessera a pagamento che assicura tutti i servizi precedenti, il massimo dei servizi disponibili.
-- **"Youngcard"** = Tessera solo per utenti sotto a una certa soglia di età.
-- **"SPID"** = Sistema di verifica elettronica approvato dallo stato ma effettuato da terzi. Assicura che la persona che dichiara un identità è stata controllata da un ente che lo stato approva. Esistono differenti enti che assicurano questo servizio.
-- **"OPAC"** = Catalogo in rete ad accesso pubblico. In questo caso si tratta dell'interfaccia di accesso al catalogo informatizzato delle biblioteche.
+- **Guest**: Utente non autenticato che può accedere alle sezioni del sito che non prevedono restrizioni (ad es. pagamenti o tesseramenti particolari).
+- **User**: Utente autenticato, indipendentemente dal tipo di accesso effettuato.
+- **Paywall**: Meccanismo di restrizione che segmenta gli utenti in base a specifiche condizioni. In assenza di ulteriori direttive, si fa riferimento al tesseramento specifico.
+- **Gamification**: Processo che trasforma l’esperienza d’uso in un gioco, con l’obiettivo di migliorare l’interazione e incentivare l’utilizzo del servizio.
+- **SPID**: Sistema Pubblico di Identità Digitale, un servizio di verifica elettronica approvato dallo Stato e gestito da enti terzi, che assicura la validità dell’identità dell’utente. Sono presenti diversi enti che offrono questo servizio.
