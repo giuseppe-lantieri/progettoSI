@@ -1,39 +1,75 @@
-# **BIBLIOTECHE DI ROMA**
-### **STUDIO DI FATTIBILITÀ**
-## ***SCOPO DEL DOCUMENTO***
-Questo documento ha lo scopo di analizzare il background e i problemi dell'ambiente in cui si inserisce il software, i vantaggi e svantaggi, un'analisi di mercato, i costi e le tecnologie utilizzate per l'implementazione.
+# BIBLIOTECHE DI ROMA
+### STUDIO DI FATTIBILITÀ
 
-## ***FORMULAZIONE DEL PROBLEMA***
-L'ambiente in cui si inserisce il software per la gestione delle biblioteche di Roma è caratterizzato da una forte rigidità, meccanicità e soprattutto da una frammentazione delle informazioni. Infatti ogni biblioteca gestisce autonomamente cataloghi e archivi locali, generando duplicazioni, errori di catalogazione e inconsistenza dei dati. L'assenza di un catalogo centralizzato rende complicato per gli utenti individuare rapidamente la disponibilità e la collocazione delle risorse, costringendoli spesso a rivolgersi fisicamente a più strutture per reperire informazioni precise. Questo sistema frammentato comporta inoltre procedure manuali lente e inefficienti per prestiti, rinnovi e iscrizioni, rendendole soggette a frequenti errori umani. Di conseguenza, le risorse bibliografiche risultano poco accessibili e scarsamente valorizzate, con un patrimonio culturale difficilmente fruibile dall’utenza e inefficientemente promosso.
+## SCOPO DEL DOCUMENTO
+Il presente documento ha l’obiettivo di analizzare il contesto e le problematiche relative all’ambiente in cui verrà implementato il software per la gestione delle biblioteche di Roma. In particolare, vengono esaminati il background operativo, i vantaggi e gli svantaggi del sistema attuale, l’analisi di mercato, i costi stimati e le tecnologie impiegate per l’implementazione.
 
-## ***SOLUZIONE***
-La soluzione proposta per risolvere questi problemi consiste nella realizzazione di una piattaforma digitale centralizzata, accessibile tramite web, che unifica in un unico ambiente informatico le informazioni e i servizi di tutte le biblioteche del sistema romano. Questa soluzione prevede un catalogo online integrato (OPAC), permettendo agli utente di cercare facilmente le risorse bibliografiche disponibili, verificarne la collocazione, lo stato del prestito, e gestire autonomamente prenotazioni e rinnovi online.
+## FORMULAZIONE DEL PROBLEMA
+L’ambiente in cui sarà inserito il software per la gestione delle biblioteche di Roma presenta diverse criticità, quali:
+- **Rigidità e meccanicità:** Ogni biblioteca gestisce autonomamente i propri cataloghi e archivi, con conseguenti duplicazioni, errori di catalogazione e incoerenze tra i dati.
+- **Fragmentazione delle informazioni:** L’assenza di un catalogo centralizzato complica il reperimento rapido della disponibilità e della collocazione delle risorse, costringendo gli utenti a rivolgersi fisicamente a più strutture.
+- **Procedure manuali:** I processi di prestito, rinnovo e iscrizione sono gestiti manualmente, rendendo il sistema soggetto a errori umani e rallentamenti.
 
-## ***VANTAGGI***
-La centralizzazione delle informazioni riduce drasticamente duplicazione ed errori. Gli utenti possono consultare in maniera semplice ed immediata il catalogo online, evitando spostamenti inutili e migliorando l'esperienza utente. Inoltre, automatizzando le procedure gestionali e il prestito interbibliotecario, il sito semplifica e velocizza il lavoro del personale, riducendo al minimo gli errori manuali. Infine, la piattaforma consente una maggiore valorizzazione e visibilità del patrimonio bibliografico e culturale, promuovendo servizi, eventi e iniziative delle biblioteche verso un pubblico più ampio e diversificato.
+Queste problematiche limitano l’accessibilità delle risorse bibliografiche e la valorizzazione del patrimonio culturale, compromettendo l’efficacia dei servizi offerti.
 
-## ***SVANTAGGI***
-Tra gli svantaggi della soluzione proposta da "Biblioteche di Roma" vi è il costo iniziale elevato, dovuto agli investimenti necessari per lo sviluppo della piattaforma digitale, la migrazione dei dati, l’acquisto delle infrastrutture tecnologiche e la formazione del personale. A questo si aggiunge la necessità di prevedere un piano continuo di manutenzione e aggiornamento, con costi periodici associati e la disponibilità di personale tecnico qualificato che garantisca nel tempo l'efficienza e il corretto funzionamento del sistema.
+## SOLUZIONE
+La soluzione proposta consiste nella realizzazione di una piattaforma digitale centralizzata, accessibile via web, che integri in un unico ambiente informativo tutti i servizi e le informazioni delle biblioteche del sistema romano. Nello specifico, la piattaforma prevede:
+- Un catalogo online integrato (OPAC) per facilitare la ricerca e la consultazione delle risorse bibliografiche.
+- La possibilità per gli utenti di gestire autonomamente prenotazioni, prestiti e rinnovi tramite interfacce intuitive.
+- L’automatizzazione delle procedure gestionali, al fine di ridurre errori e velocizzare le operazioni quotidiane.
 
-## ***ANALISI DI MERCATO***
-Nel contesto della capitale Italiana il panorama risulta frammentato, con software non uniformi e spesso non integrati tra loro. Perciò la richiesta di una soluzione unificata è fortemente sentita sia dalle istituzioni che dagli utenti. La piattaforma proposta risponde dunque alla crescente domanda di sistemi centralizzati, più efficienti e user-friendly.
+## VANTAGGI
+L’adozione della piattaforma digitale comporta numerosi benefici:
+- **Centralizzazione delle informazioni:** Eliminazione delle duplicazioni e delle incoerenze, con una gestione dati più efficiente.
+- **Esperienza utente migliorata:** Gli utenti potranno consultare il catalogo online in modo semplice e immediato, riducendo spostamenti e tempi di attesa.
+- **Ottimizzazione dei processi:** L’automazione delle attività di prestito e rinnovo ridurrà gli errori manuali, alleggerendo il carico di lavoro del personale.
+- **Valorizzazione del patrimonio culturale:** Maggiore visibilità e accessibilità per le risorse bibliografiche, contribuendo alla promozione di eventi e iniziative culturali.
 
-## ***TECNOLOGIE***
-Per la realizzazione del sistema si prevede l'utilizzo delle seguenti componenti tecnologiche:
-	
-	- **Interfaccia Web**:  consentirà agli utenti di accedere ai servizi offerti e permetterà tramite un interfaccia accessibile solo tramite verifica di un certificato di accedere alla sezione amministrativa del sito. La soluzione di un certificato assicurera che solo i computer in possesso di quest'ultimo possano accedere alle sezioni critiche del sito.
-	
-	- **Web Server**: gestirà le richieste provenienti dai client e coordinerà la comunicazione con la base dati.
-	
-	- **Base Dati**: Un database relazionale, necessario per conservare in modo strutturato le informazioni relative a utenti, libri, disponibilità e prestiti.
+## SVANTAGGI
+Tra le criticità della soluzione proposta si evidenziano:
+- **Elevato investimento iniziale:** I costi per lo sviluppo della piattaforma, la migrazione dei dati, l’acquisto delle infrastrutture tecnologiche e la formazione del personale risultano significativi.
+- **Costi di manutenzione:** È necessario predisporre un piano di aggiornamento e manutenzione continuo, con costi periodici e la necessità di personale tecnico qualificato per garantire il corretto funzionamento del sistema.
 
-Trattandosi di un sistema basato su tecnologie ampiamente diffuse e consolidate, non si rende necessario introdurre strumenti innovativi o sperimentali. 
-Il linguaggio principale adottato sarà Go, la gestione dei dati avverrà tramite comandi SQL, mentre la realizzazione dell'interfaccia utente sarà affidata a Vue.
+## ANALISI DI MERCATO
+Nel contesto della Capitale Italiana il panorama risulta estremamente frammentato, con soluzioni software non uniformi e non integrate tra loro. La crescente domanda di sistemi centralizzati, efficienti e user-friendly, è evidente sia tra le istituzioni sia tra gli utenti, rendendo la proposta particolarmente attuale e necessaria.
 
-## ***REVISIONI***
-||||
-|--|--|--|
-|Versione|Data|Descrizione|
-|1.0|19/03/2025|Prima stesura del documento|
-|1.1|25/03/2025|Seconda stesura del documento|
-|1.2|09/04/2025|Terza stesura del documento|
+## TECNOLOGIE
+Per la realizzazione del sistema si prevede l’utilizzo delle seguenti componenti tecnologiche:
+- **Interfaccia Web:** Permetterà agli utenti l’accesso ai servizi offerti; la sezione amministrativa sarà protetta da certificati, garantendo l’accesso esclusivo ai dispositivi autorizzati.
+- **Web Server:** Gestirà le richieste provenienti dai client e coordinerà la comunicazione con il database.
+- **Base Dati:** Un database relazionale strutturato per conservare in modo sicuro e organizzato informazioni relative a utenti, libri, disponibilità e prestiti.
+
+La piattaforma si baserà su tecnologie consolidate: il linguaggio principale sarà Go, la gestione dei dati avverrà tramite comandi SQL e l’interfaccia utente sarà sviluppata con Vue.
+
+## COSTI
+La realizzazione della piattaforma comporta costi significativi che includono:
+- Sviluppo del software e migrazione dei dati.
+- Acquisto, configurazione e manutenzione dell’hardware necessario.
+- Formazione del personale e supporto tecnico.
+- Spese ricorrenti per l’aggiornamento e la manutenzione del sistema.
+
+## CALCOLO DEI SERVER FISICI
+Per garantire un servizio stabile e affidabile, è essenziale dimensionare correttamente l’infrastruttura hardware. Il calcolo dei server fisici si basa sui seguenti parametri:
+
+- **Numero di utenti contemporanei:** Una stima del carico massimo previsto, che determina il volume di richieste da elaborare.
+- **Volume dei dati:** La quantità di informazioni da gestire incide sulle esigenze di capacità di storage ed elaborazione.
+- **Ridondanza e scalabilità:** È necessaria una configurazione che preveda backup e sistemi di load balancing per garantire la continuità del servizio in caso di guasti.
+
+Una metodologia per il dimensionamento è la seguente:
+1. **Analisi del traffico:** Determinare il numero medio e di picco degli utenti attivi e il volume delle richieste.
+2. **Definizione delle risorse per server:** Utilizzare benchmark e test preliminari per stabilire le capacità (CPU, memoria, storage) richieste per ogni server.
+3. **Formula di dimensionamento:**  
+   \[
+   N = \lceil \frac{U_{max}}{C} \rceil
+   \]
+   dove \( N \) rappresenta il numero di server fisici necessari, \( U_{max} \) il massimo numero di utenti simultanei, e \( C \) la capacità operativa di ogni server.
+4. **Implementazione della ridondanza:** Prevedere almeno un server in più per garantire il failover e la continuità del servizio in caso di malfunzionamenti.
+
+Questa analisi, integrata da test di carico e monitoraggio continuo, permetterà di ottimizzare il dimensionamento dell’infrastruttura in base alle reali esigenze operative.
+
+## REVISIONI
+| Versione | Data       | Descrizione                       |
+|----------|------------|-----------------------------------|
+| 1.0      | 19/03/2025 | Prima stesura del documento       |
+| 1.1      | 25/03/2025 | Seconda stesura del documento     |
+| 1.2      | 09/04/2025 | Terza stesura del documento       |

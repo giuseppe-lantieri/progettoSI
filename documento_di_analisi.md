@@ -1,158 +1,182 @@
 # Documento di Analisi – Gestione Biblioteche Romane
 
 ## 1. Introduzione
-Nel documento inizieremo con una descrizione del sistema per poi continuare con l'analisi dei casi d’uso e del glossario per estrarre le classi di analisi descritte dalle schede CRC. Visualizzeremo le relazioni mediante diagrammi EBC e infine saranno presenti i diagrammi di sequenza
+In questo documento viene descritta l’analisi del sistema per la gestione delle biblioteche romane. Il testo si articola in diverse sezioni:  
+- Una descrizione preliminare del sistema;  
+- L’analisi dei casi d’uso e la definizione del glossario;  
+- L’estrazione delle classi di analisi tramite le schede CRC;  
+- La rappresentazione delle relazioni mediante diagrammi EBC;  
+- Infine, i diagrammi di sequenza.
 
 ## 2. Visione di Sistema
+Il portale si configura come un sistema centralizzato, in grado di garantire la comunicazione tra diversi attori:
 
-Il portale dovrà fungere da sistema in grado di garantire la comunicazione  tra diversi attori:
-- **UtenteGuest** e **Utente**: utenti finali che interagiscono con il sistema per cercare libri, effettuare prestiti, prenotare spazi e partecipare alle attività di gamification.
-- **Bibliotecario**: operatore con privilegi amministrativi, responsabile della gestione dei libri, del monitoraggio dei prestiti, e della pubblicazione di notizie.
-- **Servizio Esterno**: integrazione con sistemi di autenticazione esterni (es. CIE, SPID) per agevolare l’accesso al portale.
+- **UtenteGuest** e **Utente**: Utenti finali che interagiscono con il sistema per cercare libri, effettuare prestiti, prenotare spazi e partecipare alle attività di gamification.  
+- **Bibliotecario**: Operatore dotato di privilegi amministrativi, responsabile della gestione del catalogo, del monitoraggio dei prestiti e della pubblicazione di notizie.  
+- **Servizio Esterno**: Sistema di integrazione con servizi di autenticazione esterni (ad es. CIE, SPID) che agevola l’accesso al portale.
 
-La piattaforma garantisce una gestione centralizzata e sicura delle operazioni, per assicurarci la sua corretta realizzazione procediamo con le analisi nomi-verbo e la creazione delle schede CRC.
+La piattaforma garantisce una gestione centralizzata e sicura delle operazioni; per una corretta realizzazione, si procederà con l’analisi dei nomi e dei verbi e con la creazione delle schede CRC.
 
 ## 3. Attori e Casi d’Uso
 
 ### 3.1 Attori
+Gli attori identificati sono desumibili in dettaglio dal documento dei modelli di caso d’uso.
 
-Gli attori identificati sono visionabili in dettaglio nel documento dei modelli di caso d'uso
-
-### 3.2 Casi d'uso 
-
-I casi d'uso identificati sono visionabili in dettaglio nel documento dei modelli di caso d'uso, qui riporteremo solo gli ID 
+### 3.2 Casi d’Uso
+I casi d’uso sono descritti in maniera approfondita nel documento dei modelli di caso d’uso; in questa sezione si riportano solo gli identificativi (ID).
 
 ## 4. Analisi Nomi-Verbi
-
-L’approccio "nomi-verbi" prevede di identificare le entità principali (sostantivi) e le azioni (verbi) che il sistema deve supportare. Di seguito, alcune delle principali classi e operazioni estratte dall’analisi dei casi d’uso:
+L’approccio “nomi-verbi” prevede di identificare le entità principali (sostantivi) e le azioni (verbi) che il sistema deve supportare. Di seguito sono elencate alcune delle principali entità e operazioni, estratte dall’analisi dei casi d’uso.
 
 ### 4.1 Entità (Nomi)
-- **UtenteGenerico**: astrazione che rappresenta sia l’utente Guest sia l’utente autenticato.
+- **UtenteGenerico**: astrazione che rappresenta sia l’UtenteGuest sia l’Utente autenticato.
 - **Bibliotecario**: utente con privilegi amministrativi.
 - **Libro**: oggetto ricercabile, in prestito o disponibile per il prestito.
-- **Prestito**: operazione relativa al prestito fisico o digitale dei libri o ebook.
-- **Tessera**: strumento per l’accesso a privilegi unici
-- **Prenotazione**: richiesta di prenotazione di uno spazio comune.
-- **Commento/Recensione**: feedback lasciato dagli utenti all’interno della sezione gamification.
-- **Biblioteca**: rappresentazione della biblioteca per le notizie e gli spazi
+- **Prestito**: operazione relativa al prestito fisico o digitale dei libri (o ebook).
+- **Tessera**: strumento che consente l’accesso a privilegi particolari.
+- **Prenotazione**: richiesta di prenotazione per uno spazio comune.
+- **Commento/Recensione**: feedback lasciato dagli utenti all’interno della sezione di gamification.
+- **Biblioteca**: rappresentazione dell’istituzione, per la pubblicazione di notizie e la gestione degli spazi.
 
 ### 4.2 Azioni (Verbi)
 Le principali operazioni individuate sono:
-- **Autenticare**: per gestire l’accesso al sistema (AU_1, AU_2).
-- **Registrare**: per l’inserimento di nuovi utenti (AU_4).
-- **Modificare**: per aggiornare password (AU_3) o profili (G_2).
-- **Effettuare Logout**: per terminare la sessione (AU_5).
-- **Richiedere Tessera**: per le operazioni di tesseramento (T_1, T_2, T_3, T_4, T_5).
-- **Partecipare**: per accedere al sistema di gamification (G_1).
-- **Commentare/Recensire**: per l’inserimento di feedback sui libri (G_3).
-- **Segnalare**: per la gestione delle problematiche (G_4, PS_3).
-- **Riscattare**: per il riscatto dei punti (G_5).
-- **Ricercare**: per la ricerca dei libri e la richiesta di prestito (PL_1).
-- **Restituire**: per la restituzione dei libri (PL_2).
-- **Richiedere Allungamento**: per estendere il periodo di prestito (PL_3).
-- **Richiedere e-book**: per il prestito digitale (PL_4).
-- **Prenotare/Cancellare Prenotazione**: per la gestione delle prenotazioni degli spazi (PS_1, PS_2).
-- **Caricare**: per l’inserimento di nuovi libri nel sistema (SA_1).
-- **Segnalare Prestito e Notizie**: per aggiornare lo stato del sistema (SA_2, SA_3).
-- **Gestire**: per la personalizzazione della pagina della biblioteca (SA_4).
+- **Autenticare**: gestire l’accesso al sistema (AU_1, AU_2).
+- **Registrare**: inserimento di nuovi utenti (AU_4).
+- **Modificare**: aggiornare password (AU_3) o profili (G_2).
+- **Effettuare Logout**: terminare una sessione (AU_5).
+- **Richiedere Tessera**: gestire le operazioni di tesseramento (T_1, T_2, T_3, T_4, T_5).
+- **Partecipare**: iscriversi al sistema di gamification (G_1).
+- **Commentare/Recensire**: inserire feedback sui libri (G_3).
+- **Segnalare**: gestire problematiche (G_4, PS_3).
+- **Riscattare**: riscattare punti (G_5).
+- **Ricercare**: cercare libri e richiedere il prestito (PL_1).
+- **Restituire**: restituire i libri (PL_2).
+- **Richiedere Allungamento**: estendere il periodo di prestito (PL_3).
+- **Richiedere e-book**: ottenere prestito digitale (PL_4).
+- **Prenotare/Cancellare Prenotazione**: gestire le prenotazioni degli spazi (PS_1, PS_2).
+- **Caricare**: inserire nuovi libri nel sistema (SA_1).
+- **Segnalare Prestito e Notizie**: aggiornare lo stato del sistema (SA_2, SA_3).
+- **Gestire**: personalizzare la pagina della biblioteca (SA_4).
 
 ## 5. Schede CRC
 
-| Campo | Dettaglio |
-|---|---| 
-| **Nome**          | UtenteGenerico |
-| **SuperClassi**   | - |
-| **SottoClassi**   | - UtenteGuest <br/> - Utente <br/> - UtenteGamification |
-| **Attributi**     | - |
-| **Responsabilità**| - Effettuare l’autenticazione e la registrazione (login, logout). <br> - Effettuare ricerche <br/> - Visionare le pagine delle biblioteche |
-| **Collaboratori** | - |
+### UtenteGenerico
 
-| Campo | Dettaglio |
-|---|---| 
-| **Nome**          | UtenteGuest |
-| **SuperClassi**   | - UtenteGenerico |
-| **SottoClassi**   | - |
-| **Attributi**     | - |
-| **Responsabilità**| - |
-| **Collaboratori** | - |
+| Campo              | Dettaglio                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | UtenteGenerico                                                                                                                                                              |
+| **SuperClassi**    | -                                                                                                                                                                           |
+| **SottoClassi**    | UtenteGuest <br/> Utente <br/> UtenteGamification                                                                                                                          |
+| **Attributi**      | -                                                                                                                                                                           |
+| **Responsabilità** | Effettuare l’autenticazione e la registrazione (login, logout); <br/> Effettuare ricerche; <br/> Visionare le pagine delle biblioteche.                                    |
+| **Collaboratori**  | -                                                                                                                                                                           |
 
-| Campo | Dettaglio |
-|---|---| 
-| **Nome**          | Utente |
-| **SuperClassi**   | - UtenteGenerico |
-| **SottoClassi**   | - |
-| **Attributi**     | - Nome <br/> - Cognome <br/> - Email <br/> - Numero di telefono <br/> - Numero Tessera  <br/>|
-| **Responsabilità**| - Gestire la modifica del profilo, inclusa la modifica della password. <br> - Richiedere prestiti, tesseramenti e prenotazioni degli spazi. |
-| **Collaboratori** | - Bibliotecario – per la gestione e approvazione delle richieste. <br> - Prestito – per l’attivazione e la gestione dei prestiti dei libri. <br> - Tessera – per l’iniziativa e il rinnovo del tesseramento. <br> - Prenotazione – per la richiesta e gestione delle prenotazioni degli spazi. |
+### UtenteGuest
 
-| Campo | Dettaglio |
-|---|---| 
-| **Nome**          | UtenteGamification |
-| **SuperClassi**   | - Utente |
-| **SottoClassi**   | - |
-| **Attributi**     | - Identifico Gamification <br/>        |
-| **Responsabilità**| - Partecipare al sistema di gamification (inserimento commenti/recensioni, riscossione punti). <br>|
-| **Collaboratori** | - Bibliotecario – per la verifica dei contenuti pubblicati. <br> |
+| Campo              | Dettaglio                                               |
+|--------------------|----------------------------------------------------------|
+| **Nome**           | UtenteGuest                                             |
+| **SuperClassi**    | UtenteGenerico                                          |
+| **SottoClassi**    | -                                                        |
+| **Attributi**      | -                                                        |
+| **Responsabilità** | -                                                        |
+| **Collaboratori**  | -                                                        |
 
-| Campo | Dettaglio |
-|---|---|
-| **Nome**          | Bibliotecario |
-| **SuperClassi**   | - |
-| **SottoClassi**   | - |
-| **Attributi**     | - Nome <br/> - Cognome <br/> - Email <br/> - Numero di telefono <br/> - Identifico Lavorativo <br/> |
-| **Responsabilità**| - Gestire la sezione amministrativa del sistema. <br> - Caricare nuovi libri e aggiornare il catalogo. <br> - Segnalare prestiti avvenuti (fisici o tramite API) e aggiornare lo stato dei libri in caso di cambiamenti non rilevabili dal sistema. <br> - Pubblicare e aggiornare le notizie riguardanti la biblioteca. <br> - Moderare i contenuti della sezione gamification, segnalando commenti o recensioni inappropriati. |
-| **Collaboratori** | - Utente – per le interazioni relative a richieste e segnalazioni. <br> - Libro – per l’aggiornamento e la gestione del catalogo. <br> - Prestito – per la gestione delle operazioni di prestito e restituzione. <br> - Notizia – per l’inserimento e l’aggiornamento delle notizie. <br> - Prenotazione – per la conferma e la segnalazione delle prenotazioni. |
+### Utente
 
-| Campo | Dettaglio |
-|---|---|
-| **Nome**          | Libro |
-| **SuperClassi**   | - |
-| **SottoClassi**   | - |
-| **Attributi**     | - Titolo <br/> - Identificativo libro  <br/> - Autore  <br/> - Lista biblioteche di appartenenza  <br/> - Disponibilità  <br/> - Genere |
-| **Responsabilità**| - Memorizzare e fornire informazioni dettagliate (titolo, autore, genere, ecc.). <br> - Gestire lo stato di disponibilità per il prestito. <br> - Supportare la funzionalità di ricerca. |
-| **Collaboratori** | - Prestito – per aggiornare lo stato durante le operazioni di prestito e restituzione. <br> - Bibliotecario – per il caricamento e l’aggiornamento dei dati nel sistema. |
+| Campo              | Dettaglio                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Utente                                                                                                                                      |
+| **SuperClassi**    | UtenteGenerico                                                                                                                              |
+| **SottoClassi**    | -                                                                                                                                           |
+| **Attributi**      | Nome <br/> Cognome <br/> Email <br/> Numero di telefono <br/> Numero Tessera                                                                  |
+| **Responsabilità** | Gestire la modifica del profilo, inclusa la modifica della password; <br/> Richiedere prestiti, tesseramenti e prenotazioni degli spazi.   |
+| **Collaboratori**  | Bibliotecario (per la gestione e approvazione delle richieste); <br/> Prestito (per l’attivazione e la gestione dei prestiti); <br/> Tessera (per l’iniziativa e il rinnovo); <br/> Prenotazione (per la gestione delle prenotazioni). |
 
-| Campo | Dettaglio |
-|---|---|
-| **Nome**          | Prestito |
-| **SuperClassi**   | - |
-| **SottoClassi**   | - |
-| **Attributi**     | - Data Inizio  <br/> - Data fine  <br/> - Stato <br/> - Prenotazione |
-| **Responsabilità**| - Attivare e gestire il ciclo di vita di un prestito (richiesta, attivazione, estensione, restituzione). <br> - Monitorare e aggiornare lo stato di un libro in prestito. |
-| **Collaboratori** | - Utente – per l’iniziativa della richiesta di prestito. <br> - Libro – per modificare lo stato di disponibilità. <br> - Bibliotecario – per la gestione manuale (scannerizzazione, conferme) del prestito. |
+### UtenteGamification
 
-| Campo | Dettaglio |
-|---|---|
-| **Nome**          | Tessera  |
-| **SuperClassi**   | - |
-| **SottoClassi**   | - |
-| **Attributi**     | - Numero Tessera  <br/> - Data di Emissione  <br/> - Scadenza <br/> - Stato |
-| **Responsabilità**| - Gestire le operazioni di tesseramento (nuovo tesseramento, rinnovo, cancellazione). <br> - Gestire le denunce di smarrimento o furto della tessera. |
-| **Collaboratori** | - Utente – per la richiesta e la gestione del proprio tesseramento. <br> - Bibliotecario – per la verifica e l’approvazione delle operazioni di tesseramento.  |
+| Campo              | Dettaglio                                                                                                          |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | UtenteGamification                                                                                                  |
+| **SuperClassi**    | Utente                                                                                                              |
+| **SottoClassi**    | -                                                                                                                   |
+| **Attributi**      | Identificativo Gamification                                                                                         |
+| **Responsabilità** | Partecipare al sistema di gamification (inserimento commenti/recensioni, riscossione punti).                         |
+| **Collaboratori**  | Bibliotecario (per la verifica dei contenuti pubblicati).                                                           |
 
-| Campo | Dettaglio |
-|---|---|
-| **Nome**          | Prenotazione  |
-| **SuperClassi**   | - |
-| **SottoClassi**   | - |
-| **Attributi**     | - Data inizio <br/> - Stato <br/> - Utente <br/> - Libro |
-| **Responsabilità**| - Gestire la prenotazione degli spazi comuni. <br> - Consentire la cancellazione delle prenotazioni attive.      |
-| **Collaboratori** | - Utente – per l’iniziativa della prenotazione. <br> - Bibliotecario – per la gestione delle risposte e per la segnalazione di eventuali errori. <br> - Biblioteca – per verificare la disponibilità degli ambienti da prenotare. |
+### Bibliotecario
 
-| Campo | Dettaglio |
-|---|---|
-| **Nome**          | Commento/Recensione |
-| **SuperClassi**   | - |
-| **SottoClassi**   | - |
-| **Attributi**     | - Contenuto <br/> - Data creazione <br/> -Utente <br/> - Segnalazione <br/> - Lista commenti <br/> - Libro       |
-| **Responsabilità**| - Memorizzare e visualizzare il feedback degli utenti sui libri. <br> - Consentire l’inserimento, la modifica e la segnalazione dei commenti. |
-| **Collaboratori** | - Utente – per la creazione e la gestione dei propri commenti. <br> - Bibliotecario – per la moderazione e la rimozione dei contenuti inappropriati. |
+| Campo              | Dettaglio                                                                                                                                       |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Bibliotecario                                                                                                                                   |
+| **SuperClassi**    | -                                                                                                                                                |
+| **SottoClassi**    | -                                                                                                                                                |
+| **Attributi**      | Nome <br/> Cognome <br/> Email <br/> Numero di telefono <br/> Identificativo Lavorativo                                                          |
+| **Responsabilità** | Gestire la sezione amministrativa del sistema; <br/> Caricare nuovi libri e aggiornare il catalogo; <br/> Segnalare prestiti e aggiornare lo stato dei libri; <br/> Pubblicare e aggiornare notizie; <br/> Moderare i contenuti nella sezione gamification. |
+| **Collaboratori**  | Utente (per le interazioni relative a richieste e segnalazioni); <br/> Libro (per l’aggiornamento del catalogo); <br/> Prestito (per la gestione delle operazioni di prestito); <br/> Notizia (per l’inserimento e l’aggiornamento); <br/> Prenotazione (per la gestione delle prenotazioni). |
 
-| Campo | Dettaglio |
-|---|---|
-| **Nome**          | Biblioteca |
-| **SuperClassi**   | -         |
-| **SottoClassi**   | -         |
-| **Attributi**     | - Nome <br/> - Indirizzo <br/> - Lista spazi disponibili <br/> - Lista notizie |
-| **Responsabilità**| - Memorizzare, pubblicare e aggiornare le notizie riguardanti la biblioteca. <br> - Gestire la visualizzazione delle notizie sulla pagina della biblioteca. <br/> - Rappresentare gli spazi comuni prenotabili e gestirne la disponibilità |
-| **Collaboratori** |  - Prenotazione – per la gestione delle richieste di prenotazione. <br> - Bibliotecario – per l’inserimento e l’aggiornamento delle notizie, nonché per l’aggiornamento e la manutenzione delle informazioni sugli spazi. |
+### Libro
+
+| Campo              | Dettaglio                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Libro                                                                                                                                       |
+| **SuperClassi**    | -                                                                                                                                           |
+| **SottoClassi**    | -                                                                                                                                           |
+| **Attributi**      | Titolo <br/> Identificativo libro <br/> Autore <br/> Lista delle biblioteche di appartenenza <br/> Disponibilità <br/> Genere                        |
+| **Responsabilità** | Memorizzare e fornire informazioni dettagliate (titolo, autore, genere, ecc.); <br/> Gestire lo stato di disponibilità; <br/> Supportare la funzione di ricerca. |
+| **Collaboratori**  | Prestito (per aggiornare lo stato durante le operazioni di prestito); <br/> Bibliotecario (per il caricamento e l’aggiornamento dei dati).         |
+
+### Prestito
+
+| Campo              | Dettaglio                                                                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Prestito                                                                                                                                     |
+| **SuperClassi**    | -                                                                                                                                            |
+| **SottoClassi**    | -                                                                                                                                            |
+| **Attributi**      | Data Inizio <br/> Data Fine <br/> Stato <br/> Prenotazione                                                                                     |
+| **Responsabilità** | Attivare e gestire il ciclo di vita di un prestito (richiesta, attivazione, estensione, restituzione); <br/> Monitorare e aggiornare lo stato.   |
+| **Collaboratori**  | Utente (per l’iniziativa della richiesta di prestito); <br/> Libro (per modificare lo stato di disponibilità); <br/> Bibliotecario (per la gestione manuale del prestito). |
+
+### Tessera
+
+| Campo              | Dettaglio                                                                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Tessera                                                                                                                                      |
+| **SuperClassi**    | -                                                                                                                                            |
+| **SottoClassi**    | -                                                                                                                                            |
+| **Attributi**      | Numero Tessera <br/> Data di Emissione <br/> Scadenza <br/> Stato                                                                              |
+| **Responsabilità** | Gestire le operazioni di tesseramento (nuovo tesseramento, rinnovo, cancellazione); <br/> Gestire le denunce di smarrimento o furto.         |
+| **Collaboratori**  | Utente (per la richiesta e la gestione del tesseramento); <br/> Bibliotecario (per la verifica e l’approvazione delle operazioni).             |
+
+### Prenotazione
+
+| Campo              | Dettaglio                                                                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Prenotazione                                                                                                                                 |
+| **SuperClassi**    | -                                                                                                                                            |
+| **SottoClassi**    | -                                                                                                                                            |
+| **Attributi**      | Data Inizio <br/> Stato <br/> Utente <br/> Libro                                                                                              |
+| **Responsabilità** | Gestire la prenotazione degli spazi comuni; <br/> Consentire la cancellazione delle prenotazioni attive.                                       |
+| **Collaboratori**  | Utente (per l’iniziativa della prenotazione); <br/> Bibliotecario (per la gestione delle risposte e per la segnalazione di eventuali errori); <br/> Biblioteca (per verificare la disponibilità degli spazi).  |
+
+### Commento/Recensione
+
+| Campo              | Dettaglio                                                                                                                                 |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Commento/Recensione                                                                                                                        |
+| **SuperClassi**    | -                                                                                                                                         |
+| **SottoClassi**    | -                                                                                                                                         |
+| **Attributi**      | Contenuto <br/> Data Creazione <br/> Utente <br/> Segnalazione <br/> Lista Commenti <br/> Libro                                            |
+| **Responsabilità** | Memorizzare e visualizzare il feedback degli utenti sui libri; <br/> Consentire l’inserimento, la modifica e la segnalazione dei commenti. |
+| **Collaboratori**  | Utente (per la creazione e la gestione dei commenti); <br/> Bibliotecario (per la moderazione e la rimozione dei contenuti inappropriati). |
+
+### Biblioteca
+
+| Campo              | Dettaglio                                                                                                                                 |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**           | Biblioteca                                                                                                                                |
+| **SuperClassi**    | -                                                                                                                                         |
+| **SottoClassi**    | -                                                                                                                                         |
+| **Attributi**      | Nome <br/> Indirizzo <br/> Lista Spazi Disponibili <br/> Lista Notizie                                                                      |
+| **Responsabilità** | Memorizzare, pubblicare e aggiornare le notizie relative alla biblioteca; <br/> Gestire la visualizzazione delle notizie; <br/> Gestire gli spazi prenotabili e la loro disponibilità. |
+| **Collaboratori**  | Prenotazione (per la gestione delle richieste di prenotazione); <br/> Bibliotecario (per l’inserimento e l’aggiornamento delle notizie e degli spazi). |

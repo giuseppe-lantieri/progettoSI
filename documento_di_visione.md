@@ -1,113 +1,97 @@
-# **BIBLIOTECHE DI ROMA**
-### **DOCUMENTO DI VISIONE**
-## ***INTRODUZIONE***
-Il comune di Roma vuole creare un nuovo portale online per il proprio sistema bibliotecario. 
-Il portale deve dare la possibilità di accedere ai servizi offerti dalle biblioteche in maniera semplice e digitale. 
-L'obiettivo, perciò è riuscire a creare un semplice metodo per gli utenti di usufruire dei seguenti servizi:
-- Prenotazione Libri
-- Prestito Libri (fisico e ebook)
-- Prenotazione Posto (ove possibile)
-- Servizio Wi-Fi
-- Servizio Tesseramento
+# BIBLIOTECHE DI ROMA - Documento di Visione
 
-Il portale offrirà una sezione accessibile solo al personale autorizzato, in cui sarà possibile effettuare operazioni di carattere amministrativo tra cui:
-- Operare sui libri presenti
-- Segnalare problemi negli spazi condivisi
-- Operare sull'interfaccia del profilo biblioteca
-<br/>
+## Introduzione
+Il Comune di Roma prevede di realizzare un nuovo portale online per la gestione del sistema bibliotecario, che consenta agli utenti un accesso semplice e digitale ai servizi offerti. L’obiettivo principale consiste nell’offrire un’interfaccia intuitiva per usufruire dei seguenti servizi:
 
-Oltre a ciò il portale deve essere in grado di:
-- Permettere i login tramite i servizi di stato
-- Aggregare i database
-- Gamification 
+- **Prenotazione Libri**
+- **Prestito Libri (fisico e ebook)**
+- **Prenotazione Posto** (ove disponibile)
+- **Servizio Wi-Fi**
+- **Servizio Tesseramento**
 
-## ***PRENOTAZIONE LIBRI*** 
-Il portale deve permettere ai vari utenti (che abbiano effettuato o meno l'accesso) di verificare la presenza dei libri, indicando se sono fisici o ebook. 
-Nel caso di libri fisici dovrà aggiungere le informazioni riguardanti la libreria che lo possiede, la posizione e indicare la prima disponibilità.
-Nel caso il libro risultasse già preso, l'utente potrà aumentare i giorni del prestito a meno di una prenotazione effettuata alla prima disponibilità.
+Il portale includerà inoltre una sezione riservata al personale autorizzato, che consentirà di:
+- Gestire i libri presenti
+- Segnalare eventuali criticità negli spazi comuni
+- Amministrare il profilo della biblioteca
 
-## ***PRESTITO LIBRI***
-Il prestito libri differisce in base al formato del libro:
-- Fisico: 
-	
-	Il libro fisico non potrà per ovvie ragione essere preso direttamente online, il portale per permettere il servizio a seguito di una prenotazione, dovrà:
-	
-	1) Segnalare la prima indisponibilità del libro per 14 giorni 
-	2) Creare una ricevuta da inviare all'utente da utilizzare alla consegna
-	3) Permettere al bibliotecario di convalidare l'autenticità della ricevuta
-	4) Impedire agli altri utenti di prenotare a loro volta il libro prima della scadenza della prenotazione
-	5) Permettere all'utente che ha effettuato la prenotazione di allungare il prestito in assenza di altre prenotazioni
+Sono previste, inoltre, le seguenti funzionalità:
+- Integrazione dell’autenticazione tramite i servizi di Stato
+- Aggregazione dei database
+- Funzionalità di gamification
 
-- Ebook: 
-	Il libro digitale avrà differenti termini di prestito in base alla licenza e i termini di utilizzo che la biblioteca ha stabilito con il produttore. In caso di prenotazione il portale avrà differenti comportamenti in base alla licenza.
-	Qui illustriamo due comportamenti, ma in seguito potrebbero esserne presenti di più:
-	
-	1) Licenza di libera distribuzione e fruizione: l'ebook verrà consegnato all'utente in una copia firmata e senza il permesso di ridistribuzione
-	2) Licenza di sola lettura: l'ebook sarà visionabile in una sezione del profilo dell'utente per la durata di 14 giorni in solo lettura, si utilizzeranno le tecnologie migliori per evitare comportamenti che violino i requisiti. 
+## Prenotazione Libri
+Il portale consentirà agli utenti, autenticati o meno, di verificare la disponibilità dei libri, distinguendo tra copie fisiche ed ebook.  
+- **Libri Fisici:** Verranno fornite informazioni relative alla biblioteca che detiene il libro, alla sua ubicazione e alla prima disponibilità. Qualora il libro risulti attualmente in prestito, l’utente potrà richiedere l’estensione del periodo di prestito, salvo l’esistenza di prenotazioni in corso.
+- **Ebook:** Verranno mostrate le specifiche relative al formato digitale, conformemente alle regole d’uso definite dalla singola biblioteca.
 
-## ***PRENOTAZIONE POSTO***
+## Prestito Libri
+Le modalità di prestito variano in base al formato del libro.
 
-Alcune biblioteche offrono tavoli e sale, adibite al co-working e allo studio. 
-Il portale dovrà:
-1) Segnalare se la biblioteca scelta ha un posto disponibile
-2) Gestire la prenotazione anche in caso di concorrenza
-3) Permettere la verifica di quest'ultima da parte di un bibliotecario
-4) Segnalare al bibliotecario la fine di una prenotazione in modo che esso possa controllare
-5) Permettere all'utente di estendere la propria prenotazione
+### Fisico
+Poiché il libro fisico non può essere consegnato direttamente online, il portale dovrà eseguire le seguenti operazioni:
+1. Segnalare l’indisponibilità del libro per un periodo di 14 giorni.
+2. Generare una ricevuta da inviare all’utente, da presentare al momento del ritiro.
+3. Consentire al bibliotecario di verificare l’autenticità della ricevuta.
+4. Impedire ulteriori prenotazioni sul libro fino alla scadenza della prenotazione in corso.
+5. Consentire all’utente che ha prenotato di estendere il periodo di prestito qualora non vi siano altre prenotazioni pendenti.
 
-## ***SERVIZIO DI TESSERAMENTO*** 
+### Ebook
+Il periodo di prestito per gli ebook sarà definito in base alla licenza e ai termini di utilizzo stabiliti tra la biblioteca e il fornitore. Tra gli scenari possibili si prevedono:
+1. **Licenza di libera distribuzione e fruizione:** L’ebook verrà fornito all’utente in copia digitale, corredato da una firma digitale che ne certifichi l’autenticità, senza includere il diritto alla ridistribuzione.
+2. **Licenza di sola lettura:** L’ebook sarà consultabile esclusivamente in modalità “sola lettura” all’interno della sezione dedicata del profilo utente per un periodo limitato a 14 giorni, mediante l’utilizzo di tecnologie idonee a garantire il rispetto dei requisiti di sicurezza.
 
-Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e altri gratuiti.
-La tessera d’iscrizione è personale e ha una validità fissa. 
+## Prenotazione Posto
+Per le biblioteche che mettono a disposizione spazi di studio, quali tavoli e sale per il co-working, il portale dovrà:
+1. Verificare la disponibilità del posto e segnalarlo per la biblioteca selezionata.
+2. Gestire le prenotazioni in condizioni di elevata richiesta.
+3. Consentire il controllo dello stato della prenotazione da parte di un bibliotecario.
+4. Inviare una notifica al bibliotecario al termine della prenotazione, per permettere il relativo controllo.
+5. Consentire all’utente di prolungare la prenotazione, in base alla disponibilità.
 
-I bibliotecari possono creare tessere per i nuovi utenti, proporre la creazione di una nuova tipologia di tessera e chiedere l'annullamento di una tessera di un utente.
+## Servizio di Tesseramento
+Il portale offrirà differenti servizi di tesseramento, alcuni a pagamento e altri gratuiti. La tessera d’iscrizione, di natura personale, avrà una validità prestabilita. I bibliotecari saranno abilitati a:
+- Emettere nuove tessere per gli utenti.
+- Proporre l’introduzione di nuove tipologie di tessera.
+- Richiedere l’annullamento di tessere esistenti.
 
-##  ***NOTIZIE***
+## Notizie
+Il portale comprenderà una sezione riservata alle notizie, che sarà presentata sia in forma aggregata nella pagina principale sia in dettaglio nelle pagine dedicate a ciascuna biblioteca.
 
-Il portale ha una sezione dedicata alle notizie. Questo avviene sia in maniera aggregata e generale, nella sezione principale, sia in dettaglio e in riferimento alla singola biblioteca nella pagina dedicata ad essa. 
+## Posizione
+Il portale metterà a disposizione una mappa interattiva delle biblioteche, fornendo informazioni dettagliate sulla loro ubicazione e indicazioni stradali. L’utente potrà interagire con la mappa per individuare la biblioteca più vicina al proprio municipio, senza però avere la possibilità di modificarla.
 
-## ***POSIZIONE*** 
-Il portale deve offrire una chiara e semplice mappa delle biblioteche, indicando per ognuna posizione e indicazioni. L'utente deve avere la possibilità di interagire con essa senza modificarla, identificando la più vicina a lui in base al municipio di appartenenza. 
+## Database Unificati
+Il portale consentirà l’interrogazione dei database delle varie biblioteche attraverso un unico punto d’accesso, garantendo la condivisione e l’accessibilità di tutte le informazioni. I database esistenti saranno integrati in un sistema centralizzato, migliorando la gestione dei dati grazie all’adozione di soluzioni moderne, backup frequenti e politiche di distribuzione conformi alle linee guida del progetto OPEN DATA.
 
-## ***DATABASE UNIFICATI***
-Il portale deve permettere di interrogare tutti i database delle varie biblioteche tramite un unico punto di accesso, per assicurare che ogni informazione sia condivisa e accessibile. 
+## Integrazione dei Servizi di Login di Stato
+Il portale integrerà i servizi di autenticazione offerti dallo Stato italiano (ad esempio, SPID e CIE), assicurando un login rapido e sicuro, requisito fondamentale per le applicazioni statali.
 
-Per permettere ciò i database già esistenti verranno incorporati nel database che verrà generato per l'applicazione. 
+## Gamification
+Il portale comprenderà meccanismi di gamification finalizzati a incentivare l’interazione degli utenti. Verranno assegnati punti per diverse attività, quali:
+- Inserimento di informazioni relative ai libri.
+- Pubblicazione di recensioni.
+- Gestione dei prestiti.
+- Altre interazioni all’interno della piattaforma.
 
-Inoltre sarà assicurata una migliore gestione dei dati. Verranno adottate le soluzioni più moderne, assicurando backup frequenti e politiche di distribuzione, adottando anche le regole descritte nel progetto OPEN DATA. 
+Il sistema prevede inoltre la penalizzazione di comportamenti negativi, tra cui:
+- Recensioni considerate inopportune dai bibliotecari.
+- Smarrimento di un libro.
+- Ritardi nella riconsegna.
+- Restituzione di un libro in condizioni non ottimali (danni o usura).
 
-## ***INTEGRARE I SERVIZI DEL LOGIN DI STATO***
-Lo stato italiano dispone di vari servizi certificati, che permettono il login autorizzato del cittadino. Strumenti come lo SPID o la CIE, permettono un veloce e sicuro login da parte dell'utente che in applicazioni statali, come il portale descritto in questi file, sono indispensabili. 
+I punti accumulati potranno essere riscattati per l’ottenimento di premi. Ad esempio:
 
-## ***GAMIFICATION***
-Il portale dovrà aggiungere funzionalità di gamification. Gli utenti dovranno collaborare all'interno del portale in apposite sezioni per acquisire punti tramite varie operazione tra cui: 
-- Aggiunta di informazioni riguardanti i libri
-- Recensioni
-- Prestiti
-- Interazioni con la piattaforma
+| Azione                                       | Punteggio |
+|----------------------------------------------|-----------|
+| Commento ritenuto utile                      | +300      |
+| Commento ritenuto inopportuno dai bibliotecari | -1.000    |
 
-Il sistema serve anche a punire comportamenti nocivi quali:
-- Recensioni valutate negativamente dai librai
-- Smarrimento di un libro
-- Ritardo nella riconsegna di un libro
-- Riconsegna di un libro con segni di usura
+Le sezioni dedicate alla gamification saranno ottimizzate per un’ottimale visualizzazione e interazione anche su dispositivi mobili.
 
-Al raggiungimento di una certa somma di punti l'utente potrà riscattare dei premi, segue un esempio:  
-
-|Azione| Punteggio|
-|---|---|
-|Tuo commento ritenuto utile | 300|
-|Tuo commento ritenuto inopportuno dai bibliotecari| -1.000|
-
-Il sistema sarà progettato per portare maggiore interazione dell'utente con la piattaforma e valorizzare le biblioteche per le nuove generazioni. 
-
-Per assicurare ciò le nuove sezioni del portale dedicate alla gamification saranno ottimizzate per la visione mobile. 
-
-## ***REVISIONI***
-||||
-|--|--|--|
-|Versione|Data|Descrizione|
-|1.0|15/03/2025|Prima stesura del documento|
-|1.1|19/03/2025|Seconda stesura del documento|
-|1.2|25/03/2025|Terza stesura del documento|
-|1.3|09/04/2025|Quarta stesura del documento|
+## Revisioni
+| Versione | Data       | Descrizione                    |
+|----------|------------|--------------------------------|
+| 1.0      | 15/03/2025 | Prima stesura del documento    |
+| 1.1      | 19/03/2025 | Seconda stesura del documento  |
+| 1.2      | 25/03/2025 | Terza stesura del documento    |
+| 1.3      | 09/04/2025 | Quarta stesura del documento   |
