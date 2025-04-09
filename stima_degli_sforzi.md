@@ -16,16 +16,16 @@ PM = A \times \text{Size}^{E} \times \prod_{i=1}^{n} \text{EM}_i
 $$
 Dove:
 - **A** è una costante che rappresenta una stima della produttività media, espressa in Person-months per KSLOC. In questo caso, seguendo lo standard di COCOMO II.2000, vale 2.94.
-- **Size** è la dimensione stimata del software, espressa in KLOCK (Kilo Source Lines of Code), ovvero migliaia di righe di codice sorgente;
+- **Size** è la dimensione stimata del software, espressa in KLOCK (Kilo Source Lines of Code), ovvero migliaia di righe di codice;
 - **E** è un esponente che riflette la scala del progetto;
 - **EM<sub>i</sub>** sono i moltiplicatori di sforzo (Effort Multipliers), ciascuno dei quali rappresenta un diverso aspetto che può influenzare l'impegno richiesto (ad esempio: esperienza del personale, complessità del prodotto, uso di strumenti, vincoli di tempo, ecc.).
 
 ## ***Il parametro SIZE***
-L'input più significativo è **Size**. Esso non è un parametro quantitativo, ma viene associato a un **fattore esponenziale** E che amplifica o riduce l'impatto della dimensione stessa sullo sforzo complessivo.
+L'input più significativo è **Size**. Esso non è un parametro quantitativo, ma viene associato a un **fattore esponenziale** *E* che amplifica o riduce l'impatto della dimensione stessa sullo sforzo complessivo.
 
 
 ## Revisioni
 ||||
 |--|--|--|
-|Versione|Data|Descrizione|
-|1.0|03/04/2025|Prima stesura del documento
+|Numero|Data|Descrizione|
+|1.1|03/04/2025|Prima stesura del documento
