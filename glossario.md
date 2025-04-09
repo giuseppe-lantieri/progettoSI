@@ -13,4 +13,7 @@
 - **"Youngcard"** = Tessera solo per utenti sotto a una certa soglia di età.
 - **"SPID"** = Sistema di verifica elettronica approvato dallo stato ma effettuato da terzi. Assicura che la persona che dichiara un identità è stata controllata da un ente che lo stato approva. Esistono differenti enti che assicurano questo servizio.
 - **"OPAC"** = Catalogo in rete ad accesso pubblico. In questo caso si tratta dell'interfaccia di accesso al catalogo informatizzato delle biblioteche.
-- **"Open Data"** = Scopo principale del progetto "Open Data", pubblicato tramite il portale "Biblioteche di Roma", è quello di rendere disponibili, in formati aperti e liberamente riusabili, dati diretta conseguenza dell’operato delle Biblioteche di Roma: servizi di prestito, anagrafica utenti, patrimonio culturale posseduto dalle Biblioteche di Roma.
+- **"Open Data"** = Il progetto "Open Data" delle Biblioteche di Roma ha come obiettivo principale la pubblicazione di dati aperti e riutilizzabili, relativi alle attività delle biblioteche, come:
+	- i servizi di prestito
+	- l’anagrafica degli utenti
+	- il patrimonio culturale posseduto
