@@ -42,7 +42,7 @@ Elenco casi d'uso
 | :--- | :--- | :--- |
 | AU_4_Login | Login| Verifica Login |
 | Pre-condizioni | Azioni| Post-condizioni |
-| Utente mai registrato prima d'ora|UtenteGuest diventa un nuovo Utente|1. Si preme il pulsante Registrami <br/> 2. Si viene reindirizzati alla pagina con un form dove immettere email, dati anagrafici e viene scelta una password <br/>3. Il sistema salva le informazioni in modo sicuro nel database <br/>4. L'utente viene reindirizzato al login dove farà accesso tramite email e password|
+| Utente mai registrato prima d'ora| 1. Si preme il pulsante Registrami <br/> 2. Si viene reindirizzati alla pagina con un form dove immettere email, dati anagrafici e viene scelta una password <br/>3. Il sistema salva le informazioni in modo sicuro nel database <br/>4. L'utente viene reindirizzato al login dove farà accesso tramite email e password| UtenteGuest diventa un nuovo Utente |
 
 | TestAU_5 | Scopo | Descrizione |
 | :--- | :--- | :--- |
@@ -86,7 +86,7 @@ Elenco casi d'uso
 | :--- | :--- | :--- |
 | T_5_Denuncia furto Tesseramento| Denuncia furto Tesseramento| Verifica Denuncia furto Tesseramento |
 | Pre-condizioni | Azioni| Post-condizioni |
-| Utente provvisto di tessera|| 	1. Si preme il pulsante Smarrimento tessera <br/> 2. Si viene reindirizzati su una nuova pagina contenente un form che richiede il codice della vecchia tessera <br/> 3. L'utente allega la denuncia di furto effettuata all'ordine competente <br/> 4. Il sistema alla sottoscrizione del form controlla tutti i vari campi segnalando all'utente la presenza di errori <br/> 5. L'utente clicca su invia e riceve la ricevuta| Utente denuncia il suo furto|
+| Utente provvisto di tessera|	1. Si preme il pulsante Smarrimento tessera <br/> 2. Si viene reindirizzati su una nuova pagina contenente un form che richiede il codice della vecchia tessera <br/> 3. L'utente allega la denuncia di furto effettuata all'ordine competente <br/> 4. Il sistema alla sottoscrizione del form controlla tutti i vari campi segnalando all'utente la presenza di errori <br/> 5. L'utente clicca su invia e riceve la ricevuta| Utente denuncia il suo furto|
 
 ### Gamification (G):
 - **G_1**: Partecipazione al sistema di gamification
@@ -112,7 +112,7 @@ Elenco casi d'uso
 | :--- | :--- | :--- |
 | G_3_Inserimento Commento/Recensione| Inserimento Commento/Recensione| Verifica Inserimento Commento/Recensione |
 | Pre-condizioni | Azioni| Post-condizioni |
-| Essere un Utente che partecipa alla gamification|| 	1. Si entra nel libro da recensire  <br/> 2. Si preme il pulsante "Recensisci" 3. L'utente scrive la recensione e clicca su invia| Viene aggiunta una recensione/commento |
+| Essere un Utente che partecipa alla gamification|	1. Si entra nel libro da recensire  <br/> 2. Si preme il pulsante "Recensisci" 3. L'utente scrive la recensione e clicca su invia| Viene aggiunta una recensione/commento |
 
 | TestG_4 | Scopo | Descrizione |
 | :--- | :--- | :--- |
@@ -216,14 +216,9 @@ Elenco casi d'uso
 | Pre-condizioni | Azioni| Post-condizioni |
 | -| 1. Il bibliotecario raggiunge la sezione amministrativa e preme il pulsante nuove notizie <br/> 2. Compila un form dove può aggiungere nuove notizie, modificarle o eliminare quelle già presenti  <br/> 3. Il sistema propaga le informazioni aggiornando la pagina della biblioteca corrispondente| Viene aggiornata la sezione notizie della pagina della biblioteca|
 
-| Test| Scopo | Descrizione |
+| Test | Scopo | Descrizione |
 | :--- | :--- | :--- |
 | SA_4_Gestione pagina della biblioteca| Gestione pagina della biblioteca| Verifica Gestione pagina della biblioteca |
 | Pre-condizioni | Azioni| Post-condizioni |
 | -| 1. Il bibliotecario raggiunge la sezione amministrativa e preme il pulsante modifica tema <br/> 2. Utilizzando i menu appositi modifica per quanto possibile la pagina della biblioteca  <br/> 3. Il sistema propaga le informazioni aggiornando la pagina della biblioteca corrispondente| Viene aggiornata la pagina della biblioteca|
-
-
-	
-	
-
 
