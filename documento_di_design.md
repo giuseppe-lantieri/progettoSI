@@ -1,7 +1,7 @@
 # Documento di Design – Gestione Biblioteche Romane
 
 ## 1. Introduzione
-<!--  TODO Introduzione -->
+Il documento illustrerà i dettagli riguardanti l'implementazione, illustrando in dettagli l'architettura scelta. Inoltre vengono revisionati i diagrammi di sequenza descritti durante l’analisi.
 
 ## 2. Obiettivi del Documento
 
@@ -100,11 +100,6 @@ Le CRC cards (consultabili nel documento di analisi) definiscono in modo dettagl
   - Framework: Vue.js.  
   - Librerie: Bootstrap per l'interfaccia utente.
 
-<!-- TODO 
-- **CMS:**  
-  - Scelta: Wordpress
-  - Plugin: Yare yara yara -->
-
 - **Back-End:**  
   - Linguaggio: Go  
   - Framework: -  
@@ -114,8 +109,8 @@ Le CRC cards (consultabili nel documento di analisi) definiscono in modo dettagl
   - Database relazionale (PostgreSQL)
 
 - **Sicurezza:**  
-  - Autenticazione e autorizzazione basate su token (JWT).  
-  - Cifratura dei dati sensibili e implementazione di protocolli HTTPS.
+  - Autenticazione e autorizzazione basate su token (JWT) per la gestione degli utenti.  
+  - Autenticazione e autorizzazione basate su certificati per la gestione dei bibliotecari.
 
 ## 8. Considerazioni sul Deployment e Scalabilità
 
@@ -126,10 +121,3 @@ Le CRC cards (consultabili nel documento di analisi) definiscono in modo dettagl
 - **Scalabilità:**  
   - L'architettura a micro-servizi permette di scalare singolarmente i vari componenti in base al carico.
   - Utilizzo di load balancer e sistemi di caching per migliorare le performance.
-
-## 9. Conclusioni
-<!-- TODO Scrivere conclusioni migliori 
-Il design del sistema per la gestione delle biblioteche romane si basa su una chiara separazione delle responsabilità e sull’utilizzo di pattern di design consolidati. Le scelte progettuali adottate garantiscono una piattaforma modulare, sicura e scalabile, in grado di rispondere alle esigenze di utenti, bibliotecari e servizi esterni.
-
-Questo documento costituisce la base per la fase di implementazione e potrà essere aggiornato in base agli sviluppi e alle eventuali modifiche dei requisiti. -->
-

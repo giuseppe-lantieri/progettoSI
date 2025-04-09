@@ -18,18 +18,22 @@ Tra gli svantaggi della soluzione proposta da "Biblioteche di Roma" vi è il cos
 ## ***ANALISI DI MERCATO***
 Nel contesto della capitale Italiana il panorama risulta frammentato, con software non uniformi e spesso non integrati tra loro. Perciò la richiesta di una soluzione unificata è fortemente sentita sia dalle istituzioni che dagli utenti. La piattaforma proposta risponde dunque alla crescente domanda di sistemi centralizzati, più efficienti e user-friendly.
 
-## Tecnologie
+## ***TECNOLOGIE***
 Per la realizzazione del sistema si prevede l'utilizzo delle seguenti componenti tecnologiche:
-	- Un'interfaccia web, che consenta agli utenti di accedere ai servizi offerti; 
-	- Un web server, incaricato di gestire le richieste provenienti dal client e coordinare la comunicazione con la base dati;
-	- Un database relazionale, necessario per conservare in modo strutturato le informazioni relative a utenti, libri, disponibilità e prestiti.
+	
+	- **Interfaccia Web**:  consentirà agli utenti di accedere ai servizi offerti e permetterà tramite un interfaccia accessibile solo tramite verifica di un certificato di accedere alla sezione amministrativa del sito. La soluzione di un certificato assicurera che solo i computer in possesso di quest'ultimo possano accedere alle sezioni critiche del sito.
+	
+	- **Web Server**: gestirà le richieste provenienti dai client e coordinerà la comunicazione con la base dati.
+	
+	- **Base Dati**: Un database relazionale, necessario per conservare in modo strutturato le informazioni relative a utenti, libri, disponibilità e prestiti.
 
 Trattandosi di un sistema basato su tecnologie ampiamente diffuse e consolidate, non si rende necessario introdurre strumenti innovativi o sperimentali. 
-Il linguaggio principale adottato sarà Java 8, la gestione dei dati avverrà tramite comandi SQL, mentre la realizzazione dell'interfaccia utente sarà affidata a HTML5, con il possibile supporto di CSS3 e JavScript per una maggiore dinamicità e responsività dell'esperienza utente.
+Il linguaggio principale adottato sarà Go, la gestione dei dati avverrà tramite comandi SQL, mentre la realizzazione dell'interfaccia utente sarà affidata a Vue.
 
 ## ***REVISIONI***
 ||||
 |--|--|--|
 |Versione|Data|Descrizione|
-|1.0|19/03/2025|Prima stesura del documento
-|1.1|25/03/2025|Seconda stesura del documento
+|1.0|19/03/2025|Prima stesura del documento|
+|1.1|25/03/2025|Seconda stesura del documento|
+|1.2|09/04/2025|Terza stesura del documento|

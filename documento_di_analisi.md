@@ -1,7 +1,7 @@
 # Documento di Analisi – Gestione Biblioteche Romane
 
 ## 1. Introduzione
-<!-- TODO Inserire un'introduzione carina -->
+Nel documento inizieremo con una descrizione del sistema per poi continuare con l'analisi dei casi d’uso e del glossario per estrarre le classi di analisi descritte dalle schede CRC. Visualizzeremo le relazioni mediante diagrammi EBC e infine saranno presenti i diagrammi di sequenza
 
 ## 2. Visione di Sistema
 
@@ -56,38 +56,6 @@ Le principali operazioni individuate sono:
 - **Segnalare Prestito e Notizie**: per aggiornare lo stato del sistema (SA_2, SA_3).
 - **Gestire**: per la personalizzazione della pagina della biblioteca (SA_4).
 
-<!-- TODO Trasformare questa sezione in reali schemi UML e gestire l'inserimento all'interno del file
-## 5. Modellazione dei Casi d’Uso e Relazioni
-
-### 5.1 Diagramma dei Casi d’Uso (Concettuale)
-Per ogni scenario è possibile rappresentare graficamente le interazioni fra attori e il sistema. Ad esempio, l’autenticazione (AU) coinvolge l’UtenteGuest/Utente e il Servizio Esterno oppure il sistema interno; mentre le operazioni di tesseramento (T) vedono l’interazione diretta dell’Utente con il modulo di gestione tessere.
-
-### 5.2 Diagramma delle Classi (Concettuale)
-Un diagramma delle classi potrebbe includere:
-- **Classe Utente** con metodi quali: `autentica()`, `registra()`, `modificaPassword()`, `logout()`, `partecipaGamification()`, `commenta()`, `richiediPrestito()`, ecc.
-- **Classe Libro** con metodi quali: `cerca()`, `riserva()`, `restituisci()`.
-- **Classe Prestito** che gestisce: `attivaPrestito()`, `allungaPrestito()`, `chiudiPrestito()`.
-- **Classe Tessera** con metodi per: `nuovoTesseramento()`, `rinnova()`, `cancella()`, `denunciaSmarrimento()`, `denunciaFurto()`.
-- **Classe Prenotazione** che implementa: `prenotaSpazio()`, `cancellaPrenotazione()`.
-- **Classe Notizia** e **Classe Spazio** per la gestione degli aggiornamenti e delle prenotazioni degli ambienti.
-- **Classe Servizio Esterno** che incapsula le operazioni di autenticazione tramite SPID o CIE. -->
-
-<!-- TODO Esempi di flusso lasciati per poter aiutare in seguito
-## 6. Flussi di Interazione e Sequenze
-
-### 6.1 Esempio di Flusso – Autenticazione Interna (AU_1)
-1. **UtenteGuest** seleziona il pulsante per accedere.
-2. Il sistema presenta il form di login.
-3. L’utente inserisce email e password.
-4. Il sistema verifica i dati e, in base all’esito:
-   - Autentica l’utente e aggiorna il suo stato a **Utente**.
-   - Oppure rigetta l’autenticazione, visualizzando un messaggio di errore.
-
-### 6.2 Esempio di Flusso – Prestito di Libro (PL_1)
-1. L’utente (Guest o autenticato) esegue una ricerca utilizzando parole chiave o tag.
-2. Il sistema visualizza una lista di libri (limitata a 50 risultati, con possibilità di richiedere ulteriori risultati).
-3. Se l’utente è autenticato, può inviare la richiesta di prestito e selezionare la biblioteca di ritiro; in caso contrario, viene invitato alla registrazione/autenticazione. -->
-
 ## 5. Schede CRC
 
 | Campo | Dettaglio |
@@ -113,11 +81,20 @@ Un diagramma delle classi potrebbe includere:
 | **Nome**          | Utente |
 | **SuperClassi**   | - UtenteGenerico |
 | **SottoClassi**   | - |
-| **Attributi**     | - Nome <br/> - Cognome <br/> - Email <br/> - Numero di telefono <br/> - Numero Tessera  <br/> - Identifico Gamification <br/>        |
-| **Responsabilità**| - Gestire la modifica del profilo, inclusa la modifica della password. <br> - Partecipare al sistema di gamification (inserimento commenti/recensioni, riscossione punti). <br> - Richiedere prestiti, tesseramenti e prenotazioni degli spazi. |
+| **Attributi**     | - Nome <br/> - Cognome <br/> - Email <br/> - Numero di telefono <br/> - Numero Tessera  <br/>|
+| **Responsabilità**| - Gestire la modifica del profilo, inclusa la modifica della password. <br> - Richiedere prestiti, tesseramenti e prenotazioni degli spazi. |
 | **Collaboratori** | - Bibliotecario – per la gestione e approvazione delle richieste. <br> - Prestito – per l’attivazione e la gestione dei prestiti dei libri. <br> - Tessera – per l’iniziativa e il rinnovo del tesseramento. <br> - Prenotazione – per la richiesta e gestione delle prenotazioni degli spazi. |
 
-| Campo  | Dettaglio|
+| Campo | Dettaglio |
+|---|---| 
+| **Nome**          | UtenteGamification |
+| **SuperClassi**   | - Utente |
+| **SottoClassi**   | - |
+| **Attributi**     | - Identifico Gamification <br/>        |
+| **Responsabilità**| - Partecipare al sistema di gamification (inserimento commenti/recensioni, riscossione punti). <br>|
+| **Collaboratori** | - Bibliotecario – per la verifica dei contenuti pubblicati. <br> |
+
+| Campo | Dettaglio |
 |---|---|
 | **Nome**          | Bibliotecario |
 | **SuperClassi**   | - |
@@ -126,7 +103,7 @@ Un diagramma delle classi potrebbe includere:
 | **Responsabilità**| - Gestire la sezione amministrativa del sistema. <br> - Caricare nuovi libri e aggiornare il catalogo. <br> - Segnalare prestiti avvenuti (fisici o tramite API) e aggiornare lo stato dei libri in caso di cambiamenti non rilevabili dal sistema. <br> - Pubblicare e aggiornare le notizie riguardanti la biblioteca. <br> - Moderare i contenuti della sezione gamification, segnalando commenti o recensioni inappropriati. |
 | **Collaboratori** | - Utente – per le interazioni relative a richieste e segnalazioni. <br> - Libro – per l’aggiornamento e la gestione del catalogo. <br> - Prestito – per la gestione delle operazioni di prestito e restituzione. <br> - Notizia – per l’inserimento e l’aggiornamento delle notizie. <br> - Prenotazione – per la conferma e la segnalazione delle prenotazioni. |
 
-| Campo  | Dettaglio|
+| Campo | Dettaglio |
 |---|---|
 | **Nome**          | Libro |
 | **SuperClassi**   | - |
@@ -135,16 +112,16 @@ Un diagramma delle classi potrebbe includere:
 | **Responsabilità**| - Memorizzare e fornire informazioni dettagliate (titolo, autore, genere, ecc.). <br> - Gestire lo stato di disponibilità per il prestito. <br> - Supportare la funzionalità di ricerca. |
 | **Collaboratori** | - Prestito – per aggiornare lo stato durante le operazioni di prestito e restituzione. <br> - Bibliotecario – per il caricamento e l’aggiornamento dei dati nel sistema. |
 
-| Campo  | Dettaglio |
+| Campo | Dettaglio |
 |---|---|
 | **Nome**          | Prestito |
 | **SuperClassi**   | - |
 | **SottoClassi**   | - |
-| **Attributi**     | - Data Inizio  <br/> - Data fine  <br/> - Stato <br/> - Utente |
+| **Attributi**     | - Data Inizio  <br/> - Data fine  <br/> - Stato <br/> - Prenotazione |
 | **Responsabilità**| - Attivare e gestire il ciclo di vita di un prestito (richiesta, attivazione, estensione, restituzione). <br> - Monitorare e aggiornare lo stato di un libro in prestito. |
 | **Collaboratori** | - Utente – per l’iniziativa della richiesta di prestito. <br> - Libro – per modificare lo stato di disponibilità. <br> - Bibliotecario – per la gestione manuale (scannerizzazione, conferme) del prestito. |
 
-| Campo  | Dettaglio |
+| Campo | Dettaglio |
 |---|---|
 | **Nome**          | Tessera  |
 | **SuperClassi**   | - |
@@ -153,16 +130,16 @@ Un diagramma delle classi potrebbe includere:
 | **Responsabilità**| - Gestire le operazioni di tesseramento (nuovo tesseramento, rinnovo, cancellazione). <br> - Gestire le denunce di smarrimento o furto della tessera. |
 | **Collaboratori** | - Utente – per la richiesta e la gestione del proprio tesseramento. <br> - Bibliotecario – per la verifica e l’approvazione delle operazioni di tesseramento.  |
 
-| Campo  | Dettaglio |
+| Campo | Dettaglio |
 |---|---|
 | **Nome**          | Prenotazione  |
 | **SuperClassi**   | - |
 | **SottoClassi**   | - |
-| **Attributi**     | - Data inizio <br/> - Stato <br/> - Utente |
+| **Attributi**     | - Data inizio <br/> - Stato <br/> - Utente <br/> - Libro |
 | **Responsabilità**| - Gestire la prenotazione degli spazi comuni. <br> - Consentire la cancellazione delle prenotazioni attive.      |
 | **Collaboratori** | - Utente – per l’iniziativa della prenotazione. <br> - Bibliotecario – per la gestione delle risposte e per la segnalazione di eventuali errori. <br> - Biblioteca – per verificare la disponibilità degli ambienti da prenotare. |
 
-| Campo  | Dettaglio |
+| Campo | Dettaglio |
 |---|---|
 | **Nome**          | Commento/Recensione |
 | **SuperClassi**   | - |
@@ -171,9 +148,9 @@ Un diagramma delle classi potrebbe includere:
 | **Responsabilità**| - Memorizzare e visualizzare il feedback degli utenti sui libri. <br> - Consentire l’inserimento, la modifica e la segnalazione dei commenti. |
 | **Collaboratori** | - Utente – per la creazione e la gestione dei propri commenti. <br> - Bibliotecario – per la moderazione e la rimozione dei contenuti inappropriati. |
 
-| Campo  | Dettaglio |
+| Campo | Dettaglio |
 |---|---|
-| **Nome**          | Biblioteca  |
+| **Nome**          | Biblioteca |
 | **SuperClassi**   | -         |
 | **SottoClassi**   | -         |
 | **Attributi**     | - Nome <br/> - Indirizzo <br/> - Lista spazi disponibili <br/> - Lista notizie |

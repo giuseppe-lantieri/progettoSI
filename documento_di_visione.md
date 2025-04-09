@@ -10,34 +10,40 @@ L'obiettivo, perciò è riuscire a creare un semplice metodo per gli utenti di u
 - Servizio Wi-Fi
 - Servizio Tesseramento
 
+Il portale offrirà una sezione accessibile solo al personale autorizzato, in cui sarà possibile effettuare operazioni di carattere amministrativo tra cui:
+- Operare sui libri presenti
+- Segnalare problemi negli spazi condivisi
+- Operare sull'interfaccia del profilo biblioteca
+<br/>
 
 Oltre a ciò il portale deve essere in grado di:
-- Segnalare notizie riguardanti le singole biblioteche
-- Offrire indicazioni chiare e veloci sulla posizione
-- Aggregare i database
 - Permettere i login tramite i servizi di stato
-<!-- TODO Non ho idea se lasciarlo
-- Aderire al servizio Open Data 
--->
+- Aggregare i database
 - Gamification 
 
 ## ***PRENOTAZIONE LIBRI*** 
-Il portale deve permettere ai vari utenti (che abbiano effettuato o meno l'accesso) di verificare la presenza dei libri, indicando se sono fisici o ebook, nel caso dovrà aggiungere le informazioni riguardanti la libreria che lo possiede e la posizione.
-Nel caso il libro risultasse già preso, andrà specificato il numero di giorni mancanti alla fine del prestito.
+Il portale deve permettere ai vari utenti (che abbiano effettuato o meno l'accesso) di verificare la presenza dei libri, indicando se sono fisici o ebook. 
+Nel caso di libri fisici dovrà aggiungere le informazioni riguardanti la libreria che lo possiede, la posizione e indicare la prima disponibilità.
+Nel caso il libro risultasse già preso, l'utente potrà aumentare i giorni del prestito a meno di una prenotazione effettuata alla prima disponibilità.
 
 ## ***PRESTITO LIBRI***
 Il prestito libri differisce in base al formato del libro:
 - Fisico: 
 	
-	Il libro fisico non potrà per ovvie ragione essere preso direttamente online, il portale per permettere il servizio dovrà:
+	Il libro fisico non potrà per ovvie ragione essere preso direttamente online, il portale per permettere il servizio a seguito di una prenotazione, dovrà:
 	
-	1) Segnalare la presa in carico al database
-	2) Creare una ricevuta apposita da consegnare all'utente
+	1) Segnalare la prima indisponibilità del libro per 14 giorni 
+	2) Creare una ricevuta da inviare all'utente da utilizzare alla consegna
 	3) Permettere al bibliotecario di convalidare l'autenticità della ricevuta
-	4) Impedire agli altri utenti di prenotare a loro volta il libro
+	4) Impedire agli altri utenti di prenotare a loro volta il libro prima della scadenza della prenotazione
+	5) Permettere all'utente che ha effettuato la prenotazione di allungare il prestito in assenza di altre prenotazioni
 
 - Ebook: 
-	Il libro digitale dovrà essere gestito interamente dal portale, per assicurare che i termini e le licenze dell'ebook non vengano violati deve limitare le interazione dell'utente con esso, ma permetterne comunque una lettura agevole e senza intralci.
+	Il libro digitale avrà differenti termini di prestito in base alla licenza e i termini di utilizzo che la biblioteca ha stabilito con il produttore. In caso di prenotazione il portale avrà differenti comportamenti in base alla licenza.
+	Qui illustriamo due comportamenti, ma in seguito potrebbero esserne presenti di più:
+	
+	1) Licenza di libera distribuzione e fruizione: l'ebook verrà consegnato all'utente in una copia firmata e senza il permesso di ridistribuzione
+	2) Licenza di sola lettura: l'ebook sarà visionabile in una sezione del profilo dell'utente per la durata di 14 giorni in solo lettura, si utilizzeranno le tecnologie migliori per evitare comportamenti che violino i requisiti. 
 
 ## ***PRENOTAZIONE POSTO***
 
@@ -49,16 +55,11 @@ Il portale dovrà:
 4) Segnalare al bibliotecario la fine di una prenotazione in modo che esso possa controllare
 5) Permettere all'utente di estendere la propria prenotazione
 
-## ***SERVIZIO WI-FI*** 
-
-Il portale deve offrire la possibilità di entrare all'interno della connessione protetta offerta dal comune di Roma. Il servizio è accessibile solo alle persone che hanno aderito a un certo livello di tesseramento, perciò dovrà offrire un sistema di API per fare effettuare le verifiche alle biblioteche localmente.
-
 ## ***SERVIZIO DI TESSERAMENTO*** 
 
 Il portale offre agli utenti vari servizi di tesseramento, alcuni a pagamento e altri gratuiti. Ogni tessera permette di accedere a dati servizi e vantaggi:
 
-- Bibliopass
-(tessera gratuita con possibilità di iscrizione/rinnovo on-line)
+- Bibliopass 
 
 Richiedono, invece, il pagamento di una quota di adesione annuale:
 	
@@ -67,9 +68,10 @@ Richiedono, invece, il pagamento di una quota di adesione annuale:
 - Youngcard
 	
 - Goldcard
+
 La tessera d’iscrizione è personale e ha validità di un anno dall’ emissione.
 
-Se si perde la tessera la si deve bloccare subito. In biblioteca verranno rilasciate nuove credenziali e verrà emessa una nuova tessera per avere nuovamente accesso a tutte le attività on-line. Il rilascio della tessera sostitutiva Bibliocard richiede il pagamento di un rimborso spese di 5 euro. In caso di furto la tessera sostitutiva è gratuita se viene presentata copia della denuncia.
+Se si perde la tessera la si deve bloccare subito. In biblioteca verranno rilasciate nuove credenziali e verrà emessa una nuova tessera per avere nuovamente accesso a tutte le attività on-line. Il rilascio della tessera sostitutiva Bibliocard richiede il pagamento di un rimborso. In caso di furto la tessera sostitutiva è gratuita se viene presentata copia della denuncia.
 
 ##  ***NOTIZIE***
 
@@ -80,13 +82,15 @@ Il portale deve offrire una chiara e semplice mappa delle biblioteche, indicando
 
 ## ***DATABASE UNIFICATI***
 Il portale deve permettere di interrogare tutti i database delle varie biblioteche tramite un unico punto di accesso, per assicurare che ogni informazione sia condivisa e accessibile. 
+Per permettere ciò i database già esistenti verranno incorporati nel database che verrà generato per l'applicazione. 
+Inoltre sarà assicurata una migliore gestione dei dati. Verranno adottate le soluzioni più moderne, assicurando backup frequenti e politiche di distribuzione, adottando anche le politiche descritte da OPEN DATA. 
 
 ## ***INTEGRARE I SERVIZI DEL LOGIN DI STATO***
-Lo stato italiano ha da poco aggiunto vari servizi certificati, che permettono il login autorizzato del cittadino. Strumenti come lo SPID o la CIE, permettono un veloce e sicuro login da parte dell'utente che in applicazioni statali, come il portale descritto in questi file, sono indispensabili. 
+Lo stato italiano dispone di vari servizi certificati, che permettono il login autorizzato del cittadino. Strumenti come lo SPID o la CIE, permettono un veloce e sicuro login da parte dell'utente che in applicazioni statali, come il portale descritto in questi file, sono indispensabili. 
 
 ## ***GAMIFICATION***
-Il portale dovrà aggiungere funzionalità di gamification. Gli utenti dovranno collaborare all'interno del portale per acquisire punti tramite varie operazione tra cui: 
-- Aggiunta di informazioni riguardanti i libri 
+Il portale dovrà aggiungere funzionalità di gamification. Gli utenti dovranno collaborare all'interno del portale in apposite sezioni per acquisire punti tramite varie operazione tra cui: 
+- Aggiunta di informazioni riguardanti i libri
 - Recensioni
 - Prestiti
 - Interazioni con la piattaforma
@@ -105,11 +109,14 @@ n.b.: il sistema di punteggio è indicativo
 |Tuo commento ritenuto utile (Hai trovato utile questo commento?)| 300|
 |Tuo commento ritenuto inopportuno dai bibliotecari| -1.000|
 
+Il sistema sarà progettato per portare maggiore interazione dell'utente con la piattaforma e valorizzare le biblioteche per le nuove generazioni. 
+Per assicurare ciò le nuove sezioni del portale saranno ottimizzate per la visione mobile. 
 
 ## ***REVISIONI***
 ||||
 |--|--|--|
 |Versione|Data|Descrizione|
-|1.0|15/03/2025|Prima stesura del documento
-|1.1|19/03/2025|Seconda stesura del documento
-|1.2|25/03/2025|Terza stesura del documento
+|1.0|15/03/2025|Prima stesura del documento|
+|1.1|19/03/2025|Seconda stesura del documento|
+|1.2|25/03/2025|Terza stesura del documento|
+|1.3|09/04/2025|Quarta stesura del documento|
