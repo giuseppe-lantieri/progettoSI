@@ -23,7 +23,7 @@ Inoltre:
 - La documentazione fornita costituirà il riferimento principale per eventuali aggiornamenti futuri e dovrà essere sempre mantenuta aggiornata.
 
 ## LEGGE APPLICABILE E CESSIONE
-Il presente contratto è regolato dalla legge italiana. Esso non può essere ceduto, in tutto o in parte, a terzi senza il consenso espresso delle parti, pena la nullità dell'atto di cessione.
+Il presente contratto è regolato dalla legge italiana. Esso non può essere ceduto, in tutto o in parte, a terzi senza il consenso espresso delle Parti, pena la nullità dell'atto di cessione.
 
 ## ACCORDO
 Il presente contratto, unitamente ai documenti allegati, costituisce l'accordo integrale tra le Parti e sostituisce ogni precedente intesa, accordo o offerta, sia verbale che scritta, intervenuta tra le Parti.
