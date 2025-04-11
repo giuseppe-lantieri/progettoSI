@@ -60,12 +60,12 @@ Le principali operazioni individuate sono:
 
 ## 5. Schede CRC
 
-## 1. Boundary (Interfacce)
+## 1. Boundary
 
 ### 1.1 `UIAutenticazione`
-**TipoClasse**: Boundary/Interface
+**TipoClasse**: Boundary
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| UIAutenticazione |
 | **Attributi**| - |
@@ -73,7 +73,7 @@ Le principali operazioni individuate sono:
 | **Collaboratori** | - CServiziEsterni<br/> - CUtenza |
 
 ### 1.2 `UIGuest`
-**TipoClasse**: Boundary/Interface
+**TipoClasse**: Boundary
 
 | Campo | Dettaglio |
 | --- | --- |
@@ -83,7 +83,7 @@ Le principali operazioni individuate sono:
 | **Collaboratori** | - CRicerche |
 
 ### 1.3 `UIUtente`
-**TipoClasse**: Boundary/Interface
+**TipoClasse**: Boundary
 
 | Campo | Dettaglio |
 | --- | --- |
@@ -93,17 +93,17 @@ Le principali operazioni individuate sono:
 | **Collaboratori** | - CUtenza |
 
 ### 1.4 `UIGamification`
-**TipoClasse**: Boundary/Interface
+**TipoClasse**: Boundary
 
 | Campo | Dettaglio |
 | --- | --- |
 | **Nome**| UIGamification |
 | **Attributi**| - |
 | **Responsabilità**| - Partecipare al sistema di gamification:<br/> - inserire commenti/recensioni<br/> - riscattare premi<br/> |
-| **Collaboratori** | - EUtenteGamification<br/> - EFeedback |
+| **Collaboratori** | - CGamification |
 
 ### 1.5 `UIAmministrativa`
-**TipoClasse**: Boundary/Interface
+**TipoClasse**: Boundary
 
 | Campo | Dettaglio |
 | --- | ---|
@@ -117,7 +117,7 @@ Le principali operazioni individuate sono:
 ### 2.1 `CAmministrativo`
 **TipoClasse**: Control
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| CAmministrativo |
 | **Attributi**| - |
@@ -127,7 +127,7 @@ Le principali operazioni individuate sono:
 ### 2.2 `CServiziEsterni`
 **TipoClasse**: Control
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| CServiziEsterni |
 | **Attributi**| - |
@@ -137,7 +137,7 @@ Le principali operazioni individuate sono:
 ### 2.3 `CUtenza`
 **TipoClasse**: Control
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| CUtenza |
 | **Attributi**| - |
@@ -147,18 +147,28 @@ Le principali operazioni individuate sono:
 ### 2.4 `CPrenotazioni`
 **TipoClasse**: Control
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| CPrenotazioni |
 | **Attributi**| - |
 | **Responsabilità**| - Coordinare le operazioni relative alla prenotazione e assicurare coerenza |
 | **Collaboratori** | - EBibliotecario<br/> - ELibro<br/> - EPrestito<br/> - EBiblioteca - EUtente |
 
-
-### 2.5 `CRicerche`
+### 2.5 `CGamification`
 **TipoClasse**: Control
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| CGamification |
+| **Attributi**| - |
+| **Responsabilità**| - Coordinare le operazioni relative alla gamification |
+| **Collaboratori** | - EUtenteGamification<br/> -EFeedback |
+
+
+### 2.6 `CRicerche`
+**TipoClasse**: Control
+
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| CRicerche |
 | **Attributi**| - |
@@ -180,7 +190,7 @@ Le principali operazioni individuate sono:
 ### 3.2 `EUtenteGamification`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| EUtenteGamification |
 | **SuperClassi** | EUtente |
@@ -221,7 +231,7 @@ Le principali operazioni individuate sono:
 ### 3.6 `ETessera`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| ETessera |
 | **Attributi**| - Numero Tessera<br/> - Data di Emissione<br/> - Scadenza<br/> - Stato |
@@ -231,7 +241,7 @@ Le principali operazioni individuate sono:
 ### 3.7 `EPrenotazione`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| EPrenotazione |
 | **Attributi**| - Id<br/>  - Data Inizio<br/> - Stato<br/> - Durata Prenotazione<br/> - Riferimento a EUtente<br/> - Riferimento a ELibro<br/> |
@@ -241,7 +251,7 @@ Le principali operazioni individuate sono:
 ### 3.8 `EFeedback`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio|
+| Campo | Dettaglio |
 | --- | --- |
 | **Nome**| EFeedback |
 | **Attributi**| - Contenuto<br/> - Data Creazione<br/> - Segnalazione<br/> - Riferimento a EUtente - Riferimento a ELibro <br/> - Riferimento a EFeedback |

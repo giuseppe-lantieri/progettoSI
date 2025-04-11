@@ -29,7 +29,7 @@ Le modalità di prestito variano in base al formato del libro.
 
 ### Fisico
 Poiché il libro fisico non può essere consegnato direttamente online, il portale dovrà eseguire le seguenti operazioni:
-1. Segnalare l’indisponibilità del libro per un periodo di 14 giorni.
+1. Segnalare l’indisponibilità del libro per un periodo stabilito successivamente.
 2. Generare una ricevuta da inviare all’utente, da presentare al momento del ritiro.
 3. Consentire al bibliotecario di verificare l’autenticità della ricevuta.
 4. Impedire ulteriori prenotazioni sul libro fino alla scadenza della prenotazione in corso.
@@ -38,7 +38,7 @@ Poiché il libro fisico non può essere consegnato direttamente online, il porta
 ### Ebook
 Il periodo di prestito per gli ebook sarà definito in base alla licenza e ai termini di utilizzo stabiliti tra la biblioteca e il fornitore. Tra gli scenari possibili si prevedono:
 1. **Licenza di libera distribuzione e fruizione:** L’ebook verrà fornito all’utente in copia digitale, corredato da una firma digitale che ne certifichi l’autenticità, senza includere il diritto alla ridistribuzione.
-2. **Licenza di sola lettura:** L’ebook sarà consultabile esclusivamente in modalità “sola lettura” all’interno della sezione dedicata del profilo utente per un periodo limitato a 14 giorni, mediante l’utilizzo di tecnologie idonee a garantire il rispetto dei requisiti di sicurezza.
+2. **Licenza di sola lettura:** L’ebook sarà consultabile esclusivamente in modalità “sola lettura” all’interno della sezione dedicata del profilo utente per un periodo limitato, mediante l’utilizzo di tecnologie idonee a garantire il rispetto dei requisiti di sicurezza.
 
 ## Prenotazione Posto
 Per le biblioteche che mettono a disposizione spazi di studio, quali tavoli e sale per il co-working, il portale dovrà:

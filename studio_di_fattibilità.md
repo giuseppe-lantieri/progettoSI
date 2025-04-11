@@ -41,6 +41,13 @@ Per la realizzazione del sistema si prevede l’utilizzo delle seguenti componen
 
 La piattaforma si baserà su tecnologie consolidate: il linguaggio principale sarà Go, la gestione dei dati avverrà tramite comandi SQL e l’interfaccia utente sarà sviluppata con Vue.
 
+### RAGIONI PER LA SCelta
+- **Interfaccia Web:** L’utilizzo di Vue.js per lo sviluppo dell’interfaccia web è motivato dalla sua popolarità, flessibilità e potenza di reazione. La libreria permette la creazione di componenti riutilizzabili e una gestione efficiente dello stato, garantendo un’esperienza utente fluida.
+- **Web Server:** Il linguaggio Go (Golang) è stato scelto per il suo elevato livello di performance e flessibilità. La sua sintassi elegante e la capacità di gestire operazioni concorrenti in modo efficiente lo rendono ideale per un sistema che deve gestire molte richieste simultanee.
+- **Base Dati:** L’utilizzo di un database relazionale (PostgreSQL) è motivato dalla necessità di gestire strutture dati complesse e interrelate. La sua capacità di supportare transazioni atomiche e di garantire integrità referenziale fa sì che i dati siano conservati in modo sicuro e coerente.
+
+Questo stack tecnologico permette di sviluppare un sistema robusto, scalabile e facile da mantenere, adatto a gestire le esigenze di un ampio range di utenti.
+
 ## COSTI
 La realizzazione della piattaforma comporta costi significativi che includono:
 - Sviluppo del software e migrazione dei dati.
