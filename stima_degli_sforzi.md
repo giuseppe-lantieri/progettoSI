@@ -23,6 +23,15 @@ Dove:
 ## ***Il parametro SIZE***
 L'input più significativo è **Size**. Esso non è un parametro quantitativo, ma viene associato a un **fattore esponenziale** *E* che amplifica o riduce l'impatto della dimensione stessa sullo sforzo complessivo.
 
+Il fattore **Size** si può stimare a partire dai **Function Points (FP)**, 
+
+Il fattore $E$ si calcola tramite:
+$$
+E = B + 0.01 \cdot \sum_{j=1}^{5} SF_j
+$$
+
+
+
 
 ## Revisioni
 ||||
