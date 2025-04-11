@@ -112,7 +112,7 @@ Le principali operazioni individuate sono:
 | **Responsabilità**| - Caricare libri<br/> - Aggiornare catalogo<br/> - Segnalare prestiti<br/> |
 | **Collaboratori** | - CAmministrativo |
 
-### 1.2 `UIBiblioteca`
+### 1.6 `UIBiblioteca`
 **TipoClasse**: Boundary
 
 | Campo | Dettaglio |
@@ -122,7 +122,7 @@ Le principali operazioni individuate sono:
 | **Responsabilità**| - Visionare Informazioni biblioteca<br/> - Pubblicare Notizie <br/> |
 | **Collaboratori** | - EBiblioteca |
 
-### 1.2 `UITesseramento`
+### 1.7 `UITesseramento`
 **TipoClasse**: Boundary
 
 | Campo | Dettaglio |
@@ -131,6 +131,27 @@ Le principali operazioni individuate sono:
 | **Attributi**| - |
 | **Responsabilità**| - Creare tessere<br/> - Denunciare scomparsa<br/> - Cancellare Tessera |
 | **Collaboratori** | - CTesseramento |
+
+### 1.8 `UIPrestiti`
+**TipoClasse**: Boundary
+
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| UIPrestiti |
+| **Attributi**| - |
+| **Responsabilità**| - Creare prestito <br/> - Gestione prestito <br/> |
+| **Collaboratori** | - CPrenotazioni |
+
+### 1.9 `UIPrestitiOnline`
+**TipoClasse**: Boundary
+
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| UIPrestitiOnline |
+| **SuperClassi** | UIPrestiti |
+| **Attributi**| - |
+| **Responsabilità**| - Creare prestito online <br/> - Gestione prestito online <br/> |
+| **Collaboratori** | - CEbook |
 
 ## 2. Control
 
@@ -195,8 +216,8 @@ Le principali operazioni individuate sono:
 | **Responsabilità**| - Responsabile per la ricerca dei libri |
 | **Collaboratori** | - ELibro<br/> - EBiblioteca - EPrenotazione |
 
-### 1.2 `CTesseramento`
-**TipoClasse**: Boundary
+### 2.7 `CTesseramento`
+**TipoClasse**: Control
 
 | Campo | Dettaglio |
 | --- | --- |
@@ -204,6 +225,16 @@ Le principali operazioni individuate sono:
 | **Attributi**| - |
 | **Responsabilità**| - Coordinamento creazione tessere |
 | **Collaboratori** | - UITesseramento<br/> - ETessera<br/> - EUtente<br/> |
+
+### 2.8 `CEbook`
+**TipoClasse**: Control
+
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| CEbook |
+| **Attributi**| - |
+| **Responsabilità**| - Coordinamento prestiti digitali |
+| **Collaboratori** | - UIPrestitiOnline<br/> - EEBook |
 
 ## 3. Entity
 
@@ -246,7 +277,18 @@ Le principali operazioni individuate sono:
 | **Nome**| ELibro|
 | **Attributi**| - Titolo<br/> - Identificativo Libro<br/> - Autore<br/> - Disponibilità<br/> - Genere |
 | **Responsabilità**| - Memorizzare e fornire info <br/> - Gestire disponibilità<br/> - Supportare la ricerca |
-| **Collaboratori** | - EPrestito <br/> - CBibliotecario |
+| **Collaboratori** | - EPrestito <br/> - CAmministrativo |
+
+### 3.4 `EEBook`
+**TipoClasse**: Entity
+
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| EEBook |
+| **SuperClassi** | ELibro |
+| **Attributi**| - Licenza |
+| **Responsabilità**| - Memorizzare e fornire info <br/> |
+| **Collaboratori** | - EPrestito <br/> - CAmministrativo |
 
 ### 3.5 `EPrestito`
 **TipoClasse**: Entity
@@ -256,7 +298,7 @@ Le principali operazioni individuate sono:
 | **Nome**| EPrestito |
 | **Attributi**| - Data Inizio<br/> - Data Fine<br/> - Stato<br/> - Riferimento a EUtente/Tessera<br/> - Riferimento a ELibro |
 | **Responsabilità**| - Gestire il ciclo di vita di un prestito:<br/> - richiesta<br/> - attivazione<br/> - estensione<br/> - restituzione<br/> - Monitorare e aggiornare lo stato |
-| **Collaboratori** | - EUtente <br/> - ELibro<br/> - CBibliotecario |
+| **Collaboratori** | - EUtente <br/> - ELibro<br/> - CAmministrativo |
 
 ### 3.6 `ETessera`
 **TipoClasse**: Entity
@@ -266,7 +308,7 @@ Le principali operazioni individuate sono:
 | **Nome**| ETessera |
 | **Attributi**| - Numero Tessera<br/> - Data di Emissione<br/> - Scadenza<br/> - Stato |
 | **Responsabilità**| - Mantenere i dati del tesseramento |
-| **Collaboratori** | - EUtente<br/> - CBibliotecario |
+| **Collaboratori** | - EUtente<br/> - CAmministrativo |
 
 ### 3.7 `EPrenotazione`
 **TipoClasse**: Entity
@@ -286,7 +328,7 @@ Le principali operazioni individuate sono:
 | **Nome**| EFeedback |
 | **Attributi**| - Contenuto<br/> - Data Creazione<br/> - Segnalazione<br/> - Riferimento a EUtente - Riferimento a ELibro <br/> - Riferimento a EFeedback |
 | **Responsabilità**| - Memorizzare e visualizzare feedback utenti<br/> |
-| **Collaboratori** | - EUtente<br/> - CBibliotecario |
+| **Collaboratori** | - EUtente<br/> - CAmministrativo |
 
 ### 3.9 `EBiblioteca`
 **TipoClasse**: Entity
@@ -296,4 +338,4 @@ Le principali operazioni individuate sono:
 | **Nome**| EBiblioteca |
 | **Attributi**| - Nome<br/> - Indirizzo<br/> - Lista Spazi Disponibili<br/> - Lista Notizie - Lista Libri |
 | **Responsabilità**| - Memorizzare, pubblicare e aggiornare notizie<br/> - Gestire spazi prenotabili |
-| **Collaboratori** | - EPrenotazione<br/> - CBibliotecario |
+| **Collaboratori** | - EPrenotazione<br/> - CAmministrativo |
