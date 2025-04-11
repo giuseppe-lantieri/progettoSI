@@ -1,7 +1,7 @@
 # Documento di Design – Gestione Biblioteche Romane
 
 ## 1. Introduzione
-Il presente documento descrive in dettaglio l’implementazione del sistema per la gestione delle biblioteche romane, illustrando l'architettura scelta, i moduli, le interfacce e le modalità di comunicazione. Inoltre, vengono revisionati i diagrammi di sequenza prodotti durante l’analisi, costituendo così un riferimento fondamentale per le fasi di implementazione e validazione.
+Il presente documento descrive in dettaglio l’implementazione del sistema per la gestione delle biblioteche romane, illustrando l'architettura , i moduli, le interfacce e le modalità di comunicazione scelti . Inoltre, vengono revisionati i diagrammi di sequenza prodotti durante l’analisi, costituendo così un riferimento fondamentale per le fasi di implementazione e validazione.
 
 ## 2. Obiettivi del Documento
 - Fornire una panoramica dell'architettura del sistema.
