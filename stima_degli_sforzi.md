@@ -96,6 +96,8 @@ Seguendo la tabella 1 e 2, nel nostro caso avremo:
 | SA_4   | Gestione pagina biblioteca                     | EI   | Avg         | 4        |
 |        | **Totale**                                     |      |             | **101 UFP** |
 
+<!-- Il calcolo finale è solo un esempio, devo vedere quali sono le tecnologie utilizzate 
+-->
 Considerando il mix tecnologico previsto per l’implementazione:
 
 - 40% Python (50 SLOC per FP)
