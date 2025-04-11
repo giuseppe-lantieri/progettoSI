@@ -197,8 +197,36 @@ $$
 TDEV = 3 \cdot 18.47 \cdot (0.33 + 0.2 \cdot (1.16 - 1.01)) = \boxed{19.94} \text{ mesi}
 $$
 
+### ***Ripartizione stimata dei costi dell'architettura fisica***
+
+| Voce di costo                                   | Quantità | Costo unitario (€) | Totale (€) |
+|------------------------------------------------|----------|---------------------|------------|
+| Server cloud								     | 12 mesi  | 1.000               | 12.000     |
+| Licenze software 							     | 1        | 3.000               | 3.000      |
+| Backup e storage cloud                         | 12 mesi  | 200                 | 2.400      |
+| Postazioni di lavoro                           | 2        | 1.000               | 2.000      |
+| Costi vari (rete, sicurezza, firewall, VPN...) | –        | –                   | 600        |
+| **Totale stimato**                             |          |                     | **€ 20.000** |
+
+### ***Analisi preliminare dei costi***
+
+Assumendo che:
+
+- lo stipendio medio di un ingegnere del software varia dai 2.000 ai 4.000 euro al mese, si ipotizza uno stipendio medio di **3.000 euro**;
+- i costi di overhead del team (viaggio, ufficio, mensa, strumenti) sono stimati nel **doppio del salario medio**, ovvero **6.000 euro al mese**;
+- i costi dell’architettura fisica, comprensivi di licenze software, server cloud e strumenti di supporto, ammontano a **20.000 euro**;
+
+il costo totale si ipotizza pari a:
+
+$$
+(18{,}47 \cdot 3.000\,€) + (6.000\,€ \cdot 19{,}94) + 20.000\,€ = \boxed{195.050\,€}
+$$
+
+
+
 ## Revisioni
 ||||
 |--|--|--|
-|Numero|Data|Descrizione|
+|Versione|Data|Descrizione|
 |1.0|03/04/2025|Prima stesura del documento
+|1.1|11/04/2025|Seconda stesura del documento
