@@ -34,7 +34,7 @@ Il fattore **Size** , all'inizio del progetto, si può stimare a partire dai **F
 | **External Inquiry (EQ)** | Conta ogni combinazione unica input-output in cui un input genera immediatamente un output, senza elaborazioni complesse. | 3 | 4 | 6 |
 
 
-##### Tabella 2. Pesi per la classificazione dei Function Point
+##### Tabelle 2. Pesi per la classificazione dei Function Point
 ###### Per ILF (Internal Logical Files) e EIF (External Interface Files)
 
 | Elementi Record (RET) | Elementi Dati (DET)        | 1–19 | 20–50 | 51+  |
@@ -60,7 +60,7 @@ Il fattore **Size** , all'inizio del progetto, si può stimare a partire dai **F
 | 4+                     |                             | Avg  | High   | High |
 
 
-Seguendo la tabella 1 e 2, nel nostro caso avremo:
+**Seguendo le tabelle 1 e 2, nel nostro caso avremo:**
 #### Stima dei Function Point (UFP)
 
 ##### Function Point per singola funzione
@@ -100,33 +100,105 @@ Seguendo la tabella 1 e 2, nel nostro caso avremo:
 -->
 Considerando il mix tecnologico previsto per l’implementazione:
 
-- 40% Python (50 SLOC per FP)
-- 30% C++ (80 SLOC per FP)
-- 25% JavaScript (50 SLOC per FP)
-- 5% Java (80 SLOC per FP)
+- **Backend** sviluppato in **Go**: 60% dell’implementazione, con un rapporto di circa **70 SLOC per FP**
+- **Gestione dei dati** tramite **comandi SQL**: 15% del progetto, con un rapporto di circa **12 SLOC per FP**
+- **Frontend** in **Vue.js**: 25% dell’implementazione, con una stima di **50 SLOC per FP**
 
-Il valore medio risultante è pari a **60,5 SLOC per FP**.
-
-La dimensione finale del software, espressa in **KSLOC (Kilo Source Lines of Code)**, è quindi:
+Il valore medio calcolato è:
 
 $$
-SIZE = \frac{101 \times 60.5}{1000} = 6.111 \text{ KSLOC}
+SLOC/FP = 0.60 \cdot 70 + 0.15 \cdot 12 + 0.25 \cdot 50 = 56.3
 $$
 
+La dimensione complessiva del progetto, espressa in **KSLOC (Kilo Source Lines of Code)**, risulta quindi:
 
+$$
+SIZE = \frac{101 \times 56.3}{1000} = \boxed{5.689} \text{ KSLOC}
+$$
 
-
-<!--
+## ***Il fattore E***
 Il fattore $E$ si calcola tramite:
 $$
 E = B + 0.01 \cdot \sum_{j=1}^{5} SF_j
 $$
--->
 
+e rappresenta l’esponente nella formula di calcolo dello sforzo del modello COCOMO II. Viene calcolato in base a 5 **fattori di scala (Scale Factors)**:
 
+1. **PREC** – Precedenti esperienze con progetti simili
+2. **FLEX** – Flessibilità dei requisiti
+3. **RESL** – Risolutezza dell’architettura e dei rischi
+4. **TEAM** – Capacità e coesione del team
+5. **PMAT** – Maturità dei processi
+
+A ciascun fattore viene assegnato un valore da 0 a 5, dove 0 rappresenta una condizione ottimale (molto alta) e 5 una condizione critica (molto bassa). Nel contesto di questo progetto, sono stati assegnati i seguenti valori:
+
+| Fattore | Valore assegnato | Descrizione |
+|--------|------------------|-------------|
+| PREC   | 4                | In gran parte familiare |
+| FLEX   | 3                | Qualche flessibilità nei requisiti |
+| RESL   | 3                | Architettura definita al 60% |
+| TEAM   | 0                | Interazione continua nel team |
+| PMAT   | 5                | Maturità di processo molto alta (SW-CMM livello 5) |
+
+La somma dei fattori scala è quindi:
+
+$$
+\sum SF_j = 4 + 3 + 3 + 0 + 5 = \boxed{15}
+$$
+
+Applicando la formula:
+
+$$
+E = 1.01 + 0.01 \cdot \sum SF_j = 1.01 + 0.01 \cdot 15 = \boxed{1.16}
+$$
+
+## ***Fattore EM***
+Il valore $\prod{EM_i}$ rappresenta il prodotto dei fattori di costo (Effort Multipliers) nel modello COCOMO II, che influenzano lo sforzo di sviluppo in funzione delle caratteristiche del progetto, del team e del contesto tecnologico.
+
+In questo progetto sono stati considerati i 7 fattori di costo riportati nella seguente tabella, ciascuno valutato secondo il proprio impatto stimato sul progetto:
+
+| Fattore | Significato                                 | Livello scelto | Valore EM |
+|--------|----------------------------------------------|----------------|------------|
+| **PERS** | Capacità del personale                     | Alto           | 0.83       |
+| **RCPX** | Complessità del prodotto                   | Alto           | 1.33       |
+| **PDIF** | Diversità della piattaforma                | Basso          | 0.87       |
+| **PREX** | Esperienza precedente del team             | Alto           | 0.87       |
+| **FCIL** | Vincoli hardware                           | Nominale       | 1.00       |
+| **RUSE** | Riutilizzabilità del codice                | Nominale       | 1.00       |
+| **SCED** | Vincoli temporali                          | Nominale       | 1.00       |
+
+Il valore complessivo del fattore $\prod$ EM_i è calcolato come il prodotto dei singoli coefficienti:
+
+$$
+\prod EM_i = 0.83 \cdot 1.33 \cdot 0.87 \cdot 0.87 \cdot 1.00 \cdot 1.00 \cdot 1.00 = \boxed{0.836}
+$$
+
+### ***Calcolo dello sforzo (PM)***
+$$
+PM = 2.94 \cdot (5.689)^{1.16} \cdot 0.836 = \boxed{18.47} \text{ persone-mese}
+$$
+
+### ***Calcolo della durata (TDEV)***
+
+La durata del progetto viene stimata con la formula:
+
+$$
+TDEV = 3 \cdot PM \cdot (0.33 + 0.2 \cdot (E - 1.01))
+$$
+
+Sostituendo i valori:
+
+- **PM = 18.47**
+- **E = 1.16**
+
+Si ottiene:
+
+$$
+TDEV = 3 \cdot 18.47 \cdot (0.33 + 0.2 \cdot (1.16 - 1.01)) = \boxed{19.94} \text{ mesi}
+$$
 
 ## Revisioni
 ||||
 |--|--|--|
 |Numero|Data|Descrizione|
-|1.1|03/04/2025|Prima stesura del documento
+|1.0|03/04/2025|Prima stesura del documento
