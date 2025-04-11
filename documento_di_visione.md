@@ -21,7 +21,7 @@ Sono previste, inoltre, le seguenti funzionalità:
 
 ## Prenotazione Libri
 Il portale consentirà agli utenti, autenticati o meno, di verificare la disponibilità dei libri, distinguendo tra copie fisiche ed ebook.  
-- **Libri Fisici:** Verranno fornite informazioni relative alla biblioteca che detiene il libro, alla sua ubicazione e alla prima disponibilità. Qualora il libro risulti attualmente in prestito, l’utente potrà richiedere l’estensione del periodo di prestito, salvo l’esistenza di prenotazioni in corso.
+- **Libri Fisici:** Verranno fornite informazioni relative alla biblioteca che detiene il libro, alla sua ubicazione e alla prima disponibilità.
 - **Ebook:** Verranno mostrate le specifiche relative al formato digitale, conformemente alle regole d’uso definite dalla singola biblioteca.
 
 ## Prestito Libri
@@ -33,7 +33,7 @@ Poiché il libro fisico non può essere consegnato direttamente online, il porta
 2. Generare una ricevuta da inviare all’utente, da presentare al momento del ritiro.
 3. Consentire al bibliotecario di verificare l’autenticità della ricevuta.
 4. Impedire ulteriori prenotazioni sul libro fino alla scadenza della prenotazione in corso.
-5. Consentire all’utente che ha prenotato di estendere il periodo di prestito qualora non vi siano altre prenotazioni pendenti.
+5. Consentire all’utente che ha prenotato il libro di estendere il periodo di prestito qualora non vi siano altre prenotazioni pendenti.
 
 ### Ebook
 Il periodo di prestito per gli ebook sarà definito in base alla licenza e ai termini di utilizzo stabiliti tra la biblioteca e il fornitore. Tra gli scenari possibili si prevedono:
