@@ -72,14 +72,14 @@ Le principali operazioni individuate sono:
 | **Responsabilità**| - Gestire autenticazione tramite login, logout<br/> - Gestire registrazione di nuovi utenti |
 | **Collaboratori** | - CServiziEsterni<br/> - CUtenza |
 
-### 1.2 `UIGuest`
+### 1.2 `UIRicerca`
 **TipoClasse**: Boundary
 
 | Campo | Dettaglio |
 | --- | --- |
-| **Nome**| UIGuest |
+| **Nome**| UIRicerca |
 | **Attributi**| - |
-| **Responsabilità**| - Effettuare ricerche<br/> - Visionare pagine disponibili:<br/> - cataloghi<br/> - news |
+| **Responsabilità**| - Effettuare ricerche<br/> |
 | **Collaboratori** | - CRicerche |
 
 ### 1.3 `UIUtente`
@@ -89,7 +89,7 @@ Le principali operazioni individuate sono:
 | --- | --- |
 | **Nome**| UIUtente |
 | **Attributi**| - |
-| **Responsabilità**| - Modificare profilo <br/> |
+| **Responsabilità**| - Modificare profilo <br/> - Cancellare profilo <br/> |
 | **Collaboratori** | - CUtenza |
 
 ### 1.4 `UIGamification`
@@ -99,7 +99,7 @@ Le principali operazioni individuate sono:
 | --- | --- |
 | **Nome**| UIGamification |
 | **Attributi**| - |
-| **Responsabilità**| - Partecipare al sistema di gamification:<br/> - inserire commenti/recensioni<br/> - riscattare premi<br/> |
+| **Responsabilità**| - Partecipare al sistema di gamification<br/> - inserire feedback<br/> - riscattare premi<br/> - effettuare segnalazioni <br/> |
 | **Collaboratori** | - CGamification |
 
 ### 1.5 `UIAmministrativa`
@@ -109,8 +109,28 @@ Le principali operazioni individuate sono:
 | --- | ---|
 | **Nome**| UIAmministrativa |
 | **Attributi**| - |
-| **Responsabilità**| - Caricare libri<br/> - Aggiornare catalogo<br/> - Segnalare prestiti<br/> - Moderare contenuti<br/> - Pubblicare notizie |
+| **Responsabilità**| - Caricare libri<br/> - Aggiornare catalogo<br/> - Segnalare prestiti<br/> |
 | **Collaboratori** | - CAmministrativo |
+
+### 1.2 `UIBiblioteca`
+**TipoClasse**: Boundary
+
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| UIBiblioteca |
+| **Attributi**| - |
+| **Responsabilità**| - Visionare Informazioni biblioteca<br/> - Pubblicare Notizie <br/> |
+| **Collaboratori** | - EBiblioteca |
+
+### 1.2 `UITesseramento`
+**TipoClasse**: Boundary
+
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| UITesseramento |
+| **Attributi**| - |
+| **Responsabilità**| - Creare tessere<br/> - Denunciare scomparsa<br/> - Cancellare Tessera |
+| **Collaboratori** | - CTesseramento |
 
 ## 2. Control
 
@@ -121,7 +141,7 @@ Le principali operazioni individuate sono:
 | --- | --- |
 | **Nome**| CAmministrativo |
 | **Attributi**| - |
-| **Responsabilità**| - Eseguire le operazioni di gestione su comando di UIAmministrativa:<br/> - aggiunta libri<br/> - gestione prestiti<br/> - notizie<br/> - moderazione |
+| **Responsabilità**| - Eseguire le operazioni di gestione su comando di UIAmministrativa |
 | **Collaboratori** | - EBibliotecario<br/> - ELibro<br/> - EPrestito<br/> - EBiblioteca |
 
 ### 2.2 `CServiziEsterni`
@@ -132,7 +152,7 @@ Le principali operazioni individuate sono:
 | **Nome**| CServiziEsterni |
 | **Attributi**| - |
 | **Responsabilità**| - Eseguire le operazioni di gestione dei vari servizi esterni che potranno essere collegati |
-| **Collaboratori** | - EUtente |
+| **Collaboratori** | - EUtente<br/> - UIAutenticazione |
 
 ### 2.3 `CUtenza`
 **TipoClasse**: Control
@@ -142,7 +162,7 @@ Le principali operazioni individuate sono:
 | **Nome**| CUtenza |
 | **Attributi**| - |
 | **Responsabilità**| - Eseguire le operazioni di gestione degli utenti |
-| **Collaboratori** | - EUtente |
+| **Collaboratori** | - EUtente<br/> - UIAutenticazione |
 
 ### 2.4 `CPrenotazioni`
 **TipoClasse**: Control
@@ -152,7 +172,7 @@ Le principali operazioni individuate sono:
 | **Nome**| CPrenotazioni |
 | **Attributi**| - |
 | **Responsabilità**| - Coordinare le operazioni relative alla prenotazione e assicurare coerenza |
-| **Collaboratori** | - EBibliotecario<br/> - ELibro<br/> - EPrestito<br/> - EBiblioteca - EUtente |
+| **Collaboratori** | - UIRicerca<br/> - EBibliotecario<br/> - ELibro<br/> - EPrestito<br/> - EBiblioteca - EUtente |
 
 ### 2.5 `CGamification`
 **TipoClasse**: Control
@@ -175,6 +195,16 @@ Le principali operazioni individuate sono:
 | **Responsabilità**| - Responsabile per la ricerca dei libri |
 | **Collaboratori** | - ELibro<br/> - EBiblioteca - EPrenotazione |
 
+### 1.2 `CTesseramento`
+**TipoClasse**: Boundary
+
+| Campo | Dettaglio |
+| --- | --- |
+| **Nome**| CTesseramento |
+| **Attributi**| - |
+| **Responsabilità**| - Coordinamento creazione tessere |
+| **Collaboratori** | - UITesseramento<br/> - ETessera<br/> - EUtente<br/> |
+
 ## 3. Entity
 
 ### 3.1 `EUtente`
@@ -183,7 +213,7 @@ Le principali operazioni individuate sono:
 | Campo | Dettaglio |
 | --- | --- |
 | **Nome**| EUtente |
-| **Attributi**| - ID Utente<br/> - Nome<br/> - Cognome<br/> - Email<br/> - Numero di telefono<br/> - Numero Tessera |
+| **Attributi**| - ID Utente<br/> - Nome<br/> - Cognome<br/> - Email<br/> - Numero di telefono<br/> |
 | **Responsabilità**| - Mantenere i dati anagrafici e di contatto dell’utente |
 | **Collaboratori** | - EPrestito<br/> - ETessera |
 
@@ -194,7 +224,7 @@ Le principali operazioni individuate sono:
 | --- | --- |
 | **Nome**| EUtenteGamification |
 | **SuperClassi** | EUtente |
-| **Attributi**| - Identificativo Gamification<br/> - punti<br/> - statistiche<br/>  |
+| **Attributi**| - Punti<br/> - Statistiche<br/>  |
 | **Responsabilità**| - Mantenere i dati relativi alla gamification |
 | **Collaboratori** | - EFeedback<br/> |
 
