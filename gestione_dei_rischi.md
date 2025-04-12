@@ -38,8 +38,8 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **Effetti**     | Ritardi nella consegna del prodotto finale, maggiori costi di sviluppo, rilavorazione di parti già implementate. |
 | **Descrizione** | Possibilità che i requisiti iniziali del progetto subiscano modifiche durante lo sviluppo, a causa di nuove richieste o di esigenze mutate degli stakeholder. |
 | **Mitigation**  | Definizione precisa e documentata dei requisiti, adozione di metodologie agili e revisione periodica dei requisiti. |
-| **Monitoring**  | ...                                                                                         |
-| **Management**  | ...                                                                                         |
+| **Monitoring**  | Monitoraggio continuo delle richieste degli stakeholder, uso di strumenti di gestione dei requisiti, riunioni regolari con il cliente.                                                                                         |
+| **Management**  | Adattamento del piano di progetto, assegnazione di buffer temporali per gestire modifiche, coinvolgimento tempestivo del team nella valutazione dei cambiamenti.                                                                                        |
 
 #### Secondo Rischio
 |||
@@ -77,8 +77,8 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **Effetti**     | Breve interruzione del servizio e possibili disagi per gli utenti.                           |
 | **Descrizione** | Il sistema potrebbe subire interruzioni temporanee a seguito di aggiornamenti, manutenzioni programmate o problemi momentanei del server. |
 | **Mitigation**  | Implementazione di un'infrastruttura cloud scalabile, con server di backup e comunicazioni tempestive in caso di manutenzioni. |
-| **Monitoring**  | ...                                                                                         |
-| **Management**  | ...                                                                                         |
+| **Monitoring**  | Monitoraggio continuo dei server con sistemi automatici di alert (es. uptime robot, strumenti di monitoring cloud), log degli eventi di sistema, controlli giornalieri.                                                                                        |
+| **Management**  | Attivazione rapida dei server di backup in caso di guasto, notifica immediata agli utenti, e pianificazione delle manutenzioni in orari di bassa attività.                                                                                   |
 
 ## Revisioni
 
