@@ -96,7 +96,7 @@ Il fattore **Size** , all'inizio del progetto, si può stimare a partire dai **F
 | SA_4   | Gestione pagina biblioteca                     | EI   | Avg         | 4        |
 |        | **Totale**                                     |      |             | **101 UFP** |
 
-<!-- Il calcolo finale è solo un esempio, devo vedere quali sono le tecnologie utilizzate 
+<!-- TODO: aggiungere PL_5, Proroga Prenotazione 
 -->
 Considerando il mix tecnologico previsto per l’implementazione:
 
