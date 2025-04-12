@@ -35,7 +35,7 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **ID**          | R1                                                                                          |
 | **Titolo**      | Cambiamenti nei requisiti di progetto                                                       |
 | **Probabilità** | Alta                                                                                        |
-| **Effetti**     | Ritardi nella consegna del prodotto finale, maggiori costi di sviluppo, rilavorazione di parti già implementate. |
+| **Effetti**     | Seri |
 | **Descrizione** | Possibilità che i requisiti iniziali del progetto subiscano modifiche durante lo sviluppo, a causa di nuove richieste o di esigenze mutate degli stakeholder. |
 | **Mitigation**  | Definizione precisa e documentata dei requisiti, adozione di metodologie agili e revisione periodica dei requisiti. |
 | **Monitoring**  | Monitoraggio continuo delle richieste degli stakeholder, uso di strumenti di gestione dei requisiti, riunioni regolari con il cliente.                                                                                         |
@@ -48,7 +48,7 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **ID**          | R2                                                                                          |
 | **Titolo**      | Incompatibilità con API o Database                                                          |
 | **Probabilità** | Media                                                                                       |
-| **Effetti**     | Errori di sincronizzazione, mancata comunicazione tra sistemi, dati incoerenti.             |
+| **Effetti**     | Catastrofici             |
 | **Descrizione** | Possibili difficoltà nell’integrazione del software con il database delle biblioteche o con API di terze parti. |
 | **Mitigation**  | Esecuzione di test preliminari di compatibilità e sviluppo di soluzioni di fallback in caso di errore. |
 | **Monitoring**  | Controllo periodico dei log di errore e monitoraggio delle prestazioni delle chiamate API.    |
@@ -61,7 +61,7 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **ID**          | R3                                                                                          |
 | **Titolo**      | Scarsa accessibilità e usabilità                                                            |
 | **Probabilità** | Media                                                                                       |
-| **Effetti**     | Difficoltà di navigazione per gli utenti, possibili lamentele e ridotto utilizzo del software. |
+| **Effetti**     | Tollerabili |
 | **Descrizione** | Il sito deve risultare accessibile anche a persone con disabilità visive o motorie, per garantire l'inclusività. |
 | **Mitigation**  | Adozione delle linee guida WCAG per l’accessibilità e test con utenti reali.                  |
 | **Monitoring**  | Verifica periodica del rispetto delle normative e analisi del feedback degli utenti.         |
@@ -74,7 +74,7 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **ID**          | R4                                                                                          |
 | **Titolo**      | Downtime temporaneo del sistema                                                           |
 | **Probabilità** | Bassa                                                                                       |
-| **Effetti**     | Breve interruzione del servizio e possibili disagi per gli utenti.                           |
+| **Effetti**     | Seri                      |
 | **Descrizione** | Il sistema potrebbe subire interruzioni temporanee a seguito di aggiornamenti, manutenzioni programmate o problemi momentanei del server. |
 | **Mitigation**  | Implementazione di un'infrastruttura cloud scalabile, con server di backup e comunicazioni tempestive in caso di manutenzioni. |
 | **Monitoring**  | Monitoraggio continuo dei server con sistemi automatici di alert (es. uptime robot, strumenti di monitoring cloud), log degli eventi di sistema, controlli giornalieri.                                                                                        |
