@@ -204,9 +204,11 @@ $$
 | Server cloud								     | 12 mesi  | 1.000               | 12.000     |
 | Licenze software 							     | 1        | 3.000               | 3.000      |
 | Backup e storage cloud                         | 12 mesi  | 200                 | 2.400      |
-| Postazioni di lavoro                           | 2        | 1.000               | 2.000      |
-| Costi vari (rete, sicurezza, firewall, VPN...) | –        | –                   | 600        |
-| **Totale stimato**                             |          |                     | **€ 20.000** |
+| Postazioni di lavoro                           | 180      | 1.000               | 180.000    |
+| Costi vari (rete, sicurezza, firewall, VPN...) | –        | –                   | 2000       |
+| **Totale stimato**                             |          |                     | **€ 198.000** |
+
+<!-- Ricalcolare totale e costi successivi -->
 
 ### ***Analisi preliminare dei costi***
 
