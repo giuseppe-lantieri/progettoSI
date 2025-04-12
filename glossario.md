@@ -77,3 +77,16 @@
 - **SPID**: Sistema Pubblico di Identità Digitale, utilizzato per autenticare gli utenti attraverso
 - **CIE**: Carta di Identità Elettronica, un altro sistema di autenticazione usato per l’identificazione degli utenti.
 
+- **Priorità**: Must Have, Should Have, Recommended, Would Be Better to Have, Optional
+
+
+- **Deve Avere (Must Have)**: Questi sono requisiti essenziali e critici per il successo del progetto. Senza di essi, il progetto non può essere considerato completo o funzionale.
+  
+- **Potrebbe Avere (Could Have)**: Questi requisiti sono desiderabili e aggiungono valore, ma sono meno importanti rispetto ai "Must Have". Possono essere inclusi se c'è tempo extra.
+ 
+- **Sarebbe meglio Avere (Should Have)**: Questi requisiti sono importanti ma non critici. Possono essere inclusi se c'è tempo e risorse disponibili, ma il progetto può funzionare anche senza di essi.
+ 
+- **Facoltativo (Optional)**: Questi requisiti sono completamente facoltativi e non influiscono sul funzionamento di base. Possono offrire funzionalità aggiuntive o miglioramenti.
+ 
+- **Consigliato (Recommended)**: Questi requisiti sono fortemente suggeriti perché possono migliorare l'efficacia, la sicurezza o la qualità del risultato finale, ma non sono obbligatori.
+
