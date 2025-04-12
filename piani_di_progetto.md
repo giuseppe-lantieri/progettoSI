@@ -1,209 +1,164 @@
 # Biblioteche di Roma
-# Piano di Progetto
-| Nome | Iterazione 1 | 
-| :--- | :--- |
-|Fase|Inception
-| Stato |Accettato|
-|Obiettivi| - Analisi dei requisiti<br>-Documento di visione<br>-Proposta di Contratto<br>-Studio di Fattibilità|
+### Piano di Progetto
 
-| Nome | Iterazione 2 | 
-| :--- | :--- |
-|Fase|Inception
-| Stato|Accettato | 
-|Obiettivi| - Revisione del documento di visione<br>-Piano di Iniziale Progetto<br>-Modello dei casi d'uso preliminare<br>-Valutazione dei rischi d'uso<br>-Architettura Iniziale-<br>-Glossario|
+## 1. Introduzione
 
-| Nome | Iterazione 3 | 
-| :--- | :--- |
-|Fase|Elaboration
-| Stato|Accettato | 
-|Obiettivi| -Contratto Firmato <br>-Piano di Progetto rivisto<br>-Use Case e Piano di Test|
+### 1.1 Scopo del Documento
+Il presente documento descrive il piano di progetto per lo sviluppo di un software che replichi le funzionalità del sito delle Biblioteche di Roma, adottando il metodo Rational Unified Process (RUP).
 
+### 1.2 Obiettivi del Progetto
+- Consentire la gestione del catalogo bibliotecario
+- Abilitare la prenotazione e il prestito dei libri online
+- Gestire l'iscrizione e la profilazione degli utenti
+- Integrare funzionalità di ricerca avanzata e la gestione degli eventi
 
-Nome | Iterazione 4 | 
-| :--- | :--- |
-|Fase|Construction
-| Stato|Accettato | 
-|Obiettivi| - Modello use Case<br> -Piano di Test<br>|
+### 1.3 Ambito del Progetto
+Il sistema fornirà un'interfaccia web accessibile sia da desktop che da dispositivi mobili, offrendo funzionalità dedicate a utenti, bibliotecari e amministratori.
 
+## 2. Processo di Sviluppo
 
+Il progetto seguirà il **Rational Unified Process (RUP)**, articolato nelle seguenti fasi:
 
-|Nome | Iterazione 5 | 
-| :--- | :--- |
-|Fase|Costruction
-| Stato |Accettato| 
-|Obiettivi| - Implementazione<br>-Relazizzazione dei casi di test|
+### 2.1 Inception
+- Definizione degli obiettivi principali
+- Identificazione degli stakeholder
+- Studio di fattibilità
+- Creazione del Business Case
+- Individuazione dei rischi principali
 
-|Nome | Iterazione 6 | 
-| :--- | :--- |
-|Fase|Transition
-| Stato |Accettato| 
-|Obiettivi| - Training on the Job<br>- Manuale Utente <br>- BugFix|
+### 2.2 Elaborazione
+- Definizione dell'architettura software
+- Modellazione dei casi d'uso principali
+- Prototipazione delle funzionalità chiave
+- Redazione del piano di gestione dei rischi
 
+### 2.3 Costruzione
+- Implementazione iterativa delle funzionalità secondo le priorità definite nei casi d'uso
+- Esecuzione di test unitari e di integrazione
+- Affinamento dell'architettura
 
-##Appendice
+### 2.4 Transizione
+- Esecuzione dei test di sistema e di accettazione
+- Deployment del software
+- Formazione degli utenti
+- Manutenzione e supporto post-deployment
 
- <!--Questo doc Deve comunicare:
- 
- - la portata e le risorse al responsabile del progetto, al personale tecnico ed al cliente; 
- - definire i rischi e suggerire le tecniche di governo dei rischi; 
- - definire costi e tempi, per con sentire alla direzione di esaminarli; 
- 
- - fornire una visione globale a tutte le persone in qualche modo
- coinvolte nel progetto; 
- - delineare le strategie per la qualità e per il governo dei cambiamenti.
+## 3. Struttura del Progetto
 
- La presentazione dei costi e dei tempi varia a seconda del pubblico a cui è indirizzata. Se il piano è
- utilizzato soltanto come documento interno, si possono presentare anche i risultati di ciascuna tecnica impiegata per le stime dei costi. 
- 
- Se il piano è distribuito esternamente all’organizzazione, viene fornito solo il risultato globale delle stime dei costi (si combinano i risultati di tutte le tecniche im
-piegate a tal scopo). 
+### 3.1 Ruoli e Responsabilità
 
-Analogamente, il livello di dettaglio del paragrafo dedicato alla pianificazione dei tempi può variare a seconda del pubblico e del grado di formalità del piano
+| Ruolo               | Responsabilità                                         |
+|---------------------|--------------------------------------------------------|
+| Project Manager     | Coordinamento del progetto e gestione delle tempistiche|
+| Analista            | Definizione dei requisiti e interazione con gli stakeholder |
+| Architetto Software | Progettazione dell'architettura del sistema            |
+| Sviluppatore        | Implementazione delle funzionalità                     |
+| Tester              | Verifica e validazione del software                    |
+| UX/UI Designer      | Progettazione dell'interfaccia utente                  |
 
-Quando si raccolgono i requisiti si produrranno i seguenti documenti:
+### 3.2 Pianificazione e Timeline
+Il progetto sarà suddiviso in iterazioni, con rilascio incrementale delle funzionalità principali.
 
-Riepilogo documenti prodotti
- L'attività di Requirements produce tutta una serie di documenti, il cui scopo è definire bene cosa
- deve fare il sistema.
- Normalmente il documento dei requisiti comprende:
- Il documento di visione, contenente:
-  Premesse del progetto (Obiettivi e scopo, Contesto, Stakeholders, ecc.)
-  Servizi del Sistema (Scopo del sistema, Requisiti Funzionali, Requisiti informativi, ecc.)
-  Vincoli (Requisiti di interfaccia, di prestazione, di sicurezza, operativi, ecc.)
- Gli aspetti procedurali (problemi aperti, previsione costi, ecc.)
- Le “Appendici”. E qui includiamo: 
-● Modello di business
- ● Glossario
- ● Modello dei casi d'uso (diagramma e documentazione aggiuntiva)
- ● Diagramma delle attività e di stato
- ● Valutazione del rischio (RMMM, RIS, tabella dei rischi, ecc.)
- ● Stima del costo (per ogni requisito)
- ● SRS
- ● Piano di progetto iniziale (assegnazione dei compiti, tempi di esecuzione, diagrammi PERT,
- ecc.)
- ● Prototipi
- ● Documento di architettura iniziale
- -->
- 
- Analisi
+| Fase         | Durata      |
+|--------------|-------------|
+| Inception    | 2 settimane |
+| Elaborazione | 4 settimane |
+| Costruzione  | 8 settimane |
+| Transizione  | 2 settimane |
 
- <!--
- Riepilogo dei documenti prodotti
- Una serie di documenti è prodotta durante questa attività, tutti volti a capire cosa fa il sistema dal
- punto di vista dello sviluppatore.
- Essi sono:
- ● Architettura di base: questa è l'architettura su cui si baserà tutto il progetto. Una volta che que
-sta architettura è stabilita, essa non potrà più essere variata
- ● Diagramma delle classi: modella le classi e le associazioni del sistema.
- ● Diagramma di sequenza e/o collaborazione: modella il comportamento delle classi per la riso
-luzione dei casi d'uso
- ● Diagramma dei package d'analisi: modella come sono accoppiate le classi.
- ● Diagramma delle attività e degli stati: caso mai siano necessari alla comprensione.
- ● Documentazione aggiuntiva: Ad esempio i fogli CRC, se si usa questo approccio
- -->
- Design
- <!--
-  Riepilogo dei documenti prodotti
- Tutta una serie di documenti viene prodotta durante questa attività, tutti volti a capire come realiz
-zare il sistema. Essi sono:
- ● Diagramma delle classi: completa tutte le classi e le associazioni dal punto di vista
- implementativo. Trasforma le classi di analisi in quelle di design e traduce i modelli non compa
-tibili (come le classi di associazione). Comprende anche le interfacce
- ● Diagramma di sequenza e/o collaborazione: modella il comportamento delle classi per la riso
-luzione dei casi d'uso, dal punto di vista implementativo (comprese le classi di accesso)
- ● Diagramma dei package di design: modella come sono accoppiate le classi.
- ● Diagramma degli stati: Modella i comportamenti interni delle classi.
- ● Sottosistemi: visualizza i sottosistemi utilizzati, dove sono utilizzati e, per quelli non legacy, vi
- sono i rimandi alle loro specifiche implementative, con i rispettivi diagrammi.
- ● Documentazione aggiuntiva: Ad esempio i documenti OCL, l'analisi delle scelte implementati
-ve, ecc
- -->
+## 4. Gestione dei Rischi
 
- Implementazione
- <!--
- Riepilogo dei documenti prodotti
- Questa attività produce i documenti che specificano la parte implementativa di tutto il progetto: essi
- comprendono:
- ● Piano d'integrazione
- ● Diagramma dei componenti
- ● Diagramma di Deployment
- ● Il programma
- ● Qualsiasi altro documento che il programmatore ritiene importante (documentazione tecnica,
- scelte implementative, listati di codice commentato, documentazione interna, ecc.)
- ● Manuale dell'utente e documentazione aggiuntiva necessaria per il cliente.
- -->
+| ID  | Titolo                             | Probabilità | Impatto | Azioni di Mitigazione                                |
+|-----|------------------------------------|-------------|---------|------------------------------------------------------|
+| R1  | Cambiamenti nei requisiti          | Alta        | Alto    | Revisione periodica con gli stakeholder              |
+| R2  | Problemi di integrazione con il DB | Media       | Alto    | Test di compatibilità e implementazione di fallback  |
+| R3  | Sicurezza e conformità al GDPR     | Media       | Alto    | Implementazione di crittografia e autenticazione forte |
+| R4  | Ritardi nello sviluppo             | Media       | Medio   | Pianificazione Agile e gestione efficace delle risorse|
+
+## 5. Metriche di Valutazione
+
+- **Copertura funzionale:** Percentuale di funzionalità implementate in relazione ai requisiti pianificati.
+- **Tasso di errore:** Numero di bug rilevati per ogni release.
+- **Performance del sistema:** Tempo medio di risposta e capacità di gestione del carico massimo.
+- **Feedback degli utenti:** Valutazioni e segnalazioni ricevute post-deployment.
+
+## 6. Iterazioni
+
+### Iterazione 1
+| Fase      | Inception    |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Analisi dei requisiti <br/> - Redazione del documento di visione <br/> - Proposta di contratto <br/> - Studio di fattibilità |
+
+### Iterazione 2
+| Fase      | Inception    |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Revisione del documento di visione <br/> - Redazione del piano iniziale di progetto <br/> - Modellazione preliminare dei casi d’uso <br/> - Valutazione iniziale dei rischi <br/> - Definizione dell’architettura iniziale <br/> - Redazione del glossario |
+
+### Iterazione 3
+| Fase      | Elaborazione |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Approvazione del contratto <br/> - Revisione del piano di progetto <br/> - Definizione dei casi d’uso e del piano di test |
+
+### Iterazione 4
+| Fase      | Elaborazione |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Revisione dell’architettura <br/> - Documento di Analisi <br/> - Documento di Design |
 
 
- Per questo documento riprenderei lo schema di Andrea e inserirei le iterazioni con i documenti che stiamo producendo
-|Iterazione 1
-|:--|
+### Iterazione 5
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Prioritizzazione dei modello dei casi d’uso <br/> - Finalizzazione Documento di Design <br/> - Redazione del piano di test |
 
-|Fase|Inception|
-|:--|:--|
-|Obiettivi | •Raccolta Requisiti<br>•Stesura del documento di visione<br>•Studio di Fattibilità<br>•Proposta di Contratto<br>
-Milestones|-
-Stato|Accettata
+### Iterazione 6
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _MustHave_ <br/> -  Sviluppo dei casi di test <br/> - Sviluppo dei casi di test |
 
-|Iterazione 2|
-|:--|
+### Iterazione 7
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _ShouldHave_ <br/> - Sviluppo dei casi di test |
 
-|Fase|Inception|
-|:--|:--|
-|Obiettivi | •Revisione Studio di Fattibilità<br>•Revisione Documento di Visione<br>•Valutazione dei Rischi<br>•Glossario<br>
-Milestones|-
-Stato|Accettata
+### Iterazione 8
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _Recommended_ <br/> - Sviluppo dei casi di test |
 
-|Iterazione 3|
-|:--|
+### Iterazione 9
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _Would Be Better to Have_ <br/> - Sviluppo dei casi di test |
 
-|Fase|Inception|
-|:--|:--|
-|Obiettivi |•Architettura Iniziale<br>•Modelli di Casi d'uso<br>•Piano di Progetto<br>
-Milestones| Accettazione Piano di Progetto e Firma del Contratto
-Stato|Accettata
+### Iterazione 10
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _Optional_ <br/> - Sviluppo dei casi di test |
 
-Iterazione 3|
-|:--|
+### Iterazione 11
+| Fase      | Transizione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Formazione sul campo (training on the job) <br/> - Redazione del manuale utente <br/> - Correzione dei bug riscontrati |
 
-|Fase|Elaboration|
-|:--|:--|
-|Obiettivi |•Raffinamento  Casi d'uso<br>•Piano di Test<br>•Documento di Analisi<br>•
-Milestones| -
-Stato|Accettata
+## 7. Conclusione
+Il progetto seguirà un approccio iterativo volto a garantire la qualità del software e la soddisfazione degli utenti. Ogni fase verrà monitorata e valutata costantemente per assicurare il successo e l’efficacia del sistema.
 
-Iterazione 4|
-|:--|
+## Revisioni (Cronologia Revisioni)
 
-|Fase|Elaboration|
-|:--|:--|
-|Obiettivi |•Review Architettura<br>•Documento di Analisi<br>•Documento di Design
-Milestones| -
-Stato|Accettata
-
-
-Iterazione 5|
-|:--|
-
-|Fase|Construction|
-|:--|:--|
-|Obiettivi |•Piano d'integrazione<br>•Diagramma dei componenti<br>•Diagramma di Deployment<br>•Rilascio del Software
-Milestones| -
-Stato|Accettata
-
-Iterazione 5|
-|:--|
-
-|Fase|Transition|
-|:--|:--|
-|Obiettivi |•Test di Rilascio>•Documento di UAT<br>
-Milestones| Accettazione degli UAT
-Stato|Accettata
-
-Iterazione 6|
-|:--|
-
-|Fase|Transition|
-|:--|:--|
-|Obiettivi |•Supporto agli utenti<br>•BugFix<br>•Manuale Utente
-Milestones| Accettazione degli UAT
-Stato|Accettata
+| Versione | Data       | Descrizione                        |
+|----------|------------|------------------------------------|
+| 1.0      | 19/03/2025 | Prima stesura del documento        |
+| 1.1      | 30/03/2025 | Seconda stesura del documento  
+| 1.2      | 09/04/2025 | Terza stesura del documento     |
+| 1.3      | 12/04/2025 | Terza stesura del documento     |
