@@ -80,9 +80,49 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **Monitoring**  | Monitoraggio continuo dei server con sistemi automatici di alert (es. uptime robot, strumenti di monitoring cloud), log degli eventi di sistema, controlli giornalieri.                                                                                        |
 | **Management**  | Attivazione rapida dei server di backup in caso di guasto, notifica immediata agli utenti, e pianificazione delle manutenzioni in orari di bassa attività.                                                                                   |
 
+#### Quinto Rischio
+|||
+|-----------------|---------------------------------------------------------------------------------------------|
+| **Campo**       | **Contenuto**                                                                               |
+| **ID**          | R5                                                                                          |
+| **Titolo**      | Indisponibilità del personale                                                          		|
+| **Probabilità** | Media                                                                                      |
+| **Effetti**     | Seri                          |
+| **Descrizione** | Assenza temporanea o prolungata di membri chiave del team (per malattia, imprevisti o dimissioni) che potrebbero rallentare lo sviluppo e compromettere la continuità del progetto.
+| **Mitigation**  | Pianificare in anticipo sostituzioni o turnazioni, garantire il cross-training e definire procedure per la gestione delle assenze. |
+| **Monitoring**  | Monitoraggio continuo delle assenze tramite incontri periodici e report settimanali.|
+| **Management**  | Ri-assegnare le attività ai membri disponibili o, se necessario, coinvolgere risorse esterne per minimizzare l’impatto.
+
+### Sesto rischio
+|||
+|-----------------|---------------------------------------------------------------------------------------------|
+| **Campo**       | **Contenuto**                                                                               |
+| **ID**          | R6                                                                                          |
+| **Titolo**      | Documentazione tecnica incompleta                                                        	|
+| **Probabilità** | Media                                                                                       |
+| **Effetti**     | Tollerabili/Seri                          |
+| **Descrizione** | La documentazione, se non aggiornata o redatta in modo poco chiaro, può causare errori di implementazione e difficoltà di manutenzione, impattando negativamente il progetto.
+| **Mitigation**  | 	Stabilire un processo di revisione periodica della documentazione, assegnando responsabilità chiare per la sua redazione e aggiornamento. |
+| **Monitoring**  | Effettuare audit regolari del materiale documentale e raccogliere feedback dagli sviluppatori e dagli stakeholder.|
+| **Management**  | Organizzare sessioni di aggiornamento e formazione, rivedendo tempestivamente la documentazione in base alle necessità emergenti.
+
+### Settimo rischio
+|||
+|-----------------|---------------------------------------------------------------------------------------------|
+| **Campo**       | **Contenuto**                                                                               |
+| **ID**          | R7                                                                                          
+| **Titolo**      | Violazioni della sicurezza dei dati                                                     		|
+| **Probabilità** | Bassa                                                                                |
+| **Effetti**     | Catastrofici                       															|
+| **Descrizione** | Possibile accesso non autorizzato o furto di dati sensibili degli utenti e della biblioteca, con conseguenze legali e reputazionali molto gravi.
+| **Mitigation**  | Implementare robuste misure di sicurezza: crittografia, autenticazione a due fattori, controlli di accesso e aggiornamenti regolari del sistema.
+| **Monitoring**  | Effettuare audit di sicurezza periodici, utilizzare strumenti di monitoraggio per rilevare anomalie e controllare costantemente i log di accesso.|
+| **Management**  | Predisporre un piano d’intervento d’emergenza per isolare e risolvere il problema, comunicare tempestivamente agli stakeholder e pianificare azioni correttive.
+
 ## Revisioni
 
 | Versione | Data       | Descrizione                        |
 |----------|------------|------------------------------------|
 | 1.0      | 20/03/2025 | Prima stesura del documento        |
 | 1.1      | 21/03/2025 | Seconda stesura del documento      |
+| 1.2      | 12/04/2025 | Terza stesura del documento        | 
