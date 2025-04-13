@@ -205,20 +205,18 @@ $$
 | Costi vari (rete, sicurezza, firewall, VPN...) | –        | –                   | 2000       |
 | **Totale stimato**                             |          |                     | **€ 198.000** |
 
-<!-- Ricalcolare totale e costi successivi -->
-
 ### ***Analisi preliminare dei costi***
 
 Assumendo che:
 
 - lo stipendio medio di un ingegnere del software varia dai 2.000 ai 4.000 euro al mese, si ipotizza uno stipendio medio di **3.000 euro**;
 - i costi di overhead del team (viaggio, ufficio, mensa, strumenti) sono stimati nel **doppio del salario medio**, ovvero **6.000 euro al mese**;
-- i costi dell’architettura fisica, comprensivi di licenze software, server cloud e strumenti di supporto, ammontano a **20.000 euro**;
+- i costi dell’architettura fisica, comprensivi di licenze software, server cloud e strumenti di supporto, ammontano a **199.400 euro**;
 
 il costo totale si ipotizza pari a:
 
 $$
-(18{,}47 \cdot 3.000\,€) + (6.000\,€ \cdot 19{,}94) + 20.000\,€ = \boxed{195.050\,€}
+(18{,}47 \cdot 3.000\,€) + (6.000\,€ \cdot 19{,}94) + 199.400\,€ = \boxed{374.450\,€}
 $$
 
 
