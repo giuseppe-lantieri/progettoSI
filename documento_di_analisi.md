@@ -58,143 +58,139 @@ Le principali operazioni individuate sono:
 - **Segnalare Prestito e Notizie**: aggiornare lo stato del sistema (SA_2, SA_3).
 - **Gestire**: personalizzare la pagina della biblioteca (SA_4).
 
+<div style="page-break-after: always;"></div>
+
 ## 5. Diagrammi di Attività
-### AU_1
+
+**AU_1**: Autenticazione Utente Sistema Interno  
 ![AU_1](./img/diagrammi_di_attivita/AU_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_2
+**AU_2**: Autenticazione Utente Tramite Sistema Esterno  
 ![AU_2](./img/diagrammi_di_attivita/AU_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_3
+**AU_3**: Modifica Password Sistema Interno  
 ![AU_3](./img/diagrammi_di_attivita/AU_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_4
+**AU_4**: Registrazione  
 ![AU_4](./img/diagrammi_di_attivita/AU_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_5
+**AU_5**: Logout
 ![AU_5](./img/diagrammi_di_attivita/AU_5.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_1
+**T_1**: Nuovo Tesseramento  
 ![T_1](./img/diagrammi_di_attivita/T_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_2
+**T_2**: Rinnovo Tesseramento  
 ![T_2](./img/diagrammi_di_attivita/T_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_3
+**T_3**: Cancellazione Tesseramento  
 ![T_3](./img/diagrammi_di_attivita/T_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_4
+**T_4**: Denuncia Smarrimento Tesseramento  
 ![T_4](./img/diagrammi_di_attivita/T_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_5
+**T_5**: Denuncia Furto Tesseramento
 ![T_5](./img/diagrammi_di_attivita/T_5.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_1
+**G_1**: Partecipazione al Sistema di Gamification  
 ![G_1](./img/diagrammi_di_attivita/G_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_2
+**G_2**: Gestione Profilo  
 ![G_2](./img/diagrammi_di_attivita/G_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_3
+**G_3**: Inserimento Commento/Recensione  
 ![G_3](./img/diagrammi_di_attivita/G_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_4
+**G_4**: Segnalazione Commento/Recensione  
 ![G_4](./img/diagrammi_di_attivita/G_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_5
+**G_5**: Riscatto Punti
 ![G_5](./img/diagrammi_di_attivita/G_5.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_1
+**PL_1**: Ricerca Libro Fisico e Richiesta di Prestito  
 ![PL_1](./img/diagrammi_di_attivita/PL_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_2
+**PL_2**: Restituzione Prestito Fisico  
 ![PL_2](./img/diagrammi_di_attivita/PL_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_3
+**PL_3**: Richiesta Allungamento Prestito Fisico  
 ![PL_3](./img/diagrammi_di_attivita/PL_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_4
+**PL_4**: Richiesta E-book
 ![PL_4](./img/diagrammi_di_attivita/PL_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PS_1
+**PS_1**: Prenotazione di uno Spazio Comune  
 ![PS_1](./img/diagrammi_di_attivita/PS_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PS_2
+**PS_2**: Cancellazione di una Prenotazione  
 ![PS_2](./img/diagrammi_di_attivita/PS_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PS_3
-![PS_3](./img/diagrammi_di_attivita/PS_3.jpg)
+**SA_1**: Caricamento Nuovi Libri  
 
-<div style="page-break-after: always;"></div>
-
-### SA_1
 ![SA_1](./img/diagrammi_di_attivita/SA_1.jpg)
-
 <div style="page-break-after: always;"></div>
 
-### SA_2
+**SA_2**: Segnalazione Prestito Avvenuto Dal Vivo  
 ![SA_2](./img/diagrammi_di_attivita/SA_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### SA_3
+**SA_3**: Segnalazione Notizie  
 ![SA_3](./img/diagrammi_di_attivita/SA_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### SA_4
+**SA_4**: Gestione Pagina della Biblioteca
 ![SA_4](./img/diagrammi_di_attivita/SA_4.jpg)
 
 <div style="page-break-after: always;"></div>
-
 
 ## 6. Diagrammi di Classe
 ![diagrammi_di_classe.jpg](./img/diagrammi_di_classe.jpg)
 
 <div style="page-break-after: always;"></div>
-
 
 ## 7. Diagrammi di Package
 ![diagrammi_di_classe.jpg](./img/diagrammi_package.jpg)
@@ -350,136 +346,131 @@ Le principali operazioni individuate sono:
 
 
 ## 9. Diagrammi di Sequenza
-### AU_1
+**AU_1**: Autenticazione Utente Sistema Interno  
 ![AU_1](./img/diagrammi_di_sequenza/AU_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_2
+**AU_2**: Autenticazione Utente Tramite Sistema Esterno  
 ![AU_2](./img/diagrammi_di_sequenza/AU_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_3
+**AU_3**: Modifica Password Sistema Interno  
 ![AU_3](./img/diagrammi_di_sequenza/AU_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_4
+**AU_4**: Registrazione  
 ![AU_4](./img/diagrammi_di_sequenza/AU_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### AU_5
+**AU_5**: Logout
 ![AU_5](./img/diagrammi_di_sequenza/AU_5.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_1
+**T_1**: Nuovo Tesseramento  
 ![T_1](./img/diagrammi_di_sequenza/T_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_2
+**T_2**: Rinnovo Tesseramento  
 ![T_2](./img/diagrammi_di_sequenza/T_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_3
+**T_3**: Cancellazione Tesseramento  
 ![T_3](./img/diagrammi_di_sequenza/T_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_4
+**T_4**: Denuncia Smarrimento Tesseramento  
 ![T_4](./img/diagrammi_di_sequenza/T_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### T_5
+**T_5**: Denuncia Furto Tesseramento
 ![T_5](./img/diagrammi_di_sequenza/T_5.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_1
+**G_1**: Partecipazione al Sistema di Gamification  
 ![G_1](./img/diagrammi_di_sequenza/G_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_2
+**G_2**: Gestione Profilo  
 ![G_2](./img/diagrammi_di_sequenza/G_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_3
+**G_3**: Inserimento Commento/Recensione  
 ![G_3](./img/diagrammi_di_sequenza/G_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_4
+**G_4**: Segnalazione Commento/Recensione  
 ![G_4](./img/diagrammi_di_sequenza/G_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### G_5
+**G_5**: Riscatto Punti
 ![G_5](./img/diagrammi_di_sequenza/G_5.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_1
+**PL_1**: Ricerca Libro Fisico e Richiesta di Prestito  
 ![PL_1](./img/diagrammi_di_sequenza/PL_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_2
+**PL_2**: Restituzione Prestito Fisico  
 ![PL_2](./img/diagrammi_di_sequenza/PL_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_3
+**PL_3**: Richiesta Allungamento Prestito Fisico  
 ![PL_3](./img/diagrammi_di_sequenza/PL_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PL_4
+**PL_4**: Richiesta E-book
 ![PL_4](./img/diagrammi_di_sequenza/PL_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PS_1
+**PS_1**: Prenotazione di uno Spazio Comune  
 ![PS_1](./img/diagrammi_di_sequenza/PS_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PS_2
+**PS_2**: Cancellazione di una Prenotazione  
 ![PS_2](./img/diagrammi_di_sequenza/PS_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### PS_3
-![PS_3](./img/diagrammi_di_sequenza/PS_3.jpg)
-
-<div style="page-break-after: always;"></div>
-
-### SA_1
+**SA_1**: Caricamento Nuovi Libri  
 ![SA_1](./img/diagrammi_di_sequenza/SA_1.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### SA_2
+**SA_2**: Segnalazione Prestito Avvenuto Dal Vivo  
 ![SA_2](./img/diagrammi_di_sequenza/SA_2.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### SA_3
+**SA_3**: Segnalazione Notizie  
 ![SA_3](./img/diagrammi_di_sequenza/SA_3.jpg)
 
 <div style="page-break-after: always;"></div>
 
-### SA_4
+**SA_4**: Gestione Pagina della Biblioteca
 ![SA_4](./img/diagrammi_di_sequenza/SA_4.jpg)
 
 <div style="page-break-after: always;"></div>
 
 
 ## 10. Diagrammi Entità Relazione
-![diagrammi_di_classe.jpg](./img/diagrammi_entita_realazione.jpg)
+![diagrammi_di_classe.jpg](./img/diagrammi_entita_relazione.jpg)
