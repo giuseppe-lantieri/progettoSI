@@ -6,3 +6,86 @@
 - **Paywall**: Meccanismo di restrizione che segmenta gli utenti in base a specifiche condizioni. In assenza di ulteriori direttive, si fa riferimento al tesseramento specifico.
 - **Gamification**: Processo che trasforma l’esperienza d’uso in un gioco, con l’obiettivo di migliorare l’interazione e incentivare l’utilizzo del servizio.
 - **SPID**: Sistema Pubblico di Identità Digitale, un servizio di verifica elettronica approvato dallo Stato e gestito da enti terzi, che assicura la validità dell’identità dell’utente. Sono presenti diversi enti che offrono questo servizio.
+- **API (Application Programming Interface)**: Insieme di interfacce che permettono la comunicazione tra componenti software o tra sistemi differenti.  
+- **Alpha (versione)**: Prima versione del software rilasciata internamente per testare le funzionalità principali, spesso incompleta o instabile.  
+- **Beta (versione)**: Versione di test rilasciata a un gruppo limitato di utenti per verificare il funzionamento del sistema in contesto reale prima del rilascio ufficiale.  
+- **Bibliotecari**: Utenti amministrativi del sistema, responsabili della gestione dei contenuti e dei servizi delle biblioteche.  
+- **Contratto**: Accordo formale tra il cliente e l’azienda sviluppatrice, che definisce obiettivi, tempistiche, responsabilità e vincoli del progetto.  
+- **Documentazione**: Insieme di materiali scritti che descrivono le funzionalità, l’uso e la manutenzione del sistema software.  
+- **Durata del progetto**: Tempo previsto per la realizzazione e consegna del sistema, indicato nel documento contrattuale.  
+- **Fasi di test**: Passaggi previsti per verificare che il sistema funzioni correttamente prima del rilascio ufficiale.  
+- **Installazione e configurazione**: Attività di predisposizione del software nell’ambiente di produzione per renderlo operativo.  
+- **Interfaccia utente**: Parte visibile del software con cui l’utente interagisce, progettata per essere semplice e intuitiva.  
+- **Monitoraggio dello sviluppo**: Processo continuo di controllo e valutazione dei progressi del progetto attraverso documenti e report.  
+- **Onboarding**: Processo di inserimento e formazione dei bibliotecari nell’uso del sistema.  
+- **RUP (Rational Unified Process)**: Metodologia di sviluppo software iterativa e incrementale, strutturata in fasi (Inception, Elaboration, Construction, Transition).  
+- **Sistema informativo**: Infrastruttura composta da software, database e interfacce che supportano le attività e i servizi delle biblioteche.  
+- **Stakeholder**: Individui o gruppi che hanno un interesse nel progetto, come utenti finali, clienti, sviluppatori, bibliotecari.  
+- **Versione definitiva**: Rilascio ufficiale del software, completo e stabile, pronto per l’utilizzo pubblico.  
+- **Visione (documento di)**: Documento che descrive gli obiettivi, il contesto, le funzionalità principali e la visione d’insieme del sistema.  
+- **UtenteGuest**: Utente non autenticato che può consultare i contenuti pubblici del sistema, senza possibilità di prenotazione o prestito.
+- **Utente**: Utente autenticato, abilitato alla modifica del profilo, alla gestione della tessera e alla richiesta di prestiti e prenotazioni.
+- **UtenteGamification**: Variante dell’utente che partecipa al sistema di gamification, inserendo commenti e riscattando punti.
+- **Bibliotecario**: Utente con privilegi amministrativi, responsabile del caricamento dei libri, gestione del catalogo, pubblicazione di notizie e moderazione dei contenuti.
+- **Libro**: Oggetto ricercabile nel sistema, disponibile o meno per il prestito. Contiene informazioni come titolo, autore, genere e disponibilità.
+- **Prestito**: Processo attraverso il quale un utente prende temporaneamente un libro, fisico o digitale, con possibilità di estensione o restituzione.
+- **Tessera**: Strumento identificativo che abilita l’utente a funzioni avanzate come prenotazioni e prestiti; include operazioni di emissione, rinnovo e annullamento.
+- **Prenotazione**: Richiesta di utilizzo di uno spazio comune in biblioteca, con possibilità di cancellazione.
+- **Commento/Recensione**: Feedback inserito dagli utenti sui libri, visibile pubblicamente e soggetto a moderazione.
+- **Biblioteca**: Istituzione che gestisce spazi, notizie e prenotazioni attraverso il portale centralizzato.
+- **Sistema di gamification**: Meccanismo volto a incentivare l’interazione degli utenti attraverso premi, punti e attività ludiche.
+- **Servizio Esterno**: Sistema di autenticazione esterno (es. SPID, CIE) utilizzato per verificare l’identità degli utenti.
+- **Casi d’uso**: Scenari descrittivi delle interazioni tra attori e sistema, che guidano la progettazione del software.
+- **Scheda CRC**: Strumento di analisi che descrive le classi del sistema attraverso responsabilità e collaboratori.
+- **Diagramma EBC**: Modello visuale che rappresenta le relazioni tra le entità del sistema (Entity-Boundary-Control).
+- **Diagramma di sequenza**: Rappresentazione grafica del flusso di interazioni temporali tra oggetti o attori del sistema.
+- **Analisi nomi-verbi**: Tecnica di analisi per identificare entità e azioni fondamentali a partire dalla descrizione dei requisiti.
+- **Autenticare**: Azione che consente l’accesso sicuro al sistema da parte di utenti registrati.
+- **Registrare**: Operazione per creare un nuovo account utente all’interno del sistema.
+- **Modificare**: Azione che permette agli utenti di aggiornare le proprie informazioni personali, come password o profilo.
+- **Effettuare logout**: Operazione che termina la sessione di un utente autenticato.
+- **Richiedere tessera**: Procedura con cui un utente avvia il processo di tesseramento per accedere a servizi avanzati.
+- **Partecipare**: Azione che consente a un utente di aderire al sistema di gamification.
+- **Commentare/Recensire**: Inserire feedback testuali su libri letti, visibili agli altri utenti.
+- **Segnalare**: Azione di notifica al sistema o ai bibliotecari per problemi o contenuti inappropriati.
+- **Riscattare**: Azione che consente all’utente di ottenere premi attraverso i punti accumulati nella gamification.
+- **Ricercare**: Operazione di ricerca all’interno del catalogo libri o delle biblioteche.
+- **Restituire**: Operazione di chiusura di un prestito, con il rientro del libro alla biblioteca.
+- **Richiedere allungamento**: Azione per estendere la durata di un prestito attivo.
+- **Richiedere e-book**: Operazione che consente l’accesso a una copia digitale di un libro.
+- **Prenotare/Cancellare prenotazione**: Azione che gestisce la richiesta e l’annullamento di spazi disponibili in biblioteca.
+- **Caricare**: Azione eseguita dai bibliotecari per inserire nuovi libri nel sistema.
+- **Segnalare prestito e notizie**: Operazione di aggiornamento dello stato del prestito o pubblicazione di comunicazioni.
+- **Gestire**: Azione amministrativa che include la personalizzazione delle pagine delle biblioteche e la supervisione generale del sistema.
+- **Front-End**: Livello dell’architettura responsabile dell’interfaccia utente. Permette agli utenti di interagire con il sistema tramite una web app responsive.
+- **Back-End**: Livello dell’architettura che gestisce la logica di business, l’autenticazione, i prestiti, la gamification e le altre funzionalità.
+- **Persistenza**: Strato dell’architettura responsabile della conservazione e gestione dei dati nel database relazionale.
+- **API RESTful**: Interfacce di comunicazione tra le componenti del sistema basate su protocollo HTTP e principi REST.
+- **Webhook**: Meccanismo per ricevere notifiche automatiche da servizi esterni, usato per l’integrazione con SPID, CIE e altri.
+- **Modulo Autenticazione**: Componente che gestisce login, logout, registrazione e modifica della password, integrando sia metodi interni che esterni.
+- **Modulo Tesseramento**: Componente che gestisce le operazioni relative alla tessera dell’utente, inclusi rinnovo, cancellazione e smarrimento.
+- **Modulo Gamification**: Componente che gestisce la partecipazione al sistema di gamification, con assegnazione punti, commenti e premi.
+- **Modulo Prestito Libri**: Componente dedicato alla gestione del prestito di libri fisici e digitali, comprensivo di ricerca, richiesta, restituzione e allungamento.
+- **Modulo Prenotazione Spazi**: Componente per la prenotazione e cancellazione di spazi comuni in biblioteca, con gestione delle segnalazioni.
+- **Modulo Sezione Amministrativa**: Area riservata ai bibliotecari per il caricamento di libri, gestione dei prestiti e pubblicazione di notizie.
+- **Dashboard Amministrativa**: Interfaccia dedicata ai bibliotecari per l’accesso alle funzionalità di gestione del sistema.
+- **Pattern MVC**: Architettura software che separa la logica di presentazione (View), la logica di business (Model) e la gestione degli input (Controller).
+- **Repository Pattern**: Pattern che astrae l’accesso ai dati, centralizzando le operazioni CRUD su oggetti di dominio.
+- **Dependency Injection**: Tecnica che consente di fornire oggetti e dipendenze alle classi in modo automatico e flessibile.
+- **Singleton**: Pattern creazionale che garantisce l’esistenza di una sola istanza di una determinata classe.
+- **JWT (JSON Web Token)**: Sistema di autenticazione basato su token che consente l’identificazione sicura degli utenti.
+- **SPID**: Sistema Pubblico di Identità Digitale, utilizzato per autenticare gli utenti attraverso
+- **CIE**: Carta di Identità Elettronica, un altro sistema di autenticazione usato per l’identificazione degli utenti.
+- **WCAG**: Web Content Accessibility Guidelines, linee guida per l'accessibilità dei contenuti Web.
+- **Priorità**: Must Have, Should Have, Recommended, Would Be Better to Have, Optional
+
+
+- **Deve Avere (Must Have)**: Questi sono requisiti essenziali e critici per il successo del progetto. Senza di essi, il progetto non può essere considerato completo o funzionale.
+  
+- **Potrebbe Avere (Could Have)**: Questi requisiti sono desiderabili e aggiungono valore, ma sono meno importanti rispetto ai "Must Have". Possono essere inclusi se c'è tempo extra.
+ 
+- **Sarebbe meglio Avere (Should Have)**: Questi requisiti sono importanti ma non critici. Possono essere inclusi se c'è tempo e risorse disponibili, ma il progetto può funzionare anche senza di essi.
+ 
+- **Facoltativo (Optional)**: Questi requisiti sono completamente facoltativi e non influiscono sul funzionamento di base. Possono offrire funzionalità aggiuntive o miglioramenti.
+ 
+- **Consigliato (Recommended)**: Questi requisiti sono fortemente suggeriti perché possono migliorare l'efficacia, la sicurezza o la qualità del risultato finale, ma non sono obbligatori.

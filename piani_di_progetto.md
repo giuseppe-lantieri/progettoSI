@@ -33,7 +33,7 @@ Il progetto seguirà il **Rational Unified Process (RUP)**, articolato nelle seg
 - Redazione del piano di gestione dei rischi
 
 ### 2.3 Costruzione
-- Implementazione iterativa delle funzionalità
+- Implementazione iterativa delle funzionalità secondo le priorità definite nei casi d'uso
 - Esecuzione di test unitari e di integrazione
 - Affinamento dell'architettura
 
@@ -113,13 +113,13 @@ Il progetto sarà suddiviso in iterazioni, con rilascio incrementale delle funzi
 | Fase      | Costruzione  |
 |-----------|--------------|
 | Stato     | Accettato    |
-| Obiettivi | - Prioritizzazione dei modello dei casi d’uso <br/> - Finalizzazione Documento di Design <br/> - Redazione del piano di test |
+| Obiettivi | - Finalizzazione Documento di Design <br/> - Redazione del piano di test |
 
 ### Iterazione 6
 | Fase      | Costruzione  |
 |-----------|--------------|
 | Stato     | Accettato    |
-| Obiettivi | - Implementazione delle funzionalità _MustHave_ <br/> - Redazione del piano di test <br/> - Sviluppo dei casi di test |
+| Obiettivi | - Implementazione delle funzionalità _MustHave_ <br/> -  Sviluppo dei casi di test <br/> |
 
 ### Iterazione 7
 | Fase      | Costruzione  |
@@ -128,6 +128,24 @@ Il progetto sarà suddiviso in iterazioni, con rilascio incrementale delle funzi
 | Obiettivi | - Implementazione delle funzionalità _ShouldHave_ <br/> - Sviluppo dei casi di test |
 
 ### Iterazione 8
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _Recommended_ <br/> - Sviluppo dei casi di test |
+
+### Iterazione 9
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _Would Be Better to Have_ <br/> - Sviluppo dei casi di test |
+
+### Iterazione 10
+| Fase      | Costruzione  |
+|-----------|--------------|
+| Stato     | Accettato    |
+| Obiettivi | - Implementazione delle funzionalità _Optional_ <br/> - Sviluppo dei casi di test |
+
+### Iterazione 11
 | Fase      | Transizione  |
 |-----------|--------------|
 | Stato     | Accettato    |
@@ -141,4 +159,6 @@ Il progetto seguirà un approccio iterativo volto a garantire la qualità del so
 | Versione | Data       | Descrizione                        |
 |----------|------------|------------------------------------|
 | 1.0      | 19/03/2025 | Prima stesura del documento        |
-| 1.1      | 30/03/2025 | Seconda stesura del documento      |
+| 1.1      | 30/03/2025 | Seconda stesura del documento  
+| 1.2      | 09/04/2025 | Terza stesura del documento     |
+| 1.3      | 12/04/2025 | Terza stesura del documento     |

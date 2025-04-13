@@ -91,7 +91,7 @@ I casi d'uso vengono organizzati in macro-gruppi (scenari), ciascuno identificat
 Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso:
 - **ID**: Identificativo univoco del caso d'uso.
 - **Nome**: Nome descrittivo del caso d'uso.
-- **Priorità**: Valore (da 1 a 10) che esprime l'importanza e l'impatto del caso d'uso.
+- **Priorità**: Valore (da 1 a 10) che esprime l'importanza e l'impatto del caso d'uso. MustHave (10-9),Should Have (8-7), Recommended (6-5),Would Be Better to Have (4-3),Optional (2-1)
 - **Attori**: Elenco degli attori coinvolti.
 - **Descrizione**: Breve descrizione del caso d'uso.
 - **Condizioni**: Condizioni preliminari richieste al sistema.
@@ -316,18 +316,6 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | -                                                                                                                  |
 | **Risultato**   | L'utente riceve l'accesso all'ebook, conformemente ai termini di licenza.                                             |
 | **Flusso**      | 1. L'utente accede alla sezione dedicata agli ebook e ricerca il titolo desiderato. <br/> 2. Seleziona il pulsante "Prestito". <br/> 3. Accetta i termini e le condizioni. <br/> 4. Il sistema concede l’accesso all’ebook in base ai termini di utilizzo. |
-
-| Campo        | Contenuto                                                                                                              |
-|--------------|------------------------------------------------------------------------------------------------------------------------|
-| **ID**       | PL_5                                                                                                                  |
-| **Nome**     | Proroga Prenotazione                                                                                                      |
-| **Priorità** | 3                                                                                                                     |
-| **Attori**   | Utente                                                                                                                 |
-| **Descrizione** | Un utente richiede la proroga di un prestito                                                                         |
-| **Condizioni**  | Prestito precedentemente creato                                                                                   |
-| **Risultato**   | L'utente riceve un allungamento della data di restituzione                                             |
-| **Flusso**      | 1. L'utente accede al suo profilo e va ai suoi prestiti. <br/> 2. Seleziona il prestito che vuole allungare. <br/> 3. Il sistema verifica se non esiste un prestito stabilito alla data del rilascio da parte dell'utente. <br/> 4. In base alla disponibilità il sistema sceglierà se:<br/>  &nbsp;&nbsp;&nbsp;&nbsp;4a: Prorogare il prestito all'utente.<br/> &nbsp;&nbsp;&nbsp;&nbsp;4b. Negare la proroga all'utente |
-
 
 ### Prenotazione Spazio
 

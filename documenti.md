@@ -2,11 +2,11 @@ Il modello di progetto che seguiremo è il RUP (Rational Unified Process) e per 
 - [x] Documento di Visione
 - [x] Studio di Fattibilità
 - [x] Contratto
-- [ ] Glossario -
-- [ ] Piano di Progetto -
-- [ ] Stima degli Sforzi (o Stima dei Costi) -
-- [ ] Gestione dei Rischi -
-- [ ] Modelli di Casi d'Uso v
-- [ ] Documento di Analisi m
-- [ ] Documento di Design m
-- [ ] Piano di Test v
+- [x] Glossario -
+- [x] Piano di Progetto -
+- [x] Stima degli Sforzi (o Stima dei Costi) -
+- [x] Gestione dei Rischi -
+- [x] Modelli di Casi d'Uso 
+- [x] Documento di Analisi 
+- [x] Documento di Design 
+- [x] Piano di Test 
