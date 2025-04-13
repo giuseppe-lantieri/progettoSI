@@ -238,9 +238,7 @@ Il presente documento descrive il piano di test finalizzato alla validazione dei
 
 ### Prenotazione Spazi (PS)
 - **PS_1**: Prenotazione di uno Spazio Comune  
-- **PS_2**: Richiesta Allungamento di una Prenotazione  
-- **PS_3**: Cancellazione di una Prenotazione  
-- **PS_4**: Segnalazione Richiesta/Comportamento Errato
+- **PS_2**: Cancellazione di una Prenotazione  
 
 #### TestPS_1 - Prenotazione di uno Spazio Comune
 | **Campo**          | **Dettaglio**                                                                                                                                                                                                                                                                |
@@ -252,17 +250,9 @@ Il presente documento descrive il piano di test finalizzato alla validazione dei
 
 ---
 
-#### TestPS_2 - Richiesta Allungamento di una Prenotazione
-| **Campo**          | **Dettaglio**                                                                                                                                                                                                                                                                |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Descrizione**    | Verifica del processo per richiedere l'allungamento di una prenotazione esistente.                                                                                                                                                                                          |
-| **Pre-condizioni** | Esiste una prenotazione attiva.                                                                                                                                                                                                                                               |
-| **Azioni**         | 1. L'utente accede alla schermata delle prenotazioni per la biblioteca scelta.<br/> 2. Il sistema invia una mail con i dettagli della richiesta alla biblioteca.<br/> 3. In seguito alla risposta, il sistema comunica l'esito della richiesta all'utente.          |
-| **Post-condizioni**| L'utente riceve una notifica via email con l'esito dell'allungamento della prenotazione.                                                                                                                                                                                     |
 
----
 
-#### TestPS_3 - Cancellazione di una Prenotazione
+#### TestPS_2 - Cancellazione di una Prenotazione
 | **Campo**          | **Dettaglio**                                                                                                                                                                                                                                                                |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Descrizione**    | Verifica del processo per la cancellazione di una prenotazione attiva.                                                                                                                                                                                                      |
@@ -272,15 +262,7 @@ Il presente documento descrive il piano di test finalizzato alla validazione dei
 
 ---
 
-#### TestPS_4 - Segnalazione Richiesta/Comportamento Errato
-| **Campo**          | **Dettaglio**                                                                                                                                                                                                                                                                |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Descrizione**    | Verifica del processo per la segnalazione di una richiesta o di un comportamento errato relativo a una prenotazione, eseguita dal bibliotecario.                                                                                                                          |
-| **Pre-condizioni** | Esiste una prenotazione attiva.                                                                                                                                                                                                                                               |
-| **Azioni**         | 1. Il bibliotecario individua la prenotazione problematica.<br/> 2. Seleziona il pulsante "Segnala".<br/> 3. Il sistema applica le penalizzazioni previste (ad es. decurtazione dei punti) all’utente interessato.                                                     |
-| **Post-condizioni**| L'utente riceve una penalizzazione a seguito della segnalazione.                                                                                                                                                                                                             |
 
----
 
 ### Sezione Amministrativa (SA)
 - **SA_1**: Caricamento Nuovi Libri  
