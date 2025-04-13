@@ -65,277 +65,149 @@ Le principali operazioni individuate sono:
 ### 1.1 `UIAutenticazione`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UIAutenticazione |
-| **Attributi**| - |
-| **Responsabilità**| - Gestire autenticazione tramite login, logout<br/> - Gestire registrazione di nuovi utenti |
-| **Collaboratori** | - CServiziEsterni<br/> - CUtenza |
+![alt text](img/CRC/UIAutenticazione.png)
 
 ### 1.2 `UIRicerca`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UIRicerca |
-| **Attributi**| - |
-| **Responsabilità**| - Effettuare ricerche<br/> |
-| **Collaboratori** | - CRicerche |
+![alt text](img/CRC/UIRicerca.png)
 
 ### 1.3 `UIUtente`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UIUtente |
-| **Attributi**| - |
-| **Responsabilità**| - Modificare profilo <br/> - Cancellare profilo <br/> |
-| **Collaboratori** | - CUtenza |
+![alt text](img/CRC/UIUtente.png)
 
 ### 1.4 `UIGamification`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UIGamification |
-| **Attributi**| - |
-| **Responsabilità**| - Partecipare al sistema di gamification<br/> - inserire feedback<br/> - riscattare premi<br/> - effettuare segnalazioni <br/> |
-| **Collaboratori** | - CGamification |
+![alt text](img/CRC/UIGamification.png)
 
 ### 1.5 `UIAmministrativa`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | ---|
-| **Nome**| UIAmministrativa |
-| **Attributi**| - |
-| **Responsabilità**| - Caricare libri<br/> - Aggiornare catalogo<br/> - Segnalare prestiti<br/> |
-| **Collaboratori** | - CAmministrativo |
+![alt text](img/CRC/UIAmministrativa.png)
 
 ### 1.6 `UIBiblioteca`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UIBiblioteca |
-| **Attributi**| - |
-| **Responsabilità**| - Visionare Informazioni biblioteca<br/> - Pubblicare Notizie <br/> |
-| **Collaboratori** | - EBiblioteca |
+![alt text](img/CRC/UIBiblioteca.png)
 
 ### 1.7 `UITesseramento`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UITesseramento |
-| **Attributi**| - |
-| **Responsabilità**| - Creare tessere<br/> - Denunciare scomparsa<br/> - Cancellare Tessera |
-| **Collaboratori** | - CTesseramento |
+![alt text](img/CRC/UITesseramento.png)
 
 ### 1.8 `UIPrestiti`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UIPrestiti |
-| **Attributi**| - |
-| **Responsabilità**| - Creare prestito <br/> - Gestione prestito <br/> |
-| **Collaboratori** | - CPrenotazioni |
+![alt text](img/CRC/UIPrestiti.png)
 
 ### 1.9 `UIPrestitiOnline`
 **TipoClasse**: Boundary
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| UIPrestitiOnline |
-| **SuperClassi** | UIPrestiti |
-| **Attributi**| - |
-| **Responsabilità**| - Creare prestito online <br/> - Gestione prestito online <br/> |
-| **Collaboratori** | - CEbook |
+![alt text](img/CRC/UIPrestitiOnline.png)
 
 ## 2. Control
 
 ### 2.1 `CAmministrativo`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CAmministrativo |
-| **Attributi**| - |
-| **Responsabilità**| - Eseguire le operazioni di gestione su comando di UIAmministrativa |
-| **Collaboratori** | - EBibliotecario<br/> - ELibro<br/> - EPrestito<br/> - EBiblioteca |
+![alt text](img/CRC/CAmministrativo.png)
 
 ### 2.2 `CServiziEsterni`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CServiziEsterni |
-| **Attributi**| - |
-| **Responsabilità**| - Eseguire le operazioni di gestione dei vari servizi esterni che potranno essere collegati |
-| **Collaboratori** | - EUtente<br/> - UIAutenticazione |
+![alt text](img/CRC/CServiziEsterni.png)
 
 ### 2.3 `CUtenza`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CUtenza |
-| **Attributi**| - |
-| **Responsabilità**| - Eseguire le operazioni di gestione degli utenti |
-| **Collaboratori** | - EUtente<br/> - UIAutenticazione |
+![alt text](img/CRC/CUtenza.png)
 
 ### 2.4 `CPrenotazioni`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CPrenotazioni |
-| **Attributi**| - |
-| **Responsabilità**| - Coordinare le operazioni relative alla prenotazione e assicurare coerenza |
-| **Collaboratori** | - UIRicerca<br/> - EBibliotecario<br/> - ELibro<br/> - EPrestito<br/> - EBiblioteca - EUtente |
+![alt text](img/CRC/CPrenotazioni.png)
+
+### 2.4 `CPrestiti`
+**TipoClasse**: Control
+
+![alt text](img/CRC/CPrestiti.png)
 
 ### 2.5 `CGamification`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CGamification |
-| **Attributi**| - |
-| **Responsabilità**| - Coordinare le operazioni relative alla gamification |
-| **Collaboratori** | - EUtenteGamification<br/> -EFeedback |
+![alt text](img/CRC/CGamification.png)
 
 
 ### 2.6 `CRicerche`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CRicerche |
-| **Attributi**| - |
-| **Responsabilità**| - Responsabile per la ricerca dei libri |
-| **Collaboratori** | - ELibro<br/> - EBiblioteca - EPrenotazione |
+![alt text](img/CRC/CRicerche.png)
 
 ### 2.7 `CTesseramento`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CTesseramento |
-| **Attributi**| - |
-| **Responsabilità**| - Coordinamento creazione tessere |
-| **Collaboratori** | - UITesseramento<br/> - ETessera<br/> - EUtente<br/> |
+![alt text](img/CRC/CTesseramento.png)
 
 ### 2.8 `CEbook`
 **TipoClasse**: Control
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| CEbook |
-| **Attributi**| - |
-| **Responsabilità**| - Coordinamento prestiti digitali |
-| **Collaboratori** | - UIPrestitiOnline<br/> - EEBook |
+![alt text](img/CRC/CEbook.png)
+
+### 2.9 `CPagineSito`
+**TipoClasse**: Control
+
+![alt text](img/CRC/CPagineSito.png)
 
 ## 3. Entity
 
 ### 3.1 `EUtente`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EUtente |
-| **Attributi**| - ID Utente<br/> - Nome<br/> - Cognome<br/> - Email<br/> - Numero di telefono<br/> |
-| **Responsabilità**| - Mantenere i dati anagrafici e di contatto dell’utente |
-| **Collaboratori** | - EPrestito<br/> - ETessera |
+![alt text](img/CRC/EUtente.png)
 
 ### 3.2 `EUtenteGamification`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EUtenteGamification |
-| **SuperClassi** | EUtente |
-| **Attributi**| - Punti<br/> - Statistiche<br/>  |
-| **Responsabilità**| - Mantenere i dati relativi alla gamification |
-| **Collaboratori** | - EFeedback<br/> |
+![alt text](img/CRC/EUtenteGamification.png)
 
 ### 3.3 `EBibliotecario`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EBibliotecario |
-| **Attributi**| - Identificativo Lavorativo<br/> - Log azioni |
-| **Responsabilità**| - Mantenere dati anagrafici del bibliotecario<br/> - Tracciare le azioni svolte come log |
-| **Collaboratori** | - |
+![alt text](img/CRC/EBibliotecario.png)
 
 ### 3.4 `ELibro`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| ELibro|
-| **Attributi**| - Titolo<br/> - Identificativo Libro<br/> - Autore<br/> - Disponibilità<br/> - Genere |
-| **Responsabilità**| - Memorizzare e fornire info <br/> - Gestire disponibilità<br/> - Supportare la ricerca |
-| **Collaboratori** | - EPrestito <br/> - CAmministrativo |
+![alt text](img/CRC/ELibro.png)
 
 ### 3.4 `EEBook`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EEBook |
-| **SuperClassi** | ELibro |
-| **Attributi**| - Licenza |
-| **Responsabilità**| - Memorizzare e fornire info <br/> |
-| **Collaboratori** | - EPrestito <br/> - CAmministrativo |
+![alt text](img/CRC/EEbook.png)
 
 ### 3.5 `EPrestito`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EPrestito |
-| **Attributi**| - Data Inizio<br/> - Data Fine<br/> - Stato<br/> - Riferimento a EUtente/Tessera<br/> - Riferimento a ELibro |
-| **Responsabilità**| - Gestire il ciclo di vita di un prestito:<br/> - richiesta<br/> - attivazione<br/> - estensione<br/> - restituzione<br/> - Monitorare e aggiornare lo stato |
-| **Collaboratori** | - EUtente <br/> - ELibro<br/> - CAmministrativo |
+![alt text](img/CRC/EPrestito.png)
 
 ### 3.6 `ETessera`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| ETessera |
-| **Attributi**| - Numero Tessera<br/> - Data di Emissione<br/> - Scadenza<br/> - Stato |
-| **Responsabilità**| - Mantenere i dati del tesseramento |
-| **Collaboratori** | - EUtente<br/> - CAmministrativo |
+![alt text](img/CRC/ETessera.png)
 
 ### 3.7 `EPrenotazione`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EPrenotazione |
-| **Attributi**| - Id<br/>  - Data Inizio<br/> - Stato<br/> - Durata Prenotazione<br/> - Riferimento a EUtente<br/> - Riferimento a ELibro<br/> |
-| **Responsabilità**| - Gestire prenotazioni:<br/> - richiesta<br/> - cancellazione |
-| **Collaboratori** | - EUtente<br/> - EBibliotecario<br/> - EBiblioteca |
+![alt text](img/CRC/EPrenotazione.png)
 
 ### 3.8 `EFeedback`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EFeedback |
-| **Attributi**| - Contenuto<br/> - Data Creazione<br/> - Segnalazione<br/> - Riferimento a EUtente - Riferimento a ELibro <br/> - Riferimento a EFeedback |
-| **Responsabilità**| - Memorizzare e visualizzare feedback utenti<br/> |
-| **Collaboratori** | - EUtente<br/> - CAmministrativo |
+![alt text](img/CRC/EFeedback.png)
 
 ### 3.9 `EBiblioteca`
 **TipoClasse**: Entity
 
-| Campo | Dettaglio |
-| --- | --- |
-| **Nome**| EBiblioteca |
-| **Attributi**| - Nome<br/> - Indirizzo<br/> - Lista Spazi Disponibili<br/> - Lista Notizie - Lista Libri |
-| **Responsabilità**| - Memorizzare, pubblicare e aggiornare notizie<br/> - Gestire spazi prenotabili |
-| **Collaboratori** | - EPrenotazione<br/> - CAmministrativo |
+![alt text](img/CRC/EBiblioteca.png)
