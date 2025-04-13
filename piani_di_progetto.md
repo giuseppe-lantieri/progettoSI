@@ -113,13 +113,13 @@ Il progetto sarà suddiviso in iterazioni, con rilascio incrementale delle funzi
 | Fase      | Costruzione  |
 |-----------|--------------|
 | Stato     | Accettato    |
-| Obiettivi | - Prioritizzazione dei modello dei casi d’uso <br/> - Finalizzazione Documento di Design <br/> - Redazione del piano di test |
+| Obiettivi | - Finalizzazione Documento di Design <br/> - Redazione del piano di test |
 
 ### Iterazione 6
 | Fase      | Costruzione  |
 |-----------|--------------|
 | Stato     | Accettato    |
-| Obiettivi | - Implementazione delle funzionalità _MustHave_ <br/> -  Sviluppo dei casi di test <br/> - Sviluppo dei casi di test |
+| Obiettivi | - Implementazione delle funzionalità _MustHave_ <br/> -  Sviluppo dei casi di test <br/> |
 
 ### Iterazione 7
 | Fase      | Costruzione  |
