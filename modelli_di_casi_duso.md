@@ -79,7 +79,6 @@ I casi d'uso vengono organizzati in macro-gruppi (scenari), ciascuno identificat
 ### PrenotazioneSpazio (PS)
 - **PS_1**: Prenotazione di uno Spazio Comune  
 - **PS_2**: Cancellazione di una Prenotazione  
-- **PS_3**: Segnalazione Richiesta/Comportamento Errato
 
 ### Sezione Amministrativa (SA)
 - **SA_1**: Caricamento Nuovi Libri  
@@ -91,7 +90,7 @@ I casi d'uso vengono organizzati in macro-gruppi (scenari), ciascuno identificat
 Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso:
 - **ID**: Identificativo univoco del caso d'uso.
 - **Nome**: Nome descrittivo del caso d'uso.
-- **Priorità**: Valore (da 1 a 10) che esprime l'importanza e l'impatto del caso d'uso. MustHave (10-9),Should Have (8-7), Recommended (6-5),Would Be Better to Have (4-3),Optional (2-1)
+- **Priorità**: Valore (da 1 a 10) che esprime l'importanza e l'impatto del caso d'uso. <br> - **MustHave**: [10-9] <br> - **Should Have**: [8-7]<br> - **Recommended**: [6-5]<br> - **Would Be Better to Have**: [4-3]<br> - **Optional**: [2-1]
 - **Attori**: Elenco degli attori coinvolti.
 - **Descrizione**: Breve descrizione del caso d'uso.
 - **Condizioni**: Condizioni preliminari richieste al sistema.
