@@ -399,3 +399,12 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Flusso**      | 1. Il bibliotecario accede alla sezione amministrativa e seleziona "Modifica tema" o un'opzione simile. <br/> 2. Utilizza i menu appositi per personalizzare la pagina. <br/> 3. Il sistema aggiorna la pagina con le nuove impostazioni. |
 
 <!-- Nota: Per migliorare la leggibilità delle tabelle, sono stati utilizzati tag HTML per gestire le interruzioni di riga all'interno delle celle. -->
+
+## Diagrammi Casi D'Uso
+
+![Autenticazione](./img/casi_di_uso/Autenticazione.jpg)
+![Tesseramento](./img/casi_di_uso/Tesseramento.jpg)
+![Gamification](./img/casi_di_uso/Gamification.jpg)
+![PrestitoLibri](./img/casi_di_uso/PrestitoLibri.jpg)
+![PrenotazioneSpazio](./img/casi_di_uso/PrenotazioneSpazio.jpg)
+![SezioneAmministrativa](./img/casi_di_uso/SezioneAmministrativa.jpg)
