@@ -11,6 +11,8 @@ Per gestire i rischi relativi al presente progetto si è scelto il modello **RMM
 ## Struttura delle Tabelle
 Di seguito vengono illustrati i campi che compongono la tabella di gestione dei rischi:
 
+<!--- TODO: aggiungere scala di valori effetti --->
+
 - **ID:** Codice identificativo del rischio.
 - **Titolo:** Breve descrizione del rischio.
 - **Probabilità:** Indica la probabilità che il rischio si verifichi, definita secondo la seguente scala:
@@ -18,16 +20,13 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
   - **Media (40% - 69%):** Il rischio potrebbe verificarsi occasionalmente; è consigliabile predisporre misure preventive.
   - **Bassa (10% - 39%):** Il rischio ha una probabilità ridotta di manifestarsi, ma va monitorato periodicamente.
   - **Molto Bassa (<10%):** Il rischio è estremamente improbabile e generalmente non richiede particolari attenzioni.
-- **Effetti:** Descrive le possibili conseguenze negative in caso di concretizzazione del rischio.
+- **Effetti:** 
 - **Descrizione:** Spiegazione dettagliata del rischio, con indicazioni sui contesti o le situazioni in cui potrebbe manifestarsi.
 - **Mitigation:** Azioni preventive per ridurre la probabilità o l’impatto negativo del rischio.
 - **Monitoring:** Modalità di monitoraggio periodico per verificare l’evoluzione del rischio, con indicazioni su quando e come effettuarne il controllo.
 - **Management:** Attività e piani correttivi da attivare nel caso in cui il rischio si concretizzi.
 
 ## Elenco dei Rischi
-
-<!--- TODO: completare eventuali ulteriori osservazioni se necessario --->
-
 #### Primo Rischio
 |||
 |-----------------|---------------------------------------------------------------------------------------------|
@@ -48,7 +47,7 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **ID**          | R2                                                                                          |
 | **Titolo**      | Incompatibilità con API o Database                                                          |
 | **Probabilità** | Media                                                                                       |
-| **Effetti**     | Catastrofici             |
+| **Effetti**     | Seri             |
 | **Descrizione** | Possibili difficoltà nell’integrazione del software con il database delle biblioteche o con API di terze parti. |
 | **Mitigation**  | Esecuzione di test preliminari di compatibilità e sviluppo di soluzioni di fallback in caso di errore. |
 | **Monitoring**  | Controllo periodico dei log di errore e monitoraggio delle prestazioni delle chiamate API.    |
@@ -86,8 +85,8 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **Campo**       | **Contenuto**                                                                               |
 | **ID**          | R5                                                                                          |
 | **Titolo**      | Indisponibilità del personale                                                          		|
-| **Probabilità** | Media                                                                                      |
-| **Effetti**     | Seri                          |
+| **Probabilità** | Bassa                                                                                      |
+| **Effetti**     | Tollerabili                          |
 | **Descrizione** | Assenza temporanea o prolungata di membri chiave del team (per malattia, imprevisti o dimissioni) che potrebbero rallentare lo sviluppo e compromettere la continuità del progetto.
 | **Mitigation**  | Pianificare in anticipo sostituzioni o turnazioni, garantire il cross-training e definire procedure per la gestione delle assenze. |
 | **Monitoring**  | Monitoraggio continuo delle assenze tramite incontri periodici e report settimanali.|
@@ -112,8 +111,8 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
 | **Campo**       | **Contenuto**                                                                               |
 | **ID**          | R7                                                                                          
 | **Titolo**      | Violazioni della sicurezza dei dati                                                     		|
-| **Probabilità** | Bassa                                                                                |
-| **Effetti**     | Catastrofici                       															|
+| **Probabilità** | Bassa/Media                                                                                |
+| **Effetti**     | Seri/Catastrofici                       															|
 | **Descrizione** | Possibile accesso non autorizzato o furto di dati sensibili degli utenti e della biblioteca, con conseguenze legali e reputazionali molto gravi.
 | **Mitigation**  | Implementare robuste misure di sicurezza: crittografia, autenticazione a due fattori, controlli di accesso e aggiornamenti regolari del sistema.
 | **Monitoring**  | Effettuare audit di sicurezza periodici, utilizzare strumenti di monitoraggio per rilevare anomalie e controllare costantemente i log di accesso.|
