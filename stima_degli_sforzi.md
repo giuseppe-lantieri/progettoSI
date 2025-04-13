@@ -65,36 +65,32 @@ Il fattore **Size** , all'inizio del progetto, si può stimare a partire dai **F
 | ID     | Nome                                           | Tipo | Complessità | Peso UFP |
 |--------|------------------------------------------------|------|-------------|----------|
 | AU_1   | Autenticazione sistema interno                 | EI   | Low         | 3        |
-| AU_2   | Autenticazione tramite SPID                    | EI   | Avg         | 4        |
-| AU_3   | Modifica password                              | EI   | Low         | 3        |
-| AU_4   | Registrazione                                   | EI   | Low         | 3        |
-| AU_5   | Logout                                          | EI   | Low         | 3        |
+| AU_2   | Autenticazione tramite sistema esterno         | EI   | Avg         | 4        |
+| AU_3   | Modifica password sistema interno              | EI   | Low         | 3        |
+| AU_4   | Registrazione                                  | EI   | Low         | 3        |
+| AU_5   | Logout                                         | EI   | Low         | 3        |
 | T_1    | Nuovo tesseramento                             | EI   | Avg         | 4        |
 | T_2    | Rinnovo tesseramento                           | EI   | Avg         | 4        |
 | T_3    | Cancellazione tesseramento                     | EI   | Avg         | 4        |
-| T_4    | Smarrimento tessera                            | EI   | Avg         | 4        |
-| T_5    | Furto tessera                                   | EI   | Avg         | 4        |
-| G_1    | Partecipazione gamification                    | EI   | Avg         | 4        |
+| T_4    | Denuncia smarrimento tesseramento              | EI   | Avg         | 4        |
+| T_5    | Denuncia furto tesseramento                    | EI   | Avg         | 4        |
+| G_1    | Partecipazione al sistema di gamification      | EI   | Avg         | 4        |
 | G_2    | Gestione profilo                               | EI   | Avg         | 4        |
-| G_3    | Inserimento commento                           | EI   | Avg         | 4        |
-| G_4    | Segnalazione commento                          | EI   | Avg         | 4        |
+| G_3    | Inserimento commento recensione                | EI   | Avg         | 4        |
+| G_4    | Segnalazione commento recensione               | EI   | Avg         | 4        |
 | G_5    | Riscatto punti                                 | EI   | Avg         | 4        |
-| PL_1   | Ricerca e richiesta libro                      | EQ   | Avg         | 4        |
-| PL_2   | Restituzione prestito                          | EI   | Low         | 3        |
-| PL_3   | Estensione prestito                            | EI   | Avg         | 4        |
+| PL_1   | Ricerca libro fisico e richiesta di prestito   | EQ   | Avg         | 4        |
+| PL_2   | Restituzione prestito fisico                   | EI   | Low         | 3        |
+| PL_3   | Richiesta allunamento prestito fisico          | EI   | Avg         | 4        |
 | PL_4   | Richiesta e-book                               | EI   | Avg         | 4        |
-| PS_1   | Prenotazione spazio                            | EI   | Avg         | 4        |
-| PS_2   | Allungamento prenotazione                      | EI   | Avg         | 4        |
-| PS_3   | Cancellazione richiesta                        | EQ   | Low         | 3        |
-| PS_4   | Segnalazione comportamento                     | EQ   | Low         | 3        |
-| SA_1   | Caricamento libri                              | EI   | Avg         | 4        |
-| SA_2   | Segnalazione prestito dal vivo                 | EI   | Avg         | 4        |
+| PS_1   | Prenotazione spazio comune                     | EI   | Avg         | 4        |
+| PS_2   | Cancellazione di una prenotazione              | EI   | Avg         | 4        |
+| SA_1   | Caricamento nuovi libri                        | EI   | Avg         | 4        |
+| SA_2   | Segnalazione prestito avvenuta dal vivo        | EI   | Avg         | 4        |
 | SA_3   | Segnalazione notizie                           | EI   | Avg         | 4        |
-| SA_4   | Gestione pagina biblioteca                     | EI   | Avg         | 4        |
-|        | **Totale**                                     |      |             | **101 UFP** |
+| SA_4   | Gestione pagina della biblioteca               | EI   | Avg         | 4        |
+|        | **Totale**                                     |      |             | **95 UFP** |
 
-<!-- TODO: aggiungere PL_5, Proroga Prenotazione 
--->
 Considerando il mix tecnologico previsto per l’implementazione:
 
 - **Backend** sviluppato in **Go**: 60% dell’implementazione, con un rapporto di circa **70 SLOC per FP**
@@ -110,7 +106,7 @@ $$
 La dimensione complessiva del progetto, espressa in **KSLOC (Kilo Source Lines of Code)**, risulta quindi:
 
 $$
-SIZE = \frac{101 \times 56.3}{1000} = \boxed{5.689} \text{ KSLOC}
+SIZE = \frac{95 \times 56.3}{1000} = \boxed{5.35} \text{ KSLOC}
 $$
 
 ## ***Il fattore E***
@@ -172,7 +168,7 @@ $$
 
 ### ***Calcolo dello sforzo (PM)***
 $$
-PM = 2.94 \cdot (5.689)^{1.16} \cdot 0.836 = \boxed{18.47} \text{ persone-mese}
+PM = 2.94 \cdot (5.35)^{1.16} \cdot 0.836 = \boxed{17.20} \text{ persone-mese}
 $$
 
 ### ***Calcolo della durata (TDEV)***
@@ -185,13 +181,13 @@ $$
 
 Sostituendo i valori:
 
-- **PM = 18.47**
+- **PM = 17.20**
 - **E = 1.16**
 
 Si ottiene:
 
 $$
-TDEV = 3 \cdot 18.47 \cdot (0.33 + 0.2 \cdot (1.16 - 1.01)) = \boxed{19.94} \text{ mesi}
+TDEV = 3 \cdot 17.20 \cdot (0.33 + 0.2 \cdot (1.16 - 1.01)) = \boxed{18.58} \text{ mesi}
 $$
 
 ### ***Ripartizione stimata dei costi dell'architettura fisica***
@@ -203,7 +199,7 @@ $$
 | Backup e storage cloud                         | 12 mesi  | 200                 | 2.400      |
 | Postazioni di lavoro                           | 180      | 1.000               | 180.000    |
 | Costi vari (rete, sicurezza, firewall, VPN...) | –        | –                   | 2000       |
-| **Totale stimato**                             |          |                     | **€ 198.000** |
+| **Totale stimato**                             |          |                     | **€ 199.400** |
 
 ### ***Analisi preliminare dei costi***
 
@@ -216,7 +212,7 @@ Assumendo che:
 il costo totale si ipotizza pari a:
 
 $$
-(18{,}47 \cdot 3.000\,€) + (6.000\,€ \cdot 19{,}94) + 199.400\,€ = \boxed{374.450\,€}
+(17{,}20 \cdot 3.000\,€) + (6.000\,€ \cdot 18{,}58) + 199.400\,€ = \boxed{362.480\,€}
 $$
 
 

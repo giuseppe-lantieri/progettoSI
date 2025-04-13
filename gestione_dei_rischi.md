@@ -11,8 +11,6 @@ Per gestire i rischi relativi al presente progetto si è scelto il modello **RMM
 ## Struttura delle Tabelle
 Di seguito vengono illustrati i campi che compongono la tabella di gestione dei rischi:
 
-<!--- TODO: aggiungere scala di valori effetti --->
-
 - **ID:** Codice identificativo del rischio.
 - **Titolo:** Breve descrizione del rischio.
 - **Probabilità:** Indica la probabilità che il rischio si verifichi, definita secondo la seguente scala:
@@ -20,7 +18,7 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
   - **Media (40% - 69%):** Il rischio potrebbe verificarsi occasionalmente; è consigliabile predisporre misure preventive.
   - **Bassa (10% - 39%):** Il rischio ha una probabilità ridotta di manifestarsi, ma va monitorato periodicamente.
   - **Molto Bassa (<10%):** Il rischio è estremamente improbabile e generalmente non richiede particolari attenzioni.
-- **Effetti:** 
+- **Effetti:** <!--- TODO: aggiungere scala di valori effetti --->
 - **Descrizione:** Spiegazione dettagliata del rischio, con indicazioni sui contesti o le situazioni in cui potrebbe manifestarsi.
 - **Mitigation:** Azioni preventive per ridurre la probabilità o l’impatto negativo del rischio.
 - **Monitoring:** Modalità di monitoraggio periodico per verificare l’evoluzione del rischio, con indicazioni su quando e come effettuarne il controllo.
