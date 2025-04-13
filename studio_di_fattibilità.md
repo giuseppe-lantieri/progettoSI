@@ -41,6 +41,13 @@ Per la realizzazione del sistema si prevede l’utilizzo delle seguenti componen
 
 La piattaforma si baserà su tecnologie consolidate: il linguaggio principale sarà Go, la gestione dei dati avverrà tramite comandi SQL e l’interfaccia utente sarà sviluppata con Vue.
 
+### RAGIONI PER LA SCELTA
+- **Interfaccia Web:** L’utilizzo di Vue.js per lo sviluppo dell’interfaccia web è motivato dalla sua popolarità, flessibilità e potenza di reazione. La libreria permette la creazione di componenti riutilizzabili e una gestione efficiente dello stato, garantendo un’esperienza utente fluida.
+- **Web Server:** Il linguaggio Go (Golang) è stato scelto per il suo elevato livello di performance e flessibilità. La sua sintassi elegante e la capacità di gestire operazioni concorrenti in modo efficiente lo rendono ideale per un sistema che deve gestire molte richieste simultanee.
+- **Base Dati:** L’utilizzo di un database relazionale (PostgreSQL) è motivato dalla necessità di gestire strutture dati complesse e interrelate. La sua capacità di supportare transazioni atomiche e di garantire integrità referenziale fa sì che i dati siano conservati in modo sicuro e coerente.
+
+Questo stack tecnologico permette di sviluppare un sistema robusto, scalabile e facile da mantenere, adatto a gestire le esigenze di un ampio range di utenti.
+
 ## COSTI
 La realizzazione della piattaforma comporta costi significativi che includono:
 - Sviluppo del software e migrazione dei dati.
@@ -59,10 +66,10 @@ Una metodologia per il dimensionamento è la seguente:
 1. **Analisi del traffico:** Determinare il numero medio e di picco degli utenti attivi e il volume delle richieste.
 2. **Definizione delle risorse per server:** Utilizzare benchmark e test preliminari per stabilire le capacità (CPU, memoria, storage) richieste per ogni server.
 3. **Formula di dimensionamento:**  
-   \[
-   N = \lceil \frac{U_{max}}{C} \rceil
-   \]
-   dove \( N \) rappresenta il numero di server fisici necessari, \( U_{max} \) il massimo numero di utenti simultanei, e \( C \) la capacità operativa di ogni server.
+   $$
+   N = \frac{U_{max}}{C}
+   $$
+   dove $N$ rappresenta il numero di server fisici necessari,  $U_{max}$  il massimo numero di utenti simultanei, e  $C$  la capacità operativa di ogni server.
 4. **Implementazione della ridondanza:** Prevedere almeno un server in più per garantire il failover e la continuità del servizio in caso di malfunzionamenti.
 
 Questa analisi, integrata da test di carico e monitoraggio continuo, permetterà di ottimizzare il dimensionamento dell’infrastruttura in base alle reali esigenze operative.

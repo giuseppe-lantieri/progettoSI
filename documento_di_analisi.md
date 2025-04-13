@@ -29,7 +29,7 @@ I casi d’uso sono descritti in maniera approfondita nel documento dei modelli 
 L’approccio “nomi-verbi” prevede di identificare le entità principali (nomi) e le azioni (verbi) che il sistema deve supportare. Di seguito sono elencate alcune delle principali entità e operazioni, estratte dall’analisi dei casi d’uso.
 
 ### 4.1 Entità (Nomi)
-- **UtenteGenerico**: astrazione che rappresenta sia l’UtenteGuest che l’Utente autenticato.
+- **Utente**: astrazione che rappresenta l’Utente autenticato.
 - **Bibliotecario**: utente con privilegi amministrativi.
 - **Libro**: oggetto ricercabile, disponibile o meno per il prestito.
 - **Prestito**: operazione relativa al prestito fisico o digitale(o ebook) dei libri.
@@ -58,125 +58,428 @@ Le principali operazioni individuate sono:
 - **Segnalare Prestito e Notizie**: aggiornamento dello stato del sistema (SA_2, SA_3).
 - **Gestire**: personalizzazione della pagina della biblioteca (SA_4).
 
-## 5. Schede CRC
+## 5. Diagrammi di Attività
+### AU_1
+![AU_1](./img/diagrammi_di_attivita/AU_1.jpg)
 
-### UtenteGenerico
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                                                  |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | UtenteGenerico                                                                                                                                                              |
-| **SuperClassi**    | -                                                                                                                                                                           |
-| **SottoClassi**    | UtenteGuest <br/> Utente <br/> UtenteGamification                                                                                                                          |
-| **Attributi**      | -                                                                                                                                                                           |
-| **Responsabilità** | Effettuare l’autenticazione e la registrazione (login, logout); <br/> Effettuare ricerche; <br/> Visionare le pagine delle biblioteche.                                    |
-| **Collaboratori**  | -                                                                                                                                                                           |
+### AU_2
+![AU_2](./img/diagrammi_di_attivita/AU_2.jpg)
 
-### UtenteGuest
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                               |
-|--------------------|----------------------------------------------------------|
-| **Nome**           | UtenteGuest                                             |
-| **SuperClassi**    | UtenteGenerico                                          |
-| **SottoClassi**    | -                                                        |
-| **Attributi**      | -                                                        |
-| **Responsabilità** | -                                                        |
-| **Collaboratori**  | -                                                        |
+### AU_3
+![AU_3](./img/diagrammi_di_attivita/AU_3.jpg)
 
-### Utente
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                   |
-|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Utente                                                                                                                                      |
-| **SuperClassi**    | UtenteGenerico                                                                                                                              |
-| **SottoClassi**    | -                                                                                                                                           |
-| **Attributi**      | Nome <br/> Cognome <br/> Email <br/> Numero di telefono <br/> Numero Tessera                                                                  |
-| **Responsabilità** | Gestire la modifica del profilo, inclusa la modifica della password; <br/> Richiedere prestiti, tesseramenti e prenotazioni degli spazi.   |
-| **Collaboratori**  | Bibliotecario (per la gestione e approvazione delle richieste); <br/> Prestito (per l’attivazione e la gestione dei prestiti); <br/> Tessera (per l’iniziativa e il rinnovo); <br/> Prenotazione (per la gestione delle prenotazioni). |
+### AU_4
+![AU_4](./img/diagrammi_di_attivita/AU_4.jpg)
 
-### UtenteGamification
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                          |
-|--------------------|---------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | UtenteGamification                                                                                                  |
-| **SuperClassi**    | Utente                                                                                                              |
-| **SottoClassi**    | -                                                                                                                   |
-| **Attributi**      | Identificativo Gamification                                                                                         |
-| **Responsabilità** | Partecipare al sistema di gamification (inserimento commenti/recensioni, riscossione punti).                         |
-| **Collaboratori**  | Bibliotecario (per la verifica dei contenuti pubblicati).                                                           |
+### AU_5
+![AU_5](./img/diagrammi_di_attivita/AU_5.jpg)
 
-### Bibliotecario
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                       |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Bibliotecario                                                                                                                                   |
-| **SuperClassi**    | -                                                                                                                                                |
-| **SottoClassi**    | -                                                                                                                                                |
-| **Attributi**      | Nome <br/> Cognome <br/> Email <br/> Numero di telefono <br/> Identificativo Lavorativo                                                          |
-| **Responsabilità** | Gestire la sezione amministrativa del sistema; <br/> Caricare nuovi libri e aggiornare il catalogo; <br/> Segnalare prestiti e aggiornare lo stato dei libri; <br/> Pubblicare e aggiornare notizie; <br/> Moderare i contenuti nella sezione gamification. |
-| **Collaboratori**  | Utente (per le interazioni relative a richieste e segnalazioni); <br/> Libro (per l’aggiornamento del catalogo); <br/> Prestito (per la gestione delle operazioni di prestito); <br/> Notizia (per l’inserimento e l’aggiornamento); <br/> Prenotazione (per la gestione delle prenotazioni). |
+### T_1
+![T_1](./img/diagrammi_di_attivita/T_1.jpg)
 
-### Libro
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                   |
-|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Libro                                                                                                                                       |
-| **SuperClassi**    | -                                                                                                                                           |
-| **SottoClassi**    | -                                                                                                                                           |
-| **Attributi**      | Titolo <br/> Identificativo libro <br/> Autore <br/> Lista delle biblioteche di appartenenza <br/> Disponibilità <br/> Genere                        |
-| **Responsabilità** | Memorizzare e fornire informazioni dettagliate (titolo, autore, genere, ecc.); <br/> Gestire lo stato di disponibilità; <br/> Supportare la funzione di ricerca. |
-| **Collaboratori**  | Prestito (per aggiornare lo stato durante le operazioni di prestito); <br/> Bibliotecario (per il caricamento e l’aggiornamento dei dati).         |
+### T_2
+![T_2](./img/diagrammi_di_attivita/T_2.jpg)
 
-### Prestito
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                    |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Prestito                                                                                                                                     |
-| **SuperClassi**    | -                                                                                                                                            |
-| **SottoClassi**    | -                                                                                                                                            |
-| **Attributi**      | Data Inizio <br/> Data Fine <br/> Stato <br/> Prenotazione                                                                                     |
-| **Responsabilità** | Attivare e gestire il ciclo di vita di un prestito (richiesta, attivazione, estensione, restituzione); <br/> Monitorare e aggiornare lo stato.   |
-| **Collaboratori**  | Utente (per l’iniziativa della richiesta di prestito); <br/> Libro (per modificare lo stato di disponibilità); <br/> Bibliotecario (per la gestione manuale del prestito). |
+### T_3
+![T_3](./img/diagrammi_di_attivita/T_3.jpg)
 
-### Tessera
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                    |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Tessera                                                                                                                                      |
-| **SuperClassi**    | -                                                                                                                                            |
-| **SottoClassi**    | -                                                                                                                                            |
-| **Attributi**      | Numero Tessera <br/> Data di Emissione <br/> Scadenza <br/> Stato                                                                              |
-| **Responsabilità** | Gestire le operazioni di tesseramento (nuovo tesseramento, rinnovo, cancellazione); <br/> Gestire le denunce di smarrimento o furto.         |
-| **Collaboratori**  | Utente (per la richiesta e la gestione del tesseramento); <br/> Bibliotecario (per la verifica e l’approvazione delle operazioni).             |
+### T_4
+![T_4](./img/diagrammi_di_attivita/T_4.jpg)
 
-### Prenotazione
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                    |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Prenotazione                                                                                                                                 |
-| **SuperClassi**    | -                                                                                                                                            |
-| **SottoClassi**    | -                                                                                                                                            |
-| **Attributi**      | Data Inizio <br/> Stato <br/> Utente <br/> Libro                                                                                              |
-| **Responsabilità** | Gestire la prenotazione degli spazi comuni; <br/> Consentire la cancellazione delle prenotazioni attive.                                       |
-| **Collaboratori**  | Utente (per l’iniziativa della prenotazione); <br/> Bibliotecario (per la gestione delle risposte e per la segnalazione di eventuali errori); <br/> Biblioteca (per verificare la disponibilità degli spazi).  |
+### T_5
+![T_5](./img/diagrammi_di_attivita/T_5.jpg)
 
-### Commento/Recensione
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                 |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Commento/Recensione                                                                                                                        |
-| **SuperClassi**    | -                                                                                                                                         |
-| **SottoClassi**    | -                                                                                                                                         |
-| **Attributi**      | Contenuto <br/> Data Creazione <br/> Utente <br/> Segnalazione <br/> Lista Commenti <br/> Libro                                            |
-| **Responsabilità** | Memorizzare e visualizzare il feedback degli utenti sui libri; <br/> Consentire l’inserimento, la modifica e la segnalazione dei commenti. |
-| **Collaboratori**  | Utente (per la creazione e la gestione dei commenti); <br/> Bibliotecario (per la moderazione e la rimozione dei contenuti inappropriati). |
+### G_1
+![G_1](./img/diagrammi_di_attivita/G_1.jpg)
 
-### Biblioteca
+<div style="page-break-after: always;"></div>
 
-| Campo              | Dettaglio                                                                                                                                 |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**           | Biblioteca                                                                                                                                |
-| **SuperClassi**    | -                                                                                                                                         |
-| **SottoClassi**    | -                                                                                                                                         |
-| **Attributi**      | Nome <br/> Indirizzo <br/> Lista Spazi Disponibili <br/> Lista Notizie                                                                      |
-| **Responsabilità** | Memorizzare, pubblicare e aggiornare le notizie relative alla biblioteca; <br/> Gestire la visualizzazione delle notizie; <br/> Gestire gli spazi prenotabili e la loro disponibilità. |
-| **Collaboratori**  | Prenotazione (per la gestione delle richieste di prenotazione); <br/> Bibliotecario (per l’inserimento e l’aggiornamento delle notizie e degli spazi). |
+### G_2
+![G_2](./img/diagrammi_di_attivita/G_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_3
+![G_3](./img/diagrammi_di_attivita/G_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_4
+![G_4](./img/diagrammi_di_attivita/G_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_5
+![G_5](./img/diagrammi_di_attivita/G_5.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_1
+![PL_1](./img/diagrammi_di_attivita/PL_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_2
+![PL_2](./img/diagrammi_di_attivita/PL_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_3
+![PL_3](./img/diagrammi_di_attivita/PL_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_4
+![PL_4](./img/diagrammi_di_attivita/PL_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PS_1
+![PS_1](./img/diagrammi_di_attivita/PS_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PS_2
+![PS_2](./img/diagrammi_di_attivita/PS_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PS_3
+![PS_3](./img/diagrammi_di_attivita/PS_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_1
+![SA_1](./img/diagrammi_di_attivita/SA_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_2
+![SA_2](./img/diagrammi_di_attivita/SA_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_3
+![SA_3](./img/diagrammi_di_attivita/SA_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_4
+![SA_4](./img/diagrammi_di_attivita/SA_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+
+## 6. Diagrammi di Classe
+![diagrammi_di_classe.jpg](./img/diagrammi_di_classe.jpg)
+
+<div style="page-break-after: always;"></div>
+
+
+## 7. Diagrammi di Package
+![diagrammi_di_classe.jpg](./img/diagrammi_package.jpg)
+
+<div style="page-break-after: always;"></div>
+
+
+## 8. Schede CRC
+### CAmministrativo
+![diagrammi_di_classe.jpg](./img/crc/CAmministrativo.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CEbook
+![diagrammi_di_classe.jpg](./img/crc/CEbook.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CGamification
+![diagrammi_di_classe.jpg](./img/crc/CGamification.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CPagineSito
+![diagrammi_di_classe.jpg](./img/crc/CPagineSito.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CPrenotazione
+![diagrammi_di_classe.jpg](./img/crc/CPrenotazione.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CPrestiti
+![diagrammi_di_classe.jpg](./img/crc/CPrestiti.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CRicerche
+![diagrammi_di_classe.jpg](./img/crc/CRicerche.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CServiziEsterni
+![diagrammi_di_classe.jpg](./img/crc/CServiziEsterni.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CTesseramento
+![diagrammi_di_classe.jpg](./img/crc/CTesseramento.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### CUtenza
+![diagrammi_di_classe.jpg](./img/crc/CUtenza.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EBiblioteca
+![diagrammi_di_classe.jpg](./img/crc/EBiblioteca.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EBibliotecario
+![diagrammi_di_classe.jpg](./img/crc/EBibliotecario.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EEbook
+![diagrammi_di_classe.jpg](./img/crc/EEbook.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EFeedback
+![diagrammi_di_classe.jpg](./img/crc/EFeedback.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### ELibro
+![diagrammi_di_classe.jpg](./img/crc/ELibro.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EPrenotazioni
+![diagrammi_di_classe.jpg](./img/crc/EPrenotazioni.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EPrestito
+![diagrammi_di_classe.jpg](./img/crc/EPrestito.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### ETessera
+![diagrammi_di_classe.jpg](./img/crc/ETessera.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EUtente
+![diagrammi_di_classe.jpg](./img/crc/EUtente.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### EUtenteGamification
+![diagrammi_di_classe.jpg](./img/crc/EUtenteGamification.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIAmministrativa
+![diagrammi_di_classe.jpg](./img/crc/UIAmministrativa.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIAutenticazione
+![diagrammi_di_classe.jpg](./img/crc/UIAutenticazione.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIBiblioteca
+![diagrammi_di_classe.jpg](./img/crc/UIBiblioteca.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIGamification
+![diagrammi_di_classe.jpg](./img/crc/UIGamification.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIPrestiOnline
+![diagrammi_di_classe.jpg](./img/crc/UIPrestiOnline.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIPrestiti
+![diagrammi_di_classe.jpg](./img/crc/UIPrestiti.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIRicerca
+![diagrammi_di_classe.jpg](./img/crc/UIRicerca.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UITesseramento
+![diagrammi_di_classe.jpg](./img/crc/UITesseramento.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### UIUtente
+![diagrammi_di_classe.jpg](./img/crc/UIUtente.jpg)
+
+<div style="page-break-after: always;"></div>
+
+
+## 9. Diagrammi di Sequenza
+### AU_1
+![AU_1](./img/diagrammi_di_sequenza/AU_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### AU_2
+![AU_2](./img/diagrammi_di_sequenza/AU_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### AU_3
+![AU_3](./img/diagrammi_di_sequenza/AU_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### AU_4
+![AU_4](./img/diagrammi_di_sequenza/AU_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### AU_5
+![AU_5](./img/diagrammi_di_sequenza/AU_5.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### T_1
+![T_1](./img/diagrammi_di_sequenza/T_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### T_2
+![T_2](./img/diagrammi_di_sequenza/T_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### T_3
+![T_3](./img/diagrammi_di_sequenza/T_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### T_4
+![T_4](./img/diagrammi_di_sequenza/T_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### T_5
+![T_5](./img/diagrammi_di_sequenza/T_5.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_1
+![G_1](./img/diagrammi_di_sequenza/G_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_2
+![G_2](./img/diagrammi_di_sequenza/G_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_3
+![G_3](./img/diagrammi_di_sequenza/G_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_4
+![G_4](./img/diagrammi_di_sequenza/G_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### G_5
+![G_5](./img/diagrammi_di_sequenza/G_5.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_1
+![PL_1](./img/diagrammi_di_sequenza/PL_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_2
+![PL_2](./img/diagrammi_di_sequenza/PL_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_3
+![PL_3](./img/diagrammi_di_sequenza/PL_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PL_4
+![PL_4](./img/diagrammi_di_sequenza/PL_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PS_1
+![PS_1](./img/diagrammi_di_sequenza/PS_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PS_2
+![PS_2](./img/diagrammi_di_sequenza/PS_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### PS_3
+![PS_3](./img/diagrammi_di_sequenza/PS_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_1
+![SA_1](./img/diagrammi_di_sequenza/SA_1.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_2
+![SA_2](./img/diagrammi_di_sequenza/SA_2.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_3
+![SA_3](./img/diagrammi_di_sequenza/SA_3.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### SA_4
+![SA_4](./img/diagrammi_di_sequenza/SA_4.jpg)
+
+<div style="page-break-after: always;"></div>
+
+
+## 10. Diagrammi Entità Relazione
+![diagrammi_di_classe.jpg](./img/diagrammi_entita_realazione.jpg)

@@ -12,7 +12,7 @@ Di seguito vengono elencati e descritti i possibili attori che interagiranno con
 - **Tipo**: Tipologia dell'attore (ad es. primario o secondario) in base alle sue possibili interazioni.
 - **Descrizione**: Breve descrizione che illustra la funzione dell'attore.
 
-<!-- Tabella degli attori -->
+<!-- Tabella degli attori -->---
 | Campo        | Contenuto                                                                 |
 |--------------|---------------------------------------------------------------------------|
 | **ID**       | 1                                                                         |
@@ -20,6 +20,7 @@ Di seguito vengono elencati e descritti i possibili attori che interagiranno con
 | **Genitore** | -                                                                         |
 | **Tipo**     | Secondario                                                                |
 | **Descrizione** | Utente che accede senza effettuare il login, con operazioni limitate.  |
+---
 
 | Campo        | Contenuto                                                                 |
 |--------------|---------------------------------------------------------------------------|
@@ -28,6 +29,7 @@ Di seguito vengono elencati e descritti i possibili attori che interagiranno con
 | **Genitore** | UtenteGuest                                                               |
 | **Tipo**     | Primario                                                                  |
 | **Descrizione** | Utente che effettua il login, sbloccando funzionalità aggiuntive.       |
+---
 
 | Campo        | Contenuto                                                                 |
 |--------------|---------------------------------------------------------------------------|
@@ -36,6 +38,7 @@ Di seguito vengono elencati e descritti i possibili attori che interagiranno con
 | **Genitore** | -                                                                         |
 | **Tipo**     | Primario                                                                  |
 | **Descrizione** | Dipendente della biblioteca con elevati livelli di permessi per accedere alla sezione amministrativa. |
+---
 
 | Campo        | Contenuto                                                                 |
 |--------------|---------------------------------------------------------------------------|
@@ -90,7 +93,7 @@ I casi d'uso vengono organizzati in macro-gruppi (scenari), ciascuno identificat
 Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso:
 - **ID**: Identificativo univoco del caso d'uso.
 - **Nome**: Nome descrittivo del caso d'uso.
-- **Priorità**: Valore (da 1 a 10) che esprime l'importanza e l'impatto del caso d'uso. <br> - **MustHave**: [10-9] <br> - **Should Have**: [8-7]<br> - **Recommended**: [6-5]<br> - **Would Be Better to Have**: [4-3]<br> - **Optional**: [2-1]
+- **Priorità**: Valore (da 1 a 10) che esprime l'importanza e l'impatto del caso d'uso. MustHave (10-9),Should Have (8-7), Recommended (6-5),Would Be Better to Have (4-3),Optional (2-1)
 - **Attori**: Elenco degli attori coinvolti.
 - **Descrizione**: Breve descrizione del caso d'uso.
 - **Condizioni**: Condizioni preliminari richieste al sistema.
@@ -112,6 +115,8 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Risultato**   | L'utente viene autenticato (trasformazione da UtenteGuest a Utente) oppure l'accesso viene negato.                   |
 | **Flusso**      | 1. Selezione del pulsante di accesso. <br/> 2. Compilazione del form con email e password. <br/> 3. Il sistema verifica le credenziali. <br/> 4. In base al risultato: <br/> &nbsp;&nbsp;&nbsp;&nbsp;a. L'utente viene autenticato; <br/> &nbsp;&nbsp;&nbsp;&nbsp;b. L'autenticazione viene negata. |
 
+---
+
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
 | **ID**       | AU_2                                                                                                                   |
@@ -122,6 +127,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | -                                                                                                                   |
 | **Risultato**   | L'utente viene autenticato (trasformazione da UtenteGuest a Utente) oppure l'accesso viene negato.                   |
 | **Flusso**      | 1. Selezione del pulsante corrispondente al servizio scelto. <br/> 2. Reindirizzamento alla pagina del servizio. <br/> 3. Il servizio esterno certifica l'utente e fornisce le informazioni necessarie. <br/> 4. Il sistema verifica la presenza dell'utente. <br/> 5. In base alla verifica: <br/> &nbsp;&nbsp;&nbsp;&nbsp;a. L'utente viene autenticato; <br/> &nbsp;&nbsp;&nbsp;&nbsp;b. Viene creato un nuovo utente e l'accesso è consentito. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -133,6 +139,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente deve essere già registrato.                                                                               |
 | **Risultato**   | L'utente aggiorna la password tramite il sistema.                                                                 |
 | **Flusso**      | 1. Selezione del pulsante "Ho dimenticato la password". <br/> 2. Reindirizzamento a una pagina con un form per inserire l'email. <br/> 3. Invio di una password temporanea all'indirizzo email. <br/> 4. La password temporanea viene forzata nell'account. <br/> 5. Al successivo login, l'utente è tenuto a impostare una nuova password. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -144,6 +151,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente non deve essere registrato in precedenza.                                                                  |
 | **Risultato**   | L'utenteGuest viene trasformato in un nuovo Utente.                                                               |
 | **Flusso**      | 1. Selezione del pulsante "Registrami". <br/> 2. Reindirizzamento alla pagina di registrazione contenente un form per inserire email, dati anagrafici e password. <br/> 3. Il sistema salva in maniera sicura le informazioni nel database. <br/> 4. L'utente viene reindirizzato alla pagina di login. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -157,6 +165,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Flusso**      | 1. Selezione del pulsante "Logout". <br/> 2. Reindirizzamento alla pagina iniziale mentre il sistema invalida cookie e sessione. |
 
 ### Tesseramento
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -168,6 +177,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente non è in possesso di tessera.                                                                              |
 | **Risultato**   | La richiesta di tesseramento viene inviata all'ufficio competente, che fornisce una ricevuta e l'indirizzo per il ritiro. |
 | **Flusso**      | 1. Selezione del pulsante "Nuovo tesseramento". <br/> 2. Reindirizzamento a una pagina con form per compilare i dati anagrafici e selezionare il tier della tessera. <br/> 3. Il sistema verifica i dati e segnala eventuali errori. <br/> 4. La richiesta viene inoltrata all'ufficio competente e viene restituita una ricevuta. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -179,6 +189,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente è già in possesso di tessera.                                                                              |
 | **Risultato**   | La richiesta di rinnovo viene inoltrata e una ricevuta viene restituita all'utente.                                  |
 | **Flusso**      | 1. Selezione del pulsante "Rinnovo tesseramento". <br/> 2. Reindirizzamento alla pagina di rinnovo con un form che richiede il codice della tessera esistente. <br/> 3. Il sistema controlla i dati, segnala eventuali errori e inoltra la richiesta all'ufficio competente. <br/> 4. Viene fornita una ricevuta all'utente. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -190,6 +201,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente deve essere in possesso di tessera.                                                                         |
 | **Risultato**   | La richiesta di cancellazione viene inoltrata e l'utente riceve una conferma.                                         |
 | **Flusso**      | 1. Selezione del pulsante "Cancellazione tesseramento". <br/> 2. Reindirizzamento a una pagina con form per inserire il codice della tessera. <br/> 3. Il sistema verifica i dati, segnala eventuali errori e inoltra la richiesta. <br/> 4. Viene fornita una ricevuta di conferma. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -201,6 +213,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente deve essere in possesso della tessera.                                                                      |
 | **Risultato**   | La denuncia viene inoltrata all'ufficio competente e viene restituita una ricevuta.                                  |
 | **Flusso**      | 1. Selezione del pulsante "Smarrimento tessera". <br/> 2. Reindirizzamento a una pagina con form per inserire il codice della tessera. <br/> 3. Il sistema verifica i dati, segnala eventuali errori e inoltra la richiesta. <br/> 4. Viene restituita una ricevuta. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -214,6 +227,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Flusso**      | 1. Selezione del pulsante "Smarrimento tessera". <br/> 2. Reindirizzamento a una pagina con form in cui l'utente allega la denuncia di furto. <br/> 3. Il sistema verifica i dati e segnala eventuali errori. <br/> 4. Il sistema inoltra la richiesta e restituisce una ricevuta. |
 
 ### Gamification
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -225,6 +239,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente deve essere autenticato.                                                                                   |
 | **Risultato**   | L'utente viene abilitato ad accedere alla sezione gamification.                                                     |
 | **Flusso**      | 1. L'utente accede alla sezione dedicata alla gamification. <br/> 2. Seleziona il pulsante "Voglio partecipare al gioco". <br/> 3. Legge il regolamento e accetta le condizioni. <br/> 4. Il sistema registra la partecipazione e abilita l'accesso alla sezione. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -236,6 +251,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente deve già partecipare al sistema di gamification.                                                           |
 | **Risultato**   | Le modifiche al profilo vengono applicate e salvate.                                                                 |
 | **Flusso**      | 1. L'utente accede alla sezione "Profilo" all'interno della gamification. <br/> 2. Modifica i dati tramite i menu appositi. <br/> 3. Il sistema conferma le modifiche e aggiorna il profilo. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -247,6 +263,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente deve essere iscritto e partecipare al sistema di gamification.                                             |
 | **Risultato**   | Il commento o la recensione viene aggiunto al sistema.                                                              |
 | **Flusso**      | 1. L'utente seleziona il libro da recensire. <br/> 2. Clicca sul pulsante "Recensisci". <br/> 3. Inserisce il testo della recensione e conferma. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -258,6 +275,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | L'utente ha pubblicato un commento o una recensione.                                                                 |
 | **Risultato**   | Il commento o la recensione viene rimosso e, eventualmente, vengono applicate penalizzazioni all'utente.              |
 | **Flusso**      | 1. Il bibliotecario individua il commento o la recensione problematica. <br/> 2. Seleziona il pulsante "Segnala". <br/> 3. Il sistema rimuove il contenuto e, se previsto, applica una decurtazione dei punti gamification. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -271,6 +289,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Flusso**      | 1. L'utente accede alla sezione "Gamification". <br/> 2. Seleziona il pulsante "Riscatta Punti". <br/> 3. Sceglie il premio desiderato. <br/> 4. Il sistema elabora la richiesta, fornisce una ricevuta e aggiorna il punteggio. |
 
 ### Prestito Libri
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -282,6 +301,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | Per completare la richiesta è necessario essere autenticati (trasformazione di UtenteGuest in Utente).                  |
 | **Risultato**   | Viene effettuata la prenotazione del libro.                                                                          |
 | **Flusso**      | 1. L'attore inserisce i termini di ricerca nella barra dedicata. <br/> 2. Il sistema presenta una lista di libri (almeno 50, con eventuali ulteriori risultati su richiesta). <br/> 3. Selezionando un libro, il sistema differenzia il flusso in base al ruolo: <br/> &nbsp;&nbsp;&nbsp;&nbsp;a. Per un Utente, viene offerta la possibilità di inviare la richiesta di prestito e viene indicata la biblioteca per il ritiro. <br/> &nbsp;&nbsp;&nbsp;&nbsp;b. Per un UtenteGuest, viene mostrato un banner che invita alla registrazione o all'autenticazione per poter procedere. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -293,6 +313,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | Esiste un prestito attivo.                                                                                           |
 | **Risultato**   | Il libro viene reso disponibile per un nuovo prestito.                                                               |
 | **Flusso**      | 1. Il bibliotecario scannerizza il libro restituito. <br/> 2. Il sistema riceve tramite API l'informazione di restituzione. <br/> 3. Il libro viene aggiornato come disponibile. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -304,6 +325,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | Esiste un prestito attivo.                                                                                           |
 | **Risultato**   | Il sistema inoltra la richiesta di allungamento.                                                                     |
 | **Flusso**      | 1. L'utente accede al proprio profilo e individua il prestito attivo, quindi seleziona "Allunga prestito". <br/> 2. Il sistema invia la richiesta all'ufficio competente. <br/> 3. L'utente viene informato tramite email sull'esito della richiesta. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -317,6 +339,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Flusso**      | 1. L'utente accede alla sezione dedicata agli ebook e ricerca il titolo desiderato. <br/> 2. Seleziona il pulsante "Prestito". <br/> 3. Accetta i termini e le condizioni. <br/> 4. Il sistema concede l’accesso all’ebook in base ai termini di utilizzo. |
 
 ### Prenotazione Spazio
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -328,6 +351,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | -                                                                                                                  |
 | **Risultato**   | L'utente riceve una notifica via email con l'esito della prenotazione.                                               |
 | **Flusso**      | 1. L'utente accede alla schermata delle prenotazioni della biblioteca scelta. <br/> 2. Il sistema invia una mail con i dettagli della richiesta all'indirizzo della biblioteca. <br/> 3. A seguito della risposta della biblioteca, il sistema comunica l'esito all'utente. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -339,6 +363,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | Esiste una prenotazione attiva.                                                                                    |
 | **Risultato**   | La prenotazione viene cancellata e l'utente riceve una notifica.                                                   |
 | **Flusso**      | 1. L'utente accede alla sezione delle prenotazioni nel proprio profilo e seleziona "Cancella" per la prenotazione desiderata. <br/> 2. Il sistema invia una mail di conferma della cancellazione alla biblioteca. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -352,6 +377,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Flusso**      | 1. Il bibliotecario individua la prenotazione problematica. <br/> 2. Seleziona il pulsante "Segnala". <br/> 3. Il sistema applica le penalizzazioni previste. |
 
 ### Sezione Amministrativa
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -363,6 +389,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | -                                                                                                                  |
 | **Risultato**   | Il nuovo libro viene aggiunto alla lista della biblioteca e reso disponibile sul portale.                            |
 | **Flusso**      | 1. Il bibliotecario accede alla sezione amministrativa e seleziona "Aggiungi un libro". <br/> 2. Scannerizza il codice del libro e inserisce i dati richiesti. <br/> 3. Il sistema aggiorna il catalogo, rendendo il libro disponibile agli utenti. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -374,6 +401,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | -                                                                                                                  |
 | **Risultato**   | Lo stato del libro viene aggiornato, indicando che non è più in prestito.                                             |
 | **Flusso**      | 1. Il bibliotecario accede alla sezione amministrativa e seleziona l'opzione per comunicare un prestito avvenuto. <br/> 2. Scannerizza il codice del libro e inserisce le informazioni relative al prestito. <br/> 3. Il sistema aggiorna lo stato del libro rendendolo disponibile per un nuovo prestito. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -385,6 +413,7 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Condizioni**  | -                                                                                                                  |
 | **Risultato**   | La sezione notizie della pagina della biblioteca viene aggiornata.                                                  |
 | **Flusso**      | 1. Il bibliotecario accede alla sezione amministrativa e seleziona "Nuove notizie". <br/> 2. Compila il form per aggiungere o modificare le notizie. <br/> 3. Il sistema aggiorna la pagina della biblioteca di conseguenza. |
+---
 
 | Campo        | Contenuto                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -398,3 +427,33 @@ Di seguito vengono descritte le proprietà che caratterizzano ciascun caso d'uso
 | **Flusso**      | 1. Il bibliotecario accede alla sezione amministrativa e seleziona "Modifica tema" o un'opzione simile. <br/> 2. Utilizza i menu appositi per personalizzare la pagina. <br/> 3. Il sistema aggiorna la pagina con le nuove impostazioni. |
 
 <!-- Nota: Per migliorare la leggibilità delle tabelle, sono stati utilizzati tag HTML per gestire le interruzioni di riga all'interno delle celle. -->
+
+## Diagrammi Casi D'Uso
+## Autenticazione
+
+![Autenticazione](./img/casi_di_uso/Autenticazione.jpg)
+
+<div style="page-break-after: always;"></div>
+
+## Tesseramento
+![Tesseramento](./img/casi_di_uso/Tesseramento.jpg)
+
+<div style="page-break-after: always;"></div>
+
+## Gamification
+![Gamification](./img/casi_di_uso/Gamification.jpg)
+
+<div style="page-break-after: always;"></div>
+
+## PrestitoLibri
+![PrestitoLibri](./img/casi_di_uso/PrestitoLibri.jpg)
+
+<div style="page-break-after: always;"></div>
+
+## PrenotazioneSpazio
+![PrenotazioneSpazio](./img/casi_di_uso/PrenotazioneSpazio.jpg)
+
+<div style="page-break-after: always;"></div>
+
+## SezioneAmministrativa
+![SezioneAmministrativa](./img/casi_di_uso/SezioneAmministrativa.jpg)

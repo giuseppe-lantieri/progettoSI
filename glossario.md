@@ -89,4 +89,3 @@
 - **Facoltativo (Optional)**: Questi requisiti sono completamente facoltativi e non influiscono sul funzionamento di base. Possono offrire funzionalità aggiuntive o miglioramenti.
  
 - **Consigliato (Recommended)**: Questi requisiti sono fortemente suggeriti perché possono migliorare l'efficacia, la sicurezza o la qualità del risultato finale, ma non sono obbligatori.
-
