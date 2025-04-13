@@ -76,4 +76,4 @@
 - **JWT (JSON Web Token)**: Sistema di autenticazione basato su token che consente l’identificazione sicura degli utenti.
 - **SPID**: Sistema Pubblico di Identità Digitale, utilizzato per autenticare gli utenti attraverso
 - **CIE**: Carta di Identità Elettronica, un altro sistema di autenticazione usato per l’identificazione degli utenti.
-
+- **WCAG**: Web Content Accessibility Guidelines, linee guida per l'accessibilità dei contenuti Web.
