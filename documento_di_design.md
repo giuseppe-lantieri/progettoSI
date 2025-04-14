@@ -204,3 +204,9 @@ Per brevita riportiamo i diagrammi classe più interessanti
 
 **SA_3**: Segnalazione Notizie  
 ![SA_3](./img/diagrammi_di_sequenza_design/SA_3_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+## 12. Diagramma Entita Relazione
+
+![DiagrammaEntitaRelazione](./img/diagrammi_entita_relazione_design.jpg)
