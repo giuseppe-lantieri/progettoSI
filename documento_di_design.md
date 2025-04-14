@@ -119,3 +119,88 @@ Il design orientato agli oggetti è supportato dalle schede CRC sviluppate in fa
 - **Scalabilità:**  
   - L'architettura a micro-servizi consente di scalare ogni componente in base al carico.
   - Implementazione di load balancer e sistemi di caching per ottimizzare le performance.
+
+## 9. Diagrammi di classe 
+
+![diagrammi_di_classe](./img/diagrammi_di_classe_design.jpg)
+
+## 10. Diagrammi di stato
+
+**Stato di una entità Libro**  
+![Libro](./img/diagrammi_di_stato/stato_libro.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**Stato di una entità Tessera**  
+![Tessera](./img/diagrammi_di_stato/stato_tessera.jpg)
+
+<div style="page-break-after: always;"></div>
+
+
+**Stato di una entità Utente**  
+![Utente](./img/diagrammi_di_stato/stato_utente.jpg)
+
+<div style="page-break-after: always;"></div>
+
+## 11. Diagrammi di sequenza 
+
+Per brevita riportiamo i diagrammi classe più interessanti
+
+
+**AU_1**: Autenticazione Utente Sistema Interno  
+![AU_1](./img/diagrammi_di_sequenza_design/AU_1_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**AU_2**: Autenticazione Utente Tramite Sistema Esterno  
+![AU_2](./img/diagrammi_di_sequenza_design/AU_2_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**G_1**: Partecipazione al Sistema di Gamification  
+![G_1](./img/diagrammi_di_sequenza_design/G_1_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**PL_1**: Ricerca Libro Fisico e Richiesta di Prestito  
+![PL_1](./img/diagrammi_di_sequenza_design/PL_1_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**PL_2**: Restituzione Prestito Fisico  
+![PL_2](./img/diagrammi_di_sequenza_design/PL_2_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**PL_3**: Richiesta Allungamento Prestito Fisico  
+![PL_3](./img/diagrammi_di_sequenza_design/PL_3_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**PL_4**: Richiesta E-book
+![PL_4](./img/diagrammi_di_sequenza_design/PL_4_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**PS_1**: Prenotazione di uno Spazio Comune  
+![PS_1](./img/diagrammi_di_sequenza_design/PS_1_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**PS_2**: Cancellazione di una Prenotazione  
+![PS_2](./img/diagrammi_di_sequenza_design/PS_2_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**SA_1**: Caricamento Nuovi Libri  
+
+![SA_1](./img/diagrammi_di_sequenza_design/SA_1_D.jpg)
+<div style="page-break-after: always;"></div>
+
+**SA_2**: Segnalazione Prestito Avvenuto Dal Vivo  
+![SA_2](./img/diagrammi_di_sequenza_design/SA_2_D.jpg)
+
+<div style="page-break-after: always;"></div>
+
+**SA_3**: Segnalazione Notizie  
+![SA_3](./img/diagrammi_di_sequenza_design/SA_3_D.jpg)
