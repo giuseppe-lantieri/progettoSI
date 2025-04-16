@@ -149,9 +149,8 @@ La frase che hai scritto è già chiara e corretta. Tuttavia, se desideri una ve
 
 Come descritto in precedenza, le componenti del sistema si basano su un frontend sviluppato in Vue.js che comunica con il backend sviluppato in GO tramite API RESTful, con endpoint dedicati per le operazioni CRUD e la gestione dei flussi di lavoro verso le istanze dei database dedicati alla gestione delle varie entità (Utenti, Prestito, Tesseramento, Gamification, Prenotazione Spazi, Sezione Amministrativa). 
 
-Di seguito è descritto il modello delle interazioni tra le componenti architetturali durante l'esecuzione deglu use case dettagliati nei diagrammi di sequenza seguenti.
+Di seguito è descritto il modello delle interazioni tra le componenti architetturali durante l'esecuzione degli	 use case dettagliati nei diagrammi di sequenza seguenti.
 
-Spero che questo ti sia utile! C'è qualcos'altro che posso fare per te?
 
 
 ![DiagrammaInterazioniComponenti](./img/diagramma_di_integrazione.jpg)
