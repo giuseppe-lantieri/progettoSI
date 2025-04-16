@@ -19,7 +19,7 @@ Il sistema è strutturato secondo un'architettura a strati che separa le respons
 
 La comunicazione tra i livelli avviene attraverso API RESTful, mentre l’integrazione con servizi esterni (es. SPID, CIE) è gestita tramite interfacce dedicate e webhook sicuri.
 
-(./img/diagramma_di_integrazio
+![ArchitetturaComponenti](./img/archiettura_componenti.jpg)
 
 ## 4. Design delle Componenti
 Il sistema è suddiviso in moduli che rispecchiano i casi d’uso e le funzionalità individuate durante l'analisi.
