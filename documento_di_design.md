@@ -213,9 +213,9 @@ Per brevita riportiamo i diagrammi classe più interessanti
 
 ## 13. Diagramma di Design delle componenti
 
-Come descritto in precedenza le componenti del sistema si basano su un frontend sviluppato in vue.js che comunica con il backend sviluppato in GO tramite API RESTful, con endpoint dedicati per le operazioni CRUD e la gestione dei flussi di lavoro verso i Database dedicati alle varie entità (Utenti,Prestito,Tesseramento,Gamification,PrenotazioneSpazi,SezioneAmministrativa).
+Come descritto in precedenza le componenti del sistema si basano su un frontend sviluppato in vue.js che comunica con il backend sviluppato in GO tramite API RESTful, con endpoint dedicati per le operazioni CRUD e la gestione dei flussi di lavoro verso le istanze dei Database dedicati alle gestione delle varie entità (Utenti,Prestito,Tesseramento,Gamification,PrenotazioneSpazi,SezioneAmministrativa).
 
-Di Seguito riportiamo il modello delle interazioni tra le conponenti architetturali per implementare le operazioni descritte nei diagrammi di sequenza.
+Di seguito viene riportato il modello delle interazioni tra le componenti architetturali per implementare le operazioni descritte nei diagrammi di sequenza.
 
 
 ![DiagrammaInterazioniComponenti](./img/diagramma_di_integrazione.jpg)
