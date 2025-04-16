@@ -213,4 +213,4 @@ Per brevita riportiamo i diagrammi classe più interessanti
 
 ## 12. Diagramma di Design delle componenti
 
-![DiagrammaInterazioniComponenti](./img/diagramma di integrazione.jpg)
+![DiagrammaInterazioniComponenti](./img/diagramma_di_integrazione.jpg)
