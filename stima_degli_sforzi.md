@@ -68,7 +68,7 @@ Il fattore **Size** , all'inizio del progetto, si può stimare a partire dai **F
 | AU_2   | Autenticazione tramite sistema esterno         | EI   | Avg         | 4        |
 | AU_3   | Modifica password sistema interno              | EI   | Low         | 3        |
 | AU_4   | Registrazione                                  | EI   | Low         | 3        |
-| AU_5   | Logout                                         | EI   | Low         | 3        |
+| AU_5   | Logout                                         | EO   | Low         | 3        |
 | T_1    | Nuovo tesseramento                             | EI   | Avg         | 4        |
 | T_2    | Rinnovo tesseramento                           | EI   | Avg         | 4        |
 | T_3    | Cancellazione tesseramento                     | EI   | Avg         | 4        |
@@ -78,7 +78,7 @@ Il fattore **Size** , all'inizio del progetto, si può stimare a partire dai **F
 | G_2    | Gestione profilo                               | EI   | Avg         | 4        |
 | G_3    | Inserimento commento recensione                | EI   | Avg         | 4        |
 | G_4    | Segnalazione commento recensione               | EI   | Avg         | 4        |
-| G_5    | Riscatto punti                                 | EI   | Avg         | 4        |
+| G_5    | Riscatto punti                                 | EO   | Avg         | 4        |
 | PL_1   | Ricerca libro fisico e richiesta di prestito   | EQ   | Avg         | 4        |
 | PL_2   | Restituzione prestito fisico                   | EI   | Low         | 3        |
 | PL_3   | Richiesta allunamento prestito fisico          | EI   | Avg         | 4        |
@@ -87,7 +87,7 @@ Il fattore **Size** , all'inizio del progetto, si può stimare a partire dai **F
 | PS_2   | Cancellazione di una prenotazione              | EI   | Avg         | 4        |
 | SA_1   | Caricamento nuovi libri                        | EI   | Avg         | 4        |
 | SA_2   | Segnalazione prestito avvenuta dal vivo        | EI   | Avg         | 4        |
-| SA_3   | Segnalazione notizie                           | EI   | Avg         | 4        |
+| SA_3   | Segnalazione notizie                           | EO   | Avg         | 4        |
 | SA_4   | Gestione pagina della biblioteca               | EI   | Avg         | 4        |
 |        | **Totale**                                     |      |             | **95 UFP** |
 
