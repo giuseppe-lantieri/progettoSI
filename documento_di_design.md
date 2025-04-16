@@ -217,7 +217,7 @@ Per brevita riportiamo i diagrammi classe più interessanti
 
 Come descritto in precedenza le componenti del sistema si basano su un frontend sviluppato in vue.js che comunica con il backend sviluppato in GO tramite API RESTful, con endpoint dedicati per le operazioni CRUD e la gestione dei flussi di lavoro verso le istanze dei Database dedicati alle gestione delle varie entità (Utenti,Prestito,Tesseramento,Gamification,PrenotazioneSpazi,SezioneAmministrativa).
 
-Di seguito è riportato il modello delle interazioni tra le componenti architetturali durante l'esecuzione dei metodi descritti nei diagrammi di sequenza.
+Di seguito è descritto il modello delle interazioni tra le componenti architetturali durante l'esecuzione dei metodi descritti nei diagrammi di sequenza dettagliati precedentemente.
 
 
 ![DiagrammaInterazioniComponenti](./img/diagramma_di_integrazione.jpg)
