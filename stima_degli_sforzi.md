@@ -3,7 +3,7 @@
 
 ## ***Introduzione***
 Il seguente documento ha lo scopo di stimare gli sforzi per la realizzazione del servizio proposto attraverso il modello **COCOMO II** (Constructive Cost Model). COCOMO II si distingue per la sua capacità di modellare processi non sequenziali e sviluppi rapidi; di fornire gli strumenti adeguati per la stima in progetti basati sul riutilizzo del software; per la considerazione degli effetti della maturità del processo di sviluppo. Infatti team con un alto grado di organizzazione e processi ben definiti possono ottenere stime più affidabili e costi più contenuti.
-Grazie a queste caratteristiche, COCOMO II si conferma uno strumento solido e adattabile per la stima degli sforzi nei progetti software complessi, eterogenei e in continua evoluzione.
+Grazie a queste caratteristiche, COCOMO II è uno strumento solido e adattabile per la stima degli sforzi nei progetti software complessi, eterogenei e in continua evoluzione.
 
 ## ***Stima degli sforzi con COCOMO II***
 In COCOMO II gli sforzi sono espressi come **"Person-Months" (PM)**, ovvero il numero di "Persone-Mesi" necessari per completare il progetto. Un person-month corrisponde a 152 ore di lavoro.
