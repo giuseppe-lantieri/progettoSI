@@ -210,3 +210,7 @@ Per brevita riportiamo i diagrammi classe più interessanti
 ## 12. Diagramma Entita Relazione
 
 ![DiagrammaEntitaRelazione](./img/diagrammi_entita_relazione_design.jpg)
+
+## 12. Diagramma di Design delle componenti
+
+![DiagrammaInterazioniComponenti](./img/diagrammi_entita_relazione_design.jpg)
