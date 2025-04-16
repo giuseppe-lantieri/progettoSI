@@ -19,6 +19,8 @@ Il sistema è strutturato secondo un'architettura a strati che separa le respons
 
 La comunicazione tra i livelli avviene attraverso API RESTful, mentre l’integrazione con servizi esterni (es. SPID, CIE) è gestita tramite interfacce dedicate e webhook sicuri.
 
+(./img/diagramma_di_integrazio
+
 ## 4. Design delle Componenti
 Il sistema è suddiviso in moduli che rispecchiano i casi d’uso e le funzionalità individuate durante l'analisi.
 
@@ -215,7 +217,7 @@ Per brevita riportiamo i diagrammi classe più interessanti
 
 Come descritto in precedenza le componenti del sistema si basano su un frontend sviluppato in vue.js che comunica con il backend sviluppato in GO tramite API RESTful, con endpoint dedicati per le operazioni CRUD e la gestione dei flussi di lavoro verso le istanze dei Database dedicati alle gestione delle varie entità (Utenti,Prestito,Tesseramento,Gamification,PrenotazioneSpazi,SezioneAmministrativa).
 
-Di seguito viene riportato il modello delle interazioni tra le componenti architetturali per implementare le operazioni descritte nei diagrammi di sequenza.
+Di seguito viene riportato il modello delle interazioni tra le componenti architetturali all'esecuzione dei metodi descritti nei diagrammi di sequenza.
 
 
 ![DiagrammaInterazioniComponenti](./img/diagramma_di_integrazione.jpg)
