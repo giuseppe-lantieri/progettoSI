@@ -18,7 +18,11 @@ Di seguito vengono illustrati i campi che compongono la tabella di gestione dei 
   - **Media (40% - 69%):** Il rischio potrebbe verificarsi occasionalmente; è consigliabile predisporre misure preventive.
   - **Bassa (10% - 39%):** Il rischio ha una probabilità ridotta di manifestarsi, ma va monitorato periodicamente.
   - **Molto Bassa (<10%):** Il rischio è estremamente improbabile e generalmente non richiede particolari attenzioni.
-- **Effetti:** <!--- TODO: aggiungere scala di valori effetti --->
+- **Effetti:** 
+	- **Catastrofici:** Rischi così gravi da compromettere l'intero progetto, con la possibilità di causarne il fallimento. 
+	- **Seri:** Rischi che, se non gestiti adeguatamente, possono far lievitare i costi e prolungare le tempistiche di sviluppo, fino a mettere a repentaglio la riuscita del progetto.
+	- **Tollerabili:** Rischi che provocano un aumento delle spese e un ritardo nella consegna, senza però pregiudicare in modo definito il buon esito del progetto.
+	- **Insignificanti:** Rischi che non intaccano sostanzialmente l'andamento del progetto e il cui impatto è trascurabile. 
 - **Descrizione:** Spiegazione dettagliata del rischio, con indicazioni sui contesti o le situazioni in cui potrebbe manifestarsi.
 - **Mitigation:** Azioni preventive per ridurre la probabilità o l’impatto negativo del rischio.
 - **Monitoring:** Modalità di monitoraggio periodico per verificare l’evoluzione del rischio, con indicazioni su quando e come effettuarne il controllo.
