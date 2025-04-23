@@ -145,7 +145,6 @@ Il design orientato agli oggetti è supportato dalle schede CRC sviluppate in fa
 <div style="page-break-after: always;"></div>
 
 ## 11. Diagrammi di sequenza 
-La frase che hai scritto è già chiara e corretta. Tuttavia, se desideri una versione leggermente modificata per migliorare la leggibilità, ecco un suggerimento:
 
 Come descritto in precedenza, le componenti del sistema si basano su un frontend sviluppato in Vue.js che comunica con il backend sviluppato in GO tramite API RESTful, con endpoint dedicati per le operazioni CRUD e la gestione dei flussi di lavoro verso le istanze dei database dedicati alla gestione delle varie entità (Utenti, Prestito, Tesseramento, Gamification, Prenotazione Spazi, Sezione Amministrativa). 
 
