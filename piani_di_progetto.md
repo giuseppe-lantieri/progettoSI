@@ -161,4 +161,4 @@ Il progetto seguirà un approccio iterativo volto a garantire la qualità del so
 | 1.0      | 19/03/2025 | Prima stesura del documento        |
 | 1.1      | 30/03/2025 | Seconda stesura del documento  
 | 1.2      | 09/04/2025 | Terza stesura del documento     |
-| 1.3      | 12/04/2025 | Terza stesura del documento     |
+| 1.3      | 12/04/2025 | Quarta stesura del documento     |
